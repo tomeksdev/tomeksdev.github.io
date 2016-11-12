@@ -21,30 +21,33 @@
             }
         ]
     },
-    "projects":[
-        {
-            "title":"Muralist", 
-            "date":"09/11/2016",
-            "desc":"Creating website for News portal in small town Mursko Središće",
-            "status":"Finished",
-            "statico":"fa-check",
-            "text":"project_1.md"
-        }, 
-        {
-            "title":"Muralist", 
-            "date":"09/11/2016",
-            "desc":"Creating website for News portal in small town Mursko Središće",
-            "status":"Finished",
-            "statico":"fa-check",
-            "text":"project_2.md"
-        }, 
-        {
-            "title":"Muralist", 
-            "date":"09/11/2016",
-            "desc":"Creating website for News portal in small town Mursko Središće",
-            "status":"Finished",
-            "statico":"fa-check",
-            "text":"project_3.md"
-        }
-    ]
+    "projects":{
+        "project":[
+            {
+                "title":"Muralist", 
+                "date":"09. November 2016",
+                "desc":"Creating website for News portal in small town Mursko Središće",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_1.md",
+                "img":"project1_1.png"
+            }, 
+            {
+                "title":"Muralist", 
+                "date":"09/11/2016",
+                "desc":"Creating website for News portal in small town Mursko Središće",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_2.md"
+            }, 
+            {
+                "title":"Muralist", 
+                "date":"09/11/2016",
+                "desc":"Creating website for News portal in small town Mursko Središće",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_3.md"
+            }
+        ]
+    }
 }
