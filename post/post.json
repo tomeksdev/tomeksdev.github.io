@@ -4,19 +4,19 @@
             {
                 "title":"Lorem Ipsum 1", 
                 "date":"09/11/2016",
-                "text":"post_2.md",
+                "text":"post_1.md",
                 "autor":"Tomo Novak"
             }, 
             {
                 "title":"Lorem Ipsum 2", 
                 "date":"10/11/2016",
-                "text":"post_1.md",
+                "text":"post_2.md",
                 "autor":"Tomo Novak"
             }, 
             {
                 "title":"Lorem Ipsum 3", 
                 "date":"11/11/2016",
-                "text":"post_1.md",
+                "text":"post_3.md",
                 "autor":"Tomo Novak"
             }
         ]
@@ -28,7 +28,7 @@
             "desc":"Creating website for News portal in small town Mursko Središće",
             "status":"Finished",
             "statico":"fa-check",
-            "text":"##Greeting,---My name is Tomo Novak and I am 24 years old. I'm in the programming of more than 7 years working with Java, C ++, C #, Web technologies (PHP, HTML, HTML5, CSS, CSS3, jQuery, JavaScript, Ajax, etc.).The last four years I started to give more attention to developing web sites and web applications. All my projects are visible on this page, as well as some tutorials that I decided to put online."
+            "text":"project_1.md"
         }, 
         {
             "title":"Muralist", 
@@ -36,7 +36,7 @@
             "desc":"Creating website for News portal in small town Mursko Središće",
             "status":"Finished",
             "statico":"fa-check",
-            "text":"##Greeting,---My name is Tomo Novak and I am 24 years old. I'm in the programming of more than 7 years working with Java, C ++, C #, Web technologies (PHP, HTML, HTML5, CSS, CSS3, jQuery, JavaScript, Ajax, etc.).The last four years I started to give more attention to developing web sites and web applications. All my projects are visible on this page, as well as some tutorials that I decided to put online."
+            "text":"project_2.md"
         }, 
         {
             "title":"Muralist", 
@@ -44,7 +44,7 @@
             "desc":"Creating website for News portal in small town Mursko Središće",
             "status":"Finished",
             "statico":"fa-check",
-            "text":"##Greeting,---My name is Tomo Novak and I am 24 years old. I'm in the programming of more than 7 years working with Java, C ++, C #, Web technologies (PHP, HTML, HTML5, CSS, CSS3, jQuery, JavaScript, Ajax, etc.).The last four years I started to give more attention to developing web sites and web applications. All my projects are visible on this page, as well as some tutorials that I decided to put online."
+            "text":"project_3.md"
         }
     ]
 }

@@ -296,6 +296,8 @@ article{
     padding: 0rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .column{
@@ -367,6 +369,7 @@ article{
     transition: box-shadow .1s ease,transform .1s ease;
     z-index: '';
     margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 .card .image{
@@ -438,6 +441,7 @@ article{
 
 .page-button{
     display: block;
+    margin-left: 50px;
 }
 
 .ui .header{
