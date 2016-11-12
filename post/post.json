@@ -24,13 +24,22 @@
     "projects":{
         "project":[
             {
+                "title":"Test", 
+                "date":"07. November 2016",
+                "desc":"Creating website for portal for Mirno More",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_3.md",
+                "img":"project3_1.png"
+            },
+            {
                 "title":"Mirno More", 
                 "date":"08. November 2016",
                 "desc":"Creating website for portal for Mirno More",
                 "status":"Finished",
                 "statico":"fa-check",
-                "text":"project_4.md",
-                "img":"project4_1.png"
+                "text":"project_3.md",
+                "img":"project3_1.png"
             },
             {
                 "title":"Intersoft", 
@@ -38,8 +47,8 @@
                 "desc":"Creating website for Intersoft d.o.o. company in Croatia.",
                 "status":"Finished",
                 "statico":"fa-check",
-                "text":"project_5.md",
-                "img":"project5_1.png"
+                "text":"project_4.md",
+                "img":"project4_1.png"
             },
             {
                 "title":"Muralist", 
