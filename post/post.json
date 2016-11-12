@@ -24,6 +24,24 @@
     "projects":{
         "project":[
             {
+                "title":"Mirno More", 
+                "date":"08. November 2016",
+                "desc":"Creating website for portal for Mirno More",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_4.md",
+                "img":"project4_1.png"
+            },
+            {
+                "title":"Intersoft", 
+                "date":"09. November 2016",
+                "desc":"Creating website for Intersoft d.o.o. company in Croatia.",
+                "status":"Finished",
+                "statico":"fa-check",
+                "text":"project_5.md",
+                "img":"project5_1.png"
+            },
+            {
                 "title":"Muralist", 
                 "date":"09. November 2016",
                 "desc":"Creating website for News portal in small town Mursko Središće",
@@ -33,20 +51,13 @@
                 "img":"project1_1.png"
             }, 
             {
-                "title":"Muralist", 
-                "date":"09/11/2016",
-                "desc":"Creating website for News portal in small town Mursko Središće",
+                "title":"Tid-Extra", 
+                "date":"10. November 2016",
+                "desc":"Creating website for Tid-Extra company in small town Mursko Središće",
                 "status":"Finished",
                 "statico":"fa-check",
-                "text":"project_2.md"
-            }, 
-            {
-                "title":"Muralist", 
-                "date":"09/11/2016",
-                "desc":"Creating website for News portal in small town Mursko Središće",
-                "status":"Finished",
-                "statico":"fa-check",
-                "text":"project_3.md"
+                "text":"project_2.md",
+                "img":"project2_1.png"
             }
         ]
     }
