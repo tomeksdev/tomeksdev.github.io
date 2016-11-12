@@ -3,6 +3,8 @@ $(document).ready(function(){
     $.getJSON( url, function( json ) {
         console.log(json);
         $("#post-title").html(json.posts.post[0].title);
-        $("#post-text").html(mmd("post/src/" + json.posts.post[0].text));
+        $("#post-text").load("https://tomeksdev.github.io/post/src/" + json.posts.post[0].text, function(data) {
+            $("#post-text").html(mmd(data));
+        });
     });
 });
