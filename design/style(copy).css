@@ -1,0 +1,99 @@
+/*
+Theme Name: TomeksDEV
+Theme URI: http://tomeksdev.github.io
+Author URI: http://tomeksdev.github.io
+Description: This template is for TomeksDEV created by Tomo Novak.
+Version: 1.1.4
+*/
+
+/*CSS RESET*/
+
+@import url("reset.css");
+@import url("core.css");
+
+/*INSTALL*/
+
+/* WEBSITE */
+body{
+	width: 100%;
+    height: 100%;
+	background: #0d0d0d;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Roboto', sans-serif;
+    color: #aaa;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #aaa;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    min-height: 10px;
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    margin: 0 auto;
+    height: 10px;
+    border-top: 4px solid #d30000;
+}
+
+.logo{
+    font-size: 175px !important;
+    line-height: 165px !important;
+    text-align: center;
+    margin-bottom: 0;
+    background: #fff;
+}
+
+.logo-text{
+    margin-left: 5em;
+    margin-top: 20px;
+    font-size: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+
+.logo-normaltext{
+    padding: 0 5px;
+}
+
+.logo-smalltext{
+    color: #fff;
+    background: #d80000;
+    padding: 0 5px;
+}
+
+.ico{
+    display: inline-block;
+    opacity: 1;
+    margin: 0 .25rem 0 0;
+    width: 1.18em;
+    height: 1em;
+    font-family: Icons;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: inherit;
+    text-align: center;
+    speak: none;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.center{
+    width: 100%;
+    height:90%;
+}
