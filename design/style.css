@@ -76,9 +76,8 @@ body {
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+.nav-masthead .nav-link:hover {
+  border-bottom-color: rgba(221,0,0,.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -87,7 +86,7 @@ body {
 
 .nav-masthead .active {
   color: #fff;
-  border-bottom-color: #fff;
+  border-bottom-color: #d30000;
 }
 
 @media (min-width: 48em) {
@@ -107,7 +106,7 @@ body {
 }
 
 .logo-normaltext{
-    padding: 0 5px;
+    padding: 0 2px;
 }
 
 .logo-smalltext{
