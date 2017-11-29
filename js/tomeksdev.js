@@ -7,6 +7,6 @@ jQuery( document ).ready(function() {
         e.preventDefault();
         $('.content-container div').hide('fade');
         $('#' + $(this).data('rel')).show('slow');
-        $('#mastfoot').show('slow');
+        //$('#mastfoot').show('slow');
     });
 });
