@@ -13,6 +13,7 @@ jQuery( document ).ready(function() {
     $.getJSON("https://github.com/tomeksdev/tomeksdev.github.io/blob/master/post/post.json",function(data){
         $.each(data.posts, function(i,post){
             content = post.title;
+            alert(post.title);
             $(content).appendTo("#about .cover-heading");
             content = post.text;
             $(content).appendTo("#about .lead");
