@@ -10,7 +10,7 @@ jQuery( document ).ready(function() {
         $('#mastfoot').show('slow');
     });
     
-    $.getJSON("post/post.json",function(data){
+    $.getJSON("https://github.com/tomeksdev/tomeksdev.github.io/blob/master/post/post.json",function(data){
         $.each(data.posts, function(i,post){
             content = post.title;
             $(content).appendTo("#about .cover-heading");
