@@ -1,10 +1,10 @@
 {
   posts:[{
-    id: "1",
-    title: "First post",
-    text: "#Lorem ###ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque et risus quis ornare. Donec commodo velit velit, eget finibus arcu tempor at. Vivamus dignissim justo purus. Suspendisse quis tempor mi. Etiam placerat, orci ut tristique lobortis, ante nisl ultrices nulla, sed varius risus lorem aliquam dolor. Phasellus eleifend iaculis arcu vitae volutpat. Vivamus tempor nibh non ante commodo, ac faucibus libero dapibus. Pellentesque dolor ex, faucibus sed nisl quis, aliquam posuere enim.
+    "id": "1",
+    "title": "First post",
+    "text": "#Lorem ###ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellentesque et risus quis ornare. Donec commodo velit velit, eget finibus arcu tempor at. Vivamus dignissim justo purus. Suspendisse quis tempor mi. Etiam placerat, orci ut tristique lobortis, ante nisl ultrices nulla, sed varius risus lorem aliquam dolor. Phasellus eleifend iaculis arcu vitae volutpat. Vivamus tempor nibh non ante commodo, ac faucibus libero dapibus. Pellentesque dolor ex, faucibus sed nisl quis, aliquam posuere enim.
 
 Fusce dictum dignissim ipsum sed rutrum. Nam pretium pulvinar enim, at mollis arcu vehicula ut. Vestibulum ut efficitur neque. Aliquam erat volutpat. Nunc facilisis gravida velit nec dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus porta metus non viverra aliquet. Aenean quis nisl enim. Maecenas ultrices enim non leo sollicitudin, nec ullamcorper sem interdum. Maecenas lobortis at erat eu porta.",
-    author: "Vujca(http://tomeksdev.com)"
+    "author": "Vujca(http://tomeksdev.com)"
   }]
 }
