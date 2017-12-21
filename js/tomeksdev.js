@@ -11,15 +11,16 @@ jQuery( document ).ready(function() {
     });
     
     alert("1");
-    $.getJSON("https://tomeksdev.github.io/post/post.json",function(data){
+    $.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
         alert("2");
-        $.each(data.posts, function(i,post){
+        $.each(json.posts, function(i,post){
             alert("3");
-            content = post.title;
+            //content = post.title;
             alert(post.title);
-            $(content).appendTo("#about .cover-heading");
-            content = post.text;
-            $(content).appendTo("#about .lead");
+            //$(content).appendTo("#about .cover-heading");
+            //content = post.text;
+            $("#about .cover-heading").html(post.title);
+            $("#about .lead").html(post.text);
         });
     });  
 });
