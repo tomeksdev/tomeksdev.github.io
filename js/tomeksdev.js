@@ -11,7 +11,7 @@ jQuery( document ).ready(function() {
     });
     
     alert("1");
-    $.getJSON("http://tomeksdev.github.io/post/post.json",function(data){
+    $.getJSON("https://tomeksdev.github.io/post/post.json",function(data){
         alert("2");
         $.each(data.posts, function(i,post){
             alert("3");
