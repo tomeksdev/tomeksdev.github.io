@@ -10,8 +10,11 @@ jQuery( document ).ready(function() {
         $('#mastfoot').show('slow');
     });
     
+    alert("1");
     $.getJSON("https://github.com/tomeksdev/tomeksdev.github.io/blob/master/post/post.json",function(data){
+        alert("2");
         $.each(data.posts, function(i,post){
+            alert("3");
             content = post.title;
             alert(post.title);
             $(content).appendTo("#about .cover-heading");
