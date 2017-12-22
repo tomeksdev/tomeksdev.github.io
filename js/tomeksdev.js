@@ -11,6 +11,12 @@ jQuery( document ).ready(function() {
     });
     
     alert("1");
+	$.ajax({
+	  method: "GET",
+	  url: "test.js",
+	  dataType: "script"
+	});
+alert("$.ajax");
     $.ajax({
   		dataType: "jsonp",
 	    	type: "get",
