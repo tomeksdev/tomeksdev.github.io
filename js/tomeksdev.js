@@ -13,24 +13,17 @@ jQuery( document ).ready(function() {
     alert("1");
     $.ajax({
   		dataType: "jsonp",
-  		url: request,
+  		url: "https://tomeksdev.github.io/post/post.json",
   		data: "",	
   		success: function (jsonp) {
+			alert("2");
   			console.log(jsonp);
-  			quote = '"' + jsonp.quote + '"';
-			author = "--" + jsonp.author;
-			$(".quote").html(quote);
-			$(".author").html(author);			
-			$(".tweet").attr({
-				href: 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + quote + '" ' + author)
-				});
-			$(".page").css({
-   			backgroundImage: 'url(https://placem.at/things?random=' + Math.floor(Math.random()*1000) + ')'		
-  			});
+			$("#about .cover-heading").html(jsonp.title);
+			$("#about .lead").html(jsonp.text);			
 	}});
-     alert("2");
+     
     $.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
-        alert("2");
+        alert("3");
         /*$.each(json.posts, function(i,post){
             alert("3");
             //content = post.title;
@@ -40,7 +33,7 @@ jQuery( document ).ready(function() {
             $("#about .cover-heading").html(post.title);
             $("#about .lead").html(post.text);
         });*/
-         alert("3");
+         alert("4");
     });  
-     alert("4");
+     alert("5");
 });
