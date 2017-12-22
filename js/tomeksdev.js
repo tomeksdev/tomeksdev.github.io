@@ -1,4 +1,4 @@
-jQuery( document ).ready(function() {
+$(document).ready(function() {
     
     $(".nav-link").click(function(e) {
         //console.log($(this).data('rel'));
