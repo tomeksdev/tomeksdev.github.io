@@ -9,15 +9,8 @@ jQuery( document ).ready(function() {
         $('#' + $(this).data('rel')).show('slow');
         $('#mastfoot').show('slow');
     });
-    
-    alert("1");
-	$.ajax({
-	  method: "GET",
-	  url: "test.js",
-	  dataType: "script"
-	});
-alert("$.ajax");
-    $.ajax({
+	
+    /*$.ajax({
   		dataType: "jsonp",
 	    	type: "get",
   		url: "https://tomeksdev.github.io/post/post.json",
@@ -31,7 +24,7 @@ alert("$.ajax");
 	    	error:function() {
 		      console.log("err");
 		}
-    });
+    });*/
      
     $.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
         alert("3");
