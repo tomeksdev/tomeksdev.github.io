@@ -13,6 +13,7 @@ jQuery( document ).ready(function() {
     alert("1");
     $.ajax({
   		dataType: "jsonp",
+	    	type: "get",
   		url: "https://tomeksdev.github.io/post/post.json",
   		data: "",	
   		success: function (jsonp) {
@@ -20,7 +21,11 @@ jQuery( document ).ready(function() {
   			console.log(jsonp);
 			$("#about .cover-heading").html(jsonp.title);
 			$("#about .lead").html(jsonp.text);			
-	}});
+		},
+	    	error:function() {
+		      console.log("err");
+		}
+    });
      
     $.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
         alert("3");
