@@ -10,22 +10,7 @@ $(document).ready(function() {
         $('#mastfoot').show('slow');
     });
 	
-    /*$.ajax({
-  		dataType: "jsonp",
-	    	type: "get",
-  		url: "https://tomeksdev.github.io/post/post.json",
-  		data: "",	
-  		success: function (jsonp) {
-			alert("2");
-  			console.log(jsonp);
-			$("#about .cover-heading").html(jsonp.title);
-			$("#about .lead").html(jsonp.text);			
-		},
-	    	error:function() {
-		      console.log("err");
-		}
-    });*/
-	alert("1");
+	/*alert("1");
 	$.ajax({
 	   headers: {
 	  	'Access-Control-Allow-Origin': '*',
@@ -42,9 +27,10 @@ $(document).ready(function() {
 	      alert("3");
 	   }
 	});
-	alert("4");
-     
-    /*$.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
+	alert("4");*/
+    
+    //Retrive json post's from post.json
+    $.getJSON("https://tomeksdev.com/post/post.json", function(json){
         alert("3");
         $.each(json.posts, function(i,post){
             alert("3");
@@ -56,6 +42,6 @@ $(document).ready(function() {
             $("#about .lead").html(post.text);
         });
          alert("4");
-    });  */
+    }); 
      alert("5");
 });
