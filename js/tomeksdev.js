@@ -28,7 +28,7 @@ $(document).ready(function() {
 	$.ajax({
 	   url: "https://tomeksdev.github.io/post/post.json",
 	    type:"get",
-	    dataType:'text',  
+	    dataType:'json',  
 	    success: function(data){
 	      console.log(data);
 	    },
