@@ -10,7 +10,6 @@ $(document).ready(function() {
         $('#mastfoot').show('slow');
     });
 	
-    alert("1");
     $.ajax({
    	headers: {
 		'Access-Control-Allow-Origin': '*',
@@ -25,10 +24,8 @@ $(document).ready(function() {
 	},
 	error:function() {
 	      console.log("err");
-	      alert("3");
 	}
     });
-    alert("4");
     
     /*alert("1");
     $.getJSON("http://tomeksdev.com/post/post.json", function(json){
