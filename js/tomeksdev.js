@@ -19,9 +19,10 @@ $(document).ready(function() {
 	   type:"get",
 	   dataType:'text',  
 	   success: function(data){
+		   var json_obj = $.parseJSON(data);
 	      console.log(data);
-	      $("#about .cover-heading").html(data.posts.title);
-              $("#about .lead").html(data.posts.text);
+	      $("#about .cover-heading").html(json_obj[0].title);
+              $("#about .lead").html(json_obj[0].text);
 	   },
 	   error:function() {
 	      console.log("err");
