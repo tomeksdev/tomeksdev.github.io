@@ -30,8 +30,9 @@ $(document).ready(function() {
 	alert("4");*/
     
     //Retrive json post's from post.json
+	alert("1");
     $.getJSON("https://tomeksdev.com/post/post.json", function(json){
-        alert("3");
+        alert("2");
         $.each(json.posts, function(i,post){
             alert("3");
             //content = post.title;
