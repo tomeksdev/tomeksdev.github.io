@@ -27,6 +27,9 @@ $(document).ready(function() {
     });*/
 	alert("1");
 	$.ajax({
+	   headers: {
+	  	'Access-Control-Allow-Origin': '*',
+	   },
 	   url: "https://tomeksdev.github.io/post/post.json",
 	   type:"get",
 	   dataType:'text',  
