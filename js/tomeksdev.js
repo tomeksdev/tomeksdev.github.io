@@ -25,17 +25,21 @@ $(document).ready(function() {
 		      console.log("err");
 		}
     });*/
+	alert("1");
 	$.ajax({
 	   url: "https://tomeksdev.github.io/post/post.json",
 	   type:"get",
-	   dataType:'json',  
+	   dataType:'text',  
 	   success: function(data){
 	      console.log(data);
+	      alert("2");
 	   },
 	   error:function() {
 	      console.log("err");
+	      alert("3");
 	   }
 	});
+	alert("4");
      
     /*$.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
         alert("3");
