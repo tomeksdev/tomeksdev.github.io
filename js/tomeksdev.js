@@ -5,8 +5,8 @@ $(document).ready(function() {
         $(".nav-link").removeClass("active");
         $(this).addClass("active");
         e.preventDefault();
-        $('.content-container div').hide('fade');
-        $('#' + $(this).data('rel')).show('slow');
+        $('.content-container div').hide(400);
+        $('#' + $(this).data('rel')).show(400);
         $('#mastfoot').show('slow');
     });
 	
