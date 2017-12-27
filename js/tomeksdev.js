@@ -40,6 +40,7 @@ $(document).ready(function() {
             //content = post.text;
             $("#about .cover-heading").html(post.title);
             $("#about .lead").html(post.text);
+	    console.log(json);
         });
          alert("4");
     }); 
