@@ -27,14 +27,14 @@ $(document).ready(function() {
     });*/
 	$.ajax({
 	   url: "https://tomeksdev.github.io/post/post.json",
-	    type:"get",
-	    dataType:'json',  
-	    success: function(data){
+	   type:"get",
+	   dataType:'json',  
+	   success: function(data){
 	      console.log(data);
-	    },
-	    error:function() {
+	   },
+	   error:function() {
 	      console.log("err");
-	    }
+	   }
 	});
      
     /*$.getJSON("https://tomeksdev.github.io/post/post.json", function(json){
