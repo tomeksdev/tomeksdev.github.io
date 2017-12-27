@@ -20,8 +20,8 @@ $(document).ready(function() {
 	   dataType:'text',  
 	   success: function(data){
 	      console.log(data);
-	      $("#about .cover-heading").html(data.title);
-              $("#about .lead").html(data.text);
+	      $("#about .cover-heading").html(data.posts.title);
+              $("#about .lead").html(data.posts.text);
 	   },
 	   error:function() {
 	      console.log("err");
