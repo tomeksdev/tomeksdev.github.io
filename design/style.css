@@ -48,7 +48,11 @@ nav{
     font-family: 'Lato', sans-serif;
 }
 
-nav a:href{
+nav a:hover{
+    bottom-border: 1px solid #d80000;
+}
+
+nav .active{
     bottom-border: 1px solid #d80000;
 }
 
