@@ -44,7 +44,7 @@ body {
 
 /* NAVIGATION MENU */
 nav{
-    text-align: left;
+    text-align: left !important;
     font-family: 'Lato', sans-serif;
 }
 
