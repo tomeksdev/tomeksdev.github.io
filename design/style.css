@@ -61,5 +61,6 @@ body {
 }
 
 .bottom{
+    position: relative;
     bottom: 0;
 }
