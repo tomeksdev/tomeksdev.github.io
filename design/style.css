@@ -44,9 +44,8 @@ body {
 
 /* NAVIGATION MENU */
 nav{
-    text-align: left !important;
     font-family: 'Lato', sans-serif;
-    float: left;
+    align-content: right !important;
 }
 
 nav a:hover{
