@@ -19,8 +19,8 @@ $(document).ready(function() {
 	dataType:'json',  
 	success: function(data){
 	      console.log(data);
-	      $("#about .cover-heading").html(data.posts.title);
-              $("#about .lead").html(data.posts.text);
+	      $("#blog .cover-heading").html(data.posts.title);
+              $("#blog .lead").html(data.posts.text);
 	},
 	error:function() {
 	      console.log("err");
