@@ -75,3 +75,11 @@ nav .active{
     background: #d80000;
     padding: 0 5px;
 }
+
+
+/* MOBILE PREVIEW */
+@media (min-width: 576px) {
+    .logo-text{
+        font-size: 80px;
+    }
+}
