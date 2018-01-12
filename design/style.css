@@ -42,6 +42,13 @@ body {
     border-top: 4px solid #d30000;
 }
 
+/* NAVIGATION MENU */
+nav{
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+}
+
+/* LOGO TEXT - front_page */
 .logo-text{
     margin-top: 33.33333%;
     margin-bottom: 32.33333%;
@@ -59,9 +66,4 @@ body {
     color: #fff;
     background: #d80000;
     padding: 0 5px;
-}
-
-.bottom{
-    position: relative;
-    bottom: 0;
 }
