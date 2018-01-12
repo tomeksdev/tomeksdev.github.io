@@ -44,8 +44,6 @@ body {
 
 /* NAVIGATION MENU */
 nav{
-    display: flex;
-    justify-content: space-between;
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
