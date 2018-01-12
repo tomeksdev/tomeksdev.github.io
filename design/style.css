@@ -97,6 +97,11 @@ nav .active{
     magrin-bottom: 20px;
 }
 
+/* FOOTER */
+.bottom{
+    margin-top: 20px;
+}
+
 /* MOBILE PREVIEW */
 @media (max-width: 768px) {
     .logo-text{
