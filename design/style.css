@@ -76,6 +76,10 @@ nav .active{
     padding: 0 5px;
 }
 
+/* BLOG PAGE */
+.blog{
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 /* MOBILE PREVIEW */
 @media (max-width: 768px) {
