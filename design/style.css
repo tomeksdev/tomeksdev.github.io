@@ -91,6 +91,12 @@ nav .active{
   
 }
 
+/* CONTACT PAGE */
+.contact{
+    margin-top: 40px;
+    magrin-bottom: 20px;
+}
+
 /* MOBILE PREVIEW */
 @media (max-width: 768px) {
     .logo-text{
