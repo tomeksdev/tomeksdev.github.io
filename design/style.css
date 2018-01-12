@@ -80,6 +80,6 @@ nav .active{
 /* MOBILE PREVIEW */
 @media (max-width: 768px) {
     .logo-text{
-        font-size: 80px !important;
+        font-size: 60px !important;
     }
 }
