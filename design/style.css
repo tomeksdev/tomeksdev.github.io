@@ -41,3 +41,22 @@ body {
     min-height: 100%;
     border-top: 4px solid #d30000;
 }
+
+.logo-text{
+    margin-left: 5em;
+    margin-top: 20px;
+    font-size: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+
+.logo-normaltext{
+    padding: 0 5px;
+}
+
+.logo-smalltext{
+    color: #fff;
+    background: #d80000;
+    padding: 0 5px;
+}
