@@ -45,7 +45,12 @@ body {
 /* NAVIGATION MENU */
 nav{
     font-family: 'Lato', sans-serif;
-    text-align: center;
+    text-align: right;
+    padding-top: 20px;
+}
+
+.navlink{
+    padding: 20px;
 }
 
 nav a:hover{
@@ -58,7 +63,7 @@ nav .active{
 
 /* LOGO TEXT - front_page */
 .logo-text{
-    margin-top: 33.33333%;
+    margin-top: 23.33333%;
     margin-bottom: 32.33333%;
     font-size: 100px;
     font-family: 'Raleway', sans-serif;
