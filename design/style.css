@@ -80,6 +80,16 @@ nav .active{
 .blog{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.cover-heading{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.lead{
+  
+}
 
 /* MOBILE PREVIEW */
 @media (max-width: 768px) {
