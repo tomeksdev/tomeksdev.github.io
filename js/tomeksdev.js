@@ -19,28 +19,11 @@ $(document).ready(function() {
 	dataType:'json',  
 	success: function(data){
 	      console.log(data);
-	      $("#blog .cover-heading").html(data.posts.title);
-              $("#blog .lead").html(data.posts.text);
+	      $(".blog .cover-heading").html(data.posts.title);
+              $(".blog .lead").html(data.posts.text);
 	},
 	error:function() {
 	      console.log("err");
 	}
     });
-    
-    /*alert("1");
-    $.getJSON("http://tomeksdev.com/post/post.json", function(json){
-        alert("2");
-        $.each(json.posts, function(i,post){
-            alert("3");
-            //content = post.title;
-            alert(post.title);
-            //$(content).appendTo("#about .cover-heading");
-            //content = post.text;
-            $("#about .cover-heading").html(post.title);
-            $("#about .lead").html(post.text);
-	    console.log(json);
-        });
-         alert("4");
-    }); 
-     alert("5");*/
 });
