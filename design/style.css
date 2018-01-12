@@ -48,6 +48,9 @@ nav{
     font-family: 'Lato', sans-serif;
 }
 
+nav a:href{
+    bottom-border: 1px solid #d80000;
+
 /* LOGO TEXT - front_page */
 .logo-text{
     margin-top: 33.33333%;
