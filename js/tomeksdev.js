@@ -1,11 +1,12 @@
-$(document).ready(function() {
-    var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-    if (a.indexOf('html') > -1) { //Check of html String in URL.
-        url = url.substring(0, newURL.lastIndexOf("."));
-    }    
+//Mask url without .html
+var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+if (a.indexOf('html') > -1) { //Check of html String in URL.
+	url = url.substring(0, newURL.lastIndexOf("."));
+}    
 
-	
-    $(".nav-link").click(function(e) {
+//jQuery function
+$(document).ready(function() {	
+    /*$(".nav-link").click(function(e) {
         //console.log($(this).data('rel'));
         $(".nav-link").removeClass("active");
         $(this).addClass("active");
@@ -13,7 +14,7 @@ $(document).ready(function() {
         $('.content-container div').hide(400);
         $('#' + $(this).data('rel')).show(400);
         $('#mastfoot').show('slow');
-    });
+    });*/
 	
     $.ajax({
    	headers: {
