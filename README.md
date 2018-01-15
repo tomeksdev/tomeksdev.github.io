@@ -1,5 +1,5 @@
 # tomeksdev.github.io
 TomeksDEV Github Page! https://tomeksdev.github.io
 
-Website is created with Bootstrap library.
+Website is created with Bootstrap library, jQuery, json.
 Version: v2.0.4
