@@ -24,7 +24,6 @@ $(document).ready(function() {
 	type:"get",
 	dataType:'json',  
 	success: function(data){
-	      console.log(data);
 	      $(".blog .cover-heading").html(data.posts.title);
               $(".blog .lead").html(data.posts.text);
 	},
