@@ -1,5 +1,10 @@
 $(document).ready(function() {
-    
+    var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+    if (a.indexOf('html') > -1) { //Check of html String in URL.
+        url = url.substring(0, newURL.lastIndexOf("."));
+    }    
+
+	
     $(".nav-link").click(function(e) {
         //console.log($(this).data('rel'));
         $(".nav-link").removeClass("active");
