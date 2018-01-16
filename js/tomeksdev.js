@@ -1,9 +1,3 @@
-//Mask url without .html
-var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-if (newURL.indexOf('html') > -1) { //Check of html String in URL.
-	newURL = newURL.substring(0, newURL.lastIndexOf("."));
-}    
-
 //jQuery function
 $(document).ready(function() {	
     /*$(".nav-link").click(function(e) {
@@ -24,8 +18,9 @@ $(document).ready(function() {
 	type:"get",
 	dataType:'json',  
 	success: function(data){
+	      var text = markdown.toHTML(data.posts.text);
 	      $(".blog .cover-heading").html(data.posts.title);
-              $(".blog .lead").html(data.posts.text);
+              $(".blog .lead").html(text);
 	},
 	error:function() {
 	      console.log("err");
