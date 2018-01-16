@@ -11,23 +11,17 @@
     <!-- LOADING CSS FILES -->
     <link rel="stylesheet" href="../design/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../design/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../design/font-awesome/css/font-awesome.min.css">
     <!-- LOADING JS FILES -->
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 </head>
 <body>
     <div class="container-fluid">
-       <form>
-          <input name="title" type="text" placeholder="Title?" />
-          <textarea name="content" data-provide="markdown" rows="10"></textarea>
-          <label class="checkbox">
-             <input name="publish" type="checkbox"> Publish
-          </label>
-          <hr/>
-          <button type="submit" class="btn">Submit</button>
-       </form> 
+        <div id="editor"></div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
