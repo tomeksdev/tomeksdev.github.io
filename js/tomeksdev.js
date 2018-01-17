@@ -1,3 +1,6 @@
+var editor = new Editor();
+editor.render();
+
 //jQuery function
 $(document).ready(function() {	
     /*$(".nav-link").click(function(e) {
