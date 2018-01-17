@@ -37,7 +37,7 @@ $(document).ready(function() {
 		
               id = parseInt(data.posts[j].id) + 1;
 	      for(var i = 0; i < data.author.length; i++){
-	      	      $("#author").html('<option value="' + data.author[i].name '">' + data.author[i].name + '</option>');
+	      	      $("#author").html('<option value="' + data.author[i].name + '">' + data.author[i].name + '</option>');
 	      }
 	
 	},
