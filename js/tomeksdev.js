@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 	
     // Most options demonstrate the non-default behavior
-	var simplemde = new SimpleMDE({
+	/*var simplemde = new SimpleMDE({
 		autofocus: true,
 		autosave: {
 			enabled: true,
@@ -93,5 +93,5 @@ $(document).ready(function() {
 		tabSize: 4,
 		toolbar: ["bold", "italic", "heading", "|", "quote"],
 		toolbarTips: false,
-	});
+	});*/
 });
