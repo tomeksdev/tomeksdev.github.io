@@ -116,6 +116,7 @@ nav .active{
     background: #fff;
     color: #000;
     text-shadow: initial;
+    text-align: left;
 }
 
 .editor-toolbar{
