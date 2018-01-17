@@ -1,7 +1,29 @@
 var editor = new Editor();
 editor.render();
 
-$(document).ready(function() {		
+//Save posts to post.json file
+function savePost(id, title, text, author) {
+    $.ajax
+    ({
+        type: "POST",
+        //the url where you want to sent the userName and password to
+        url: 'http://tomeksdev.com/post/post.json',
+	contentType: 'application/json',
+        dataType: 'json',
+        async: false,
+        //json object to sent to the authentication url
+        data: '{"id": "' + id + '", "title": "' + title + '", "text": "' + text + '", "author": ' + author + '"}',
+        success: function () {
+        	console.log(data); 
+        },
+	error:function() {
+	      console.log("err");
+	}
+    });
+}
+
+$(document).ready(function() {
+	var id = 0;
     $.ajax({
    	headers: {
 		'Access-Control-Allow-Origin': '*',
@@ -13,12 +35,22 @@ $(document).ready(function() {
 	      for(var i = 0; i < data.posts.length; i++)
 		      var j = i;
 		
-        var id = parseInt(data.posts[j].id) + 1;
-		console.log(data.posts[j].id);
-	      console.log(id);
+              id = parseInt(data.posts[j].id) + 1;
+	      for(var i = 0; i < data.author.length; i++){
+	      	      $("#author").html('<option value="' + data.author[i].name '">' + data.author[i].name + '</option>");
+	      }
+	
 	},
 	error:function() {
 	      console.log("err");
 	}
+    });
+	
+    $("#submit").click(function(){
+	    var title = $("#title").val();
+	    var text = $("#text").val();
+	    var author = $("#author").val();
+	    
+	    savePost(id, title, text, author);
     });
 });
