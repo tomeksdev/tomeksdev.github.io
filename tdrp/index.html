@@ -11,86 +11,26 @@
     <!-- LOADING CSS FILES -->
     <link rel="stylesheet" href="../design/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../design/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../design/font-awesome/css/font-awesome.min.css">
     <!-- LOADING JS FILES -->
-    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+    <script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 </head>
 <body>
     <div class="container-fluid">
         <script>
-            var simplemde = new SimpleMDE({
-                autofocus: true,
-                autosave: {
-                    enabled: true,
-                    uniqueId: "552",
-                    delay: 1000,
-                },
-                blockStyles: {
-                    bold: "__",
-                    italic: "_"
-                },
-                element: document.getElementById("mtext"),
-                forceSync: true,
-                hideIcons: ["guide", "heading"],
-                indentWithTabs: false,
-                initialValue: "Hello world!",
-                insertTexts: {
-                    horizontalRule: ["", "\n\n-----\n\n"],
-                    image: ["![](http://", ")"],
-                    link: ["[", "](http://)"],
-                    table: ["", "\n\n| Column 1 | Column 2 | Column 3 |\n| -------- | -------- | -------- |\n| Text     | Text      | Text     |\n\n"],
-                },
-                lineWrapping: false,
-                parsingConfig: {
-                    allowAtxHeaderWithoutSpace: true,
-                    strikethrough: false,
-                    underscoresBreakWords: true,
-                },
-                placeholder: "Type here...",
-                previewRender: function(plainText) {
-                    return customMarkdownParser(plainText); // Returns HTML from a custom parser
-                },
-                previewRender: function(plainText, preview) { // Async method
-                    setTimeout(function(){
-                        preview.innerHTML = customMarkdownParser(plainText);
-                    }, 250);
-
-                    return "Loading...";
-                },
-                promptURLs: true,
-                renderingConfig: {
-                    singleLineBreaks: false,
-                    codeSyntaxHighlighting: true,
-                },
-                shortcuts: {
-                    drawTable: "Cmd-Alt-T"
-                },
-                showIcons: ["code", "table"],
-                spellChecker: false,
-                status: false,
-                status: ["autosave", "lines", "words", "cursor"], // Optional usage
-                status: ["autosave", "lines", "words", "cursor", {
-                    className: "keystrokes",
-                    defaultValue: function(el) {
-                        this.keystrokes = 0;
-                        el.innerHTML = "0 Keystrokes";
-                    },
-                    onUpdate: function(el) {
-                        el.innerHTML = ++this.keystrokes + " Keystrokes";
-                    }
-                }], // Another optional usage, with a custom status bar item that counts keystrokes
-                styleSelectedText: false,
-                tabSize: 4,
-                toolbar: false,
-                toolbarTips: false,
+            new Editor({
+              element: document.getElementById('mtext'),
             });
+            var editor = new Editor();
+            editor.render();
         </script>
         <form>
-            <div id="mtext"></div>                                                  
+            <textarea col="50" row="4" id="mtext"></textarea>                                                  
         </form>
     </div>
     <!-- Bootstrap core JavaScript
