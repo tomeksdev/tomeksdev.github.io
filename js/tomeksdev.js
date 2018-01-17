@@ -14,6 +14,7 @@ $(document).ready(function() {
 	      var text = markdown.toHTML(data.posts[j].text);
 	      $(".blog .cover-heading").html(data.posts[j].title);
               $(".blog .lead").html(text);
+		console.log(j);
 	},
 	error:function() {
 	      console.log("err");
