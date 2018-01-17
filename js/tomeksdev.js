@@ -8,8 +8,11 @@ $(document).ready(function() {
 	type:"get",
 	dataType:'json',  
 	success: function(data){
-	      var text = markdown.toHTML(data.posts[0].text);
-	      $(".blog .cover-heading").html(data.posts[0].title);
+	      for(var i = 0; i < data.post.length; i++)
+		      var j = i;
+		
+	      var text = markdown.toHTML(data.posts[j].text);
+	      $(".blog .cover-heading").html(data.posts[j].title);
               $(".blog .lead").html(text);
 	},
 	error:function() {
