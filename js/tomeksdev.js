@@ -8,7 +8,7 @@ $(document).ready(function() {
 	type:"get",
 	dataType:'json',  
 	success: function(data){
-	      for(var i = 0; i < data.post.length; i++)
+	      for(var i = 0; i < data.posts.length; i++)
 		      var j = i;
 		
 	      var text = markdown.toHTML(data.posts[j].text);
