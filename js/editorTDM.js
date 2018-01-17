@@ -14,6 +14,7 @@ $(document).ready(function() {
 		      var j = i;
 		
         var id = data.posts[j].id + 1;
+		console.log(data.posts[j].id);
 	      console.log(id);
 	},
 	error:function() {
