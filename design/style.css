@@ -109,3 +109,15 @@ nav .active{
         font-size: 60px !important;
     }
 }
+
+
+/* Panel Editor */
+.CodeMirror{
+    background: #fff;
+    color: #000;
+    text-shadow: initial;
+}
+
+.editor-toolbar{
+    background: #e1e1e1;
+}
