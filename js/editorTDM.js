@@ -5,6 +5,9 @@ editor.render();
 function savePost(id, title, text, author) {
     $.ajax
     ({
+	headers: {
+		'Access-Control-Allow-Origin': '*',
+	},
         type: "POST",
         //the url where you want to sent the userName and password to
         url: 'http://tomeksdev.com/post/post.json',
