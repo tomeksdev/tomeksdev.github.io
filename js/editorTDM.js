@@ -13,7 +13,7 @@ $(document).ready(function() {
 	      for(var i = 0; i < data.posts.length; i++)
 		      var j = i;
 		
-        var id = data.posts[j].id + 1;
+        var id = parseInt(data.posts[j].id) + 1;
 		console.log(data.posts[j].id);
 	      console.log(id);
 	},
