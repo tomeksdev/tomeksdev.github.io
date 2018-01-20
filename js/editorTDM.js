@@ -95,7 +95,7 @@ $(document).ready(function() {
 		page: params.page
 	      };
 	    },
-	    processResults: function (data.posts, params) {
+	    processResults: function (data, params) {
 	      // parse the results into the format expected by Select2
 	      // since we are using custom formatting functions we do not need to
 	      // alter the remote JSON data, except to indicate that infinite
