@@ -72,6 +72,7 @@ $(document).ready(function() {
                         results: $.map(data.posts, function(obj) {
 			    $.each(obj, function(i, v) {
 					if (v.title.search(new RegExp(params, "i")) != -1) {
+						console.log("ID: " + v[i].id + " Title: " + v[i].title);
 						return { id: v[i].id, text: v[i].title };
 					}
 			    });
@@ -80,11 +81,6 @@ $(document).ready(function() {
                 }
             }
         });
-	
-	$('#post').on('select2:select', function (e) {
-	    var data = e.params.data;
-	    console.log(data);
-	});
 	   /*$("#post").select2({
 		placeholder: "Search for a repository",
 		minimumInputLength: 3,
