@@ -60,33 +60,28 @@ $(document).ready(function() {
     	// Set up the Select2 control
 	$('#post').select2({
 	    placeholder: 'Select post to editing',
+	    data: function (term) {
+                return {
+                    term: term.term
+                };
+            },
 	    ajax: {
 		headers: {
 			'Access-Control-Allow-Origin': '*',
 		},
 		url: 'http://tomeksdev.com/post/post.json'
-	    }
-	});
-
-	// Fetch the preselected item, and add to the control
-	var studentSelect = $('#post');
-	$.ajax({
-	    headers: {
-		'Access-Control-Allow-Origin': '*',
 	    },
-	    type: 'GET',
-	    url: 'http://tomeksdev.com/post/post.json'
-	}).then(function (data) {
-	    // create the option and append to Select2
-	    var option = new Option(data.posts.id, data.posts.title, true, true);
-	    studentSelect.append(option).trigger('change');
-		console.log(data.posts);
-	    // manually trigger the `select2:select` event
-	    studentSelect.trigger({
-		type: 'select2:select',
-		params: {
-		    data: data.posts
-		}
-	    });
+            processResults: function (data) {
+                var myResults = [];
+                $.each(data.posts, function (index, item) {
+                    myResults.push({
+                        'id': item.id,
+                        'title': item.title
+                    });
+                });
+                return {
+                    results: myResults
+                };
+	    }
 	});
 });
