@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
 	
     	// Set up the Select2 control
-	 /*$('#post').select2({
+	 $('#post').select2({
             tags: true,
             ajax: {
                 headers: {
@@ -70,40 +70,11 @@ $(document).ready(function() {
                 processResults: function (data, params) {
                     return {
                         results: $.map(data.posts, function(obj) {
-			    $.each(obj, function(i, v) {
-					if (v[i].title.search(new RegExp(params, "i")) != -1) {
-						console.log("ID: " + v[i].id + " Title: " + v[i].title);
-						return { id: v[i].id, text: v[i].title };
-					}
+				return { id: obj.id, text: obj.title };
 			    });
 			})
                     };
                 }
             }
-        });*/
-	   $("#post").select2({
-		placeholder: "Search for a repository",
-		minimumInputLength: 3,
-		ajax: {
-		    headers: {
-			'Access-Control-Allow-Origin': '*',
-		    },
-		    url: "http://tomeksdev.com/post/post.json",
-		    dataType: 'json',
-		    quietMillis: 250,
-		    data: function (term, page) { // page is the one-based page number tracked by Select2
-			return {
-			    q: term, //search term
-			    page: page // page number
-			};
-		    },
-		    results: function (data, page) {
-			var more = (page * 30) < data.posts.length; // whether or not there are more results available
-
-			// notice we return the value of more so Select2 knows if more results can be loaded
-			return { results: data.posts.title, more: more };
-		    }
-		},
-		escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
-	    });
+        });
 });
