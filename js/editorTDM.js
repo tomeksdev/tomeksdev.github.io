@@ -75,7 +75,7 @@ $(document).ready(function() {
 		      };
 		  },
 		  results: function(data, page) {
-		      return {results: data.posts};
+		      return {results: data};
 		  },
 		  cache: true
 	      },
@@ -89,4 +89,6 @@ $(document).ready(function() {
 		  return m;
 	      }
 	});
+	
+	$("#mySelect2").select2('data', { id:"elementID", text: "Hello!"});
 });
