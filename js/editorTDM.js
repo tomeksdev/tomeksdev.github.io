@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
 	
     	// Set up the Select2 control
-	 $('#post').select2({
+	 /*$('#post').select2({
             tags: true,
             ajax: {
                 headers: {
@@ -67,7 +67,7 @@ $(document).ready(function() {
 		url: "http://tomeksdev.com/post/post.json",
                 dataType: 'json',
 		type:"get",
-                processResults: function (data) {
+                processResults: function (data, params) {
                     return {
                         results: $.map(data.posts, function(obj) {
 			    return { id: obj.id, text: obj.title };
@@ -76,5 +76,62 @@ $(document).ready(function() {
                 }
             }
         });
+	
+	$('#post').on('select2:select', function (e) {
+	    var data = e.params.data;
+	    console.log(data);
+	});*/
+	$("#post").select2({
+	  ajax: {
+	    headers: {
+		'Access-Control-Allow-Origin': '*',
+	    },
+	    url: "http://tomeksdev.com/post/post.json",
+	    dataType: 'json',
+	    delay: 250,
+	    data: function (params) {
+	      return {
+		q: params.term, // search term
+		page: params.page
+	      };
+	    },
+	    processResults: function (data, params) {
+	      // parse the results into the format expected by Select2
+	      // since we are using custom formatting functions we do not need to
+	      // alter the remote JSON data, except to indicate that infinite
+	      // scrolling can be used
+	      params.page = params.page || 1;
 
+	      return {
+		results: data.posts,
+		pagination: {
+		  more: (params.page * 30) < data.total_count
+		}
+	      };
+	    },
+	    cache: true
+	  },
+	  placeholder: 'Search for a repository',
+	  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+	  minimumInputLength: 1,
+	  templateResult: formatRepo,
+	  templateSelection: formatRepoSelection
+	});
+
+	function formatRepo (repo) {
+	  if (repo.loading) {
+	    return repo.text;
+	  }
+
+	  var markup = "<div class='select2-result-repository clearfix'>" +
+	    "<div class='select2-result-repository__meta'>" +
+	      "<div class='select2-result-repository__title'>" + repo.title + "</div></div></div>";
+
+
+	  return markup;
+	}
+
+	function formatRepoSelection (repo) {
+	  return repo.title || repo.text;
+	}
 });
