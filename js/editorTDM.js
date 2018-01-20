@@ -59,6 +59,7 @@ $(document).ready(function() {
 	
     	// Set up the Select2 control
 	$('#post').select2({
+	    placeholder: 'Select post to editing',
 	    ajax: {
 		headers: {
 			'Access-Control-Allow-Origin': '*',
