@@ -59,34 +59,34 @@ $(document).ready(function() {
 	
     	// Set up the Select2 control
 	$('#post').select2({
-	    placeholder: 'Select post to editing',
-	    tags: true,
-	    ajax: {
-		headers: {
+	      placeholder: "Select post for editing",
+	      multiple: false,
+	      minimumInputLength: 1,
+	      ajax: {
+		  headers: {
 			'Access-Control-Allow-Origin': '*',
-		},
-		url: 'http://tomeksdev.com/post/post.json',
-		dataType: 'json',
-                type: "GET",
-                data: function (term) {
-			return {
-			    term: term.term
-			};
-                },
-		processResults: function (data) {
-                	var myResults = [];
-			$.each(data.posts, function (index, item) {
-			    myResults.push({
-				'title': item.title
-			    });
-			    console.log("ITEM: " + item.title);
-			});
-			console.log("Data: " + data.posts.title);
-			console.log("Results: " + myResults);
-			return {
-			    results: $.each(data.posts.title, function (index, item) { item })
-			};
-		}
-	    }
+		  },
+		  url: "http://tomeksdev.com/post/post.json",
+		  dataType: 'json',
+		  quietMillis: 250,
+		  data: function(term, page) {
+		      return {
+			  q: term,
+		      };
+		  },
+		  results: function(data, page) {
+		      return {results: data.posts};
+		  },
+		  cache: true
+	      },
+	      formatResult: function(element){
+		  return element.title + ' (' + element.id + ')';
+	      },
+	      formatSelection: function(element){
+		  return element.title + ' (' + element.id + ')';
+	      },
+	      escapeMarkup: function(m) {
+		  return m;
+	      }
 	});
 });
