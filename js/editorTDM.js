@@ -120,18 +120,18 @@ $(document).ready(function() {
 
 	function formatRepo (repo) {
 	  if (repo.loading) {
-	    return repo.posts.text;
+	    return repo.text;
 	  }
 
 	  var markup = "<div class='select2-result-repository clearfix'>" +
 	    "<div class='select2-result-repository__meta'>" +
-	      "<div class='select2-result-repository__title'>" + repo.posts.title + "</div></div></div>";
+	      "<div class='select2-result-repository__title'>" + repo.title + "</div></div></div>";
 
 
 	  return markup;
 	}
 
 	function formatRepoSelection (repo) {
-	  return repo.posts.title || repo.posts.text;
+	  return repo.title || repo.text;
 	}
 });
