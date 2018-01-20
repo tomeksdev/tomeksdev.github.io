@@ -60,11 +60,7 @@ $(document).ready(function() {
     	// Set up the Select2 control
 	$('#post').select2({
 	    placeholder: 'Select post to editing',
-	    data: function (term) {
-                return {
-                    term: term.term
-                };
-            },
+	    tags: true,
 	    ajax: {
 		headers: {
 			'Access-Control-Allow-Origin': '*',
