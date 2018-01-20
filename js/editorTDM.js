@@ -82,7 +82,7 @@ $(document).ready(function() {
 			    });
 			});
 			return {
-			    results: myResults
+			    results: data.posts
 			};
 		}
 	    }
