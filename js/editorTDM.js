@@ -85,6 +85,9 @@ $(document).ready(function() {
 		placeholder: "Search for a repository",
 		minimumInputLength: 3,
 		ajax: {
+		    headers: {
+			'Access-Control-Allow-Origin': '*',
+		    },
 		    url: "http://tomeksdev.com/post/post.json",
 		    dataType: 'json',
 		    quietMillis: 250,
