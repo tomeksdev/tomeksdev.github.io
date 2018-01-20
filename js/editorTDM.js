@@ -71,7 +71,7 @@ $(document).ready(function() {
                     return {
                         results: $.map(data.posts, function(obj) {
 				return { id: obj.id, text: obj.title }
-			});
+			})
                     };
                 }
             }
