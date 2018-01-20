@@ -85,7 +85,7 @@ $(document).ready(function() {
 			console.log("Results: " + myResults);
 			return {
 			    results: $.each(data.posts, function (index, item) {
-				    item.title
+				    item.title;
 				});
 			};
 		}
