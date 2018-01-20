@@ -56,4 +56,7 @@ $(document).ready(function() {
 	    
 	    savePost(id, title, text, author);
     });
+	
+    //Select2 function for post
+    $('#post').select2();
 });
