@@ -88,7 +88,7 @@ $(document).ready(function() {
 	    console.log(t);
 	    if (t=='djubrivo') {
 	       console.log('prolazi klik if');
-	       $('#stavka').select2({
+	       $('#post').select2({
 		  ajax: {
 		     headers: {
 			'Access-Control-Allow-Origin': '*',
