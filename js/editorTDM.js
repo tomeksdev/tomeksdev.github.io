@@ -69,19 +69,26 @@ $(document).ready(function() {
 		headers: {
 			'Access-Control-Allow-Origin': '*',
 		},
-		url: 'http://tomeksdev.com/post/post.json'
-	    },
-            processResults: function (data) {
-                var myResults = [];
-                $.each(data.posts, function (index, item) {
-                    myResults.push({
-                        'id': item.id,
-                        'title': item.title
-                    });
-                });
-                return {
-                    results: myResults
-                };
+		url: 'http://tomeksdev.com/post/post.json',
+		dataType: 'json',
+                type: "GET",
+                data: function (term) {
+			return {
+			    term: term.term
+			};
+                },
+		processResults: function (data) {
+                	var myResults = [];
+			$.each(data.posts, function (index, item) {
+			    myResults.push({
+				'id': item.id,
+				'title': item.title
+			    });
+			});
+			return {
+			    results: myResults
+			};
+		}
 	    }
 	});
 });
