@@ -105,8 +105,9 @@ $(document).ready(function() {
 		  },
 		  formatResult : formatDjubrivo
 	       });
-	    }else {
-	       console.log('nije djubrivo');
-	    }
+	}else {
+	       	console.log('nije djubrivo');
+	}
 	});
+		    
 });
