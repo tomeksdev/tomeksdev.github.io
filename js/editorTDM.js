@@ -79,10 +79,10 @@ $(document).ready(function() {
 			    myResults.push({
 				'title': item.title
 			    });
-			    console.log(item.title);
+			    console.log("ITEM: " + item.title);
 			});
-			console.log(data.posts.title);
-			console.log(myResults);
+			console.log("Data: " + data.posts.title);
+			console.log("Results: " + myResults);
 			return {
 			    results: myResults
 			};
