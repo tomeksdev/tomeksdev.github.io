@@ -71,8 +71,8 @@ $(document).ready(function() {
                     return {
                         results: $.map(data.posts, function(obj) {
 			    $.each(obj, function(i, v) {
-					if (v.name.search(new RegExp(params, "i")) != -1) {
-						return { id: obj[i].id, text: obj[i].title };
+					if (v.title.search(new RegExp(params, "i")) != -1) {
+						return { id: v[i].id, text: v[i].title };
 					}
 			    });
 			})
