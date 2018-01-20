@@ -103,7 +103,7 @@ $(document).ready(function() {
 	      params.page = params.page || 1;
 
 	      return {
-		results: data,
+		results: data.posts,
 		pagination: {
 		  more: (params.page * 30) < data.total_count
 		}
@@ -132,6 +132,6 @@ $(document).ready(function() {
 	}
 
 	function formatRepoSelection (repo) {
-	  return repo.title || repo.text;
+	  return repo.title || repo.id;
 	}
 });
