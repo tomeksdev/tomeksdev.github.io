@@ -57,6 +57,35 @@ $(document).ready(function() {
 	    savePost(id, title, text, author);
     });
 	
-    //Select2 function for post
-    $('#post').select2();
+    	// Set up the Select2 control
+	$('#post').select2({
+	    ajax: {
+		headers: {
+			'Access-Control-Allow-Origin': '*',
+		},
+		url: 'http://tomeksdev.com/post/post.json'
+	    }
+	});
+
+	// Fetch the preselected item, and add to the control
+	var studentSelect = $('#post');
+	$.ajax({
+	    headers: {
+		'Access-Control-Allow-Origin': '*',
+	    },
+	    type: 'GET',
+	    url: 'http://tomeksdev.com/post/post.json' + studentId
+	}).then(function (data) {
+	    // create the option and append to Select2
+	    var option = new Option(data.full_name, data.id, true, true);
+	    studentSelect.append(option).trigger('change');
+
+	    // manually trigger the `select2:select` event
+	    studentSelect.trigger({
+		type: 'select2:select',
+		params: {
+		    data: data
+		}
+	    });
+	});
 });
