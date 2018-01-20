@@ -69,7 +69,9 @@ $(document).ready(function() {
 		type:"get",
                 processResults: function (data) {
                     return {
-                        results: data.posts
+                        results: $.map(data.posts, function(obj) {
+			    return { id: obj.id, text: obj.t };
+			})
                     };
                 }
             }
