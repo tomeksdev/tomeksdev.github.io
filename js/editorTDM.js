@@ -74,10 +74,10 @@ $(document).ready(function() {
 		'Access-Control-Allow-Origin': '*',
 	    },
 	    type: 'GET',
-	    url: 'http://tomeksdev.com/post/post.json' + studentId
+	    url: 'http://tomeksdev.com/post/post.json'
 	}).then(function (data) {
 	    // create the option and append to Select2
-	    var option = new Option(data.full_name, data.id, true, true);
+	    var option = new Option(data.id, data.title, true, true);
 	    studentSelect.append(option).trigger('change');
 
 	    // manually trigger the `select2:select` event
