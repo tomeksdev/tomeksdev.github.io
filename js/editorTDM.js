@@ -71,7 +71,7 @@ $(document).ready(function() {
                     return {
                         results: $.map(data.posts, function(obj) {
 			    $.each(obj, function(i, v) {
-					if (v.title.search(new RegExp(params, "i")) != -1) {
+					if (v[i].title.search(new RegExp(params, "i")) != -1) {
 						console.log("ID: " + v[i].id + " Title: " + v[i].title);
 						return { id: v[i].id, text: v[i].title };
 					}
