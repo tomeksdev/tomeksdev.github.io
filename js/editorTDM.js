@@ -66,6 +66,7 @@ $(document).ready(function() {
 		},
 		url: "http://tomeksdev.com/post/post.json",
                 dataType: 'json',
+		type:"get",
                 processResults: function (data) {
                     return {
                         results: data
