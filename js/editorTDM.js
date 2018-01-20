@@ -80,7 +80,7 @@ $(document).ready(function() {
 	    // create the option and append to Select2
 	    var option = new Option(data.id, data.title, true, true);
 	    studentSelect.append(option).trigger('change');
-
+		console.log(data);
 	    // manually trigger the `select2:select` event
 	    studentSelect.trigger({
 		type: 'select2:select',
