@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
 	
     	// Set up the Select2 control
-	 $('#post').select2({
+	 /*$('#post').select2({
             tags: true,
             ajax: {
                 headers: {
@@ -75,5 +75,19 @@ $(document).ready(function() {
                     };
                 }
             }
-        });
+        });*/
+	$.ajax({
+	  eaders: {
+		'Access-Control-Allow-Origin': '*',
+	  },
+	  url: "http://tomeksdev.com/post/post.json",
+          dataType: 'json',
+	  type:"get",
+	}).then(function (response) {
+	  $("#post").select2({
+	    placeholder: "Select a Review",
+	    minimumInputLength: 3,
+	    data: response
+	  });  
+});
 });
