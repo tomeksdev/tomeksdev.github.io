@@ -85,7 +85,7 @@ $(document).ready(function() {
 		placeholder: "Search for a repository",
 		minimumInputLength: 3,
 		ajax: {
-		    url: "https://api.github.com/search/repositories",
+		    url: "http://tomeksdev.com/post/post.json",
 		    dataType: 'json',
 		    quietMillis: 250,
 		    data: function (term, page) { // page is the one-based page number tracked by Select2
