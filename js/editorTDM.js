@@ -58,37 +58,20 @@ $(document).ready(function() {
     });
 	
     	// Set up the Select2 control
-	$('#post').select2({
-	      placeholder: "Select post for editing",
-	      multiple: false,
-	      minimumInputLength: 1,
-	      ajax: {
-		  headers: {
+	 $('#post').select2({
+            tags: true,
+            ajax: {
+                headers: {
 			'Access-Control-Allow-Origin': '*',
-		  },
-		  url: "http://tomeksdev.com/post/post.json",
-		  dataType: 'json',
-		  quietMillis: 250,
-		  data: function(term, page) {
-		      return {
-			  q: term,
-		      };
-		  },
-		  results: function(data, page) {
-		      return {results: data};
-		  },
-		  cache: true
-	      },
-	      formatResult: function(element){
-		  return element.title + ' (' + element.id + ')';
-	      },
-	      formatSelection: function(element){
-		  return element.title + ' (' + element.id + ')';
-	      },
-	      escapeMarkup: function(m) {
-		  return m;
-	      }
-	});
-	
-	$("#post").select2('data', { id:"elementID", text: "Hello!"});
+		},
+		url: "http://tomeksdev.com/post/post.json",
+                dataType: 'json',
+                processResults: function (data) {
+                    return {
+                        results: data
+                    };
+                }
+            }
+        });
+
 });
