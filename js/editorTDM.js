@@ -95,7 +95,7 @@ $(document).ready(function() {
 			};
 		    },
 		    results: function (data, page) {
-			var more = (page * 30) < data.post.length; // whether or not there are more results available
+			var more = (page * 30) < data.posts.length; // whether or not there are more results available
 
 			// notice we return the value of more so Select2 knows if more results can be loaded
 			return { results: data.posts.title, more: more };
