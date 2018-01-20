@@ -70,7 +70,7 @@ $(document).ready(function() {
                 processResults: function (data) {
                     return {
                         results: $.map(data.posts, function(obj) {
-			    return { id: obj.id, text: obj.t };
+			    return { id: obj.id, text: obj.title };
 			})
                     };
                 }
