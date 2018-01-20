@@ -81,7 +81,7 @@ $(document).ready(function() {
 	    var data = e.params.data;
 	    console.log(data);
 	});*/
-	   $("#e7").select2({
+	   $("#post").select2({
 		placeholder: "Search for a repository",
 		minimumInputLength: 3,
 		ajax: {
