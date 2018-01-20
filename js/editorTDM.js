@@ -69,7 +69,7 @@ $(document).ready(function() {
 		type:"get",
                 processResults: function (data) {
                     return {
-                        results: data
+                        results: data.posts
                     };
                 }
             }
