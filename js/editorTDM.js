@@ -90,5 +90,5 @@ $(document).ready(function() {
 	      }
 	});
 	
-	$("#mySelect2").select2('data', { id:"elementID", text: "Hello!"});
+	$("#post").select2('data', { id:"elementID", text: "Hello!"});
 });
