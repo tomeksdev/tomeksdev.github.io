@@ -78,7 +78,7 @@ $(document).ready(function() {
 	    url: 'http://tomeksdev.com/post/post.json'
 	}).then(function (data) {
 	    // create the option and append to Select2
-	    var option = new Option(data.id, data.title, true, true);
+	    var option = new Option(data.posts.id, data.posts.title, true, true);
 	    studentSelect.append(option).trigger('change');
 		console.log(data);
 	    // manually trigger the `select2:select` event
