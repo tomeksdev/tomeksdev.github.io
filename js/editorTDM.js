@@ -76,18 +76,37 @@ $(document).ready(function() {
                 }
             }
         });*/
-	$.ajax({
-	  eaders: {
-		'Access-Control-Allow-Origin': '*',
-	  },
-	  url: "http://tomeksdev.com/post/post.json",
-          dataType: 'json',
-	  type:"get",
-	}).then(function (response) {
-	  $("#post").select2({
-	    placeholder: "Select a Review",
-	    minimumInputLength: 3,
-	    data: response
-	  });  
-});
+	function formatDjubrivo(data) {
+	    return data;
+	}
+	function formatDjubrivo1(data) {
+	    return data.ime;
+	}
+	$( "#post" ).change(function() {
+	    console.log('prolazi klik');
+	    var t = $( this ).val();
+	    console.log(t);
+	    if (t=='djubrivo') {
+	       console.log('prolazi klik if');
+	       $('#stavka').select2({
+		  ajax: {
+		     headers: {
+			'Access-Control-Allow-Origin': '*',
+			},
+			url: "http://tomeksdev.com/post/post.json",
+			dataType: 'json',
+			type:"get",
+		     processResults: function (data) {
+			    return {
+				results: $.map(data.posts, function(obj) {
+				    return { id: obj.id, text: obj.title };
+				})
+			    };
+		  },
+		  formatResult : formatDjubrivo
+	       });
+	    }else {
+	       console.log('nije djubrivo');
+	    }
+	});
 });
