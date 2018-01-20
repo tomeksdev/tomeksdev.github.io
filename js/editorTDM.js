@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
 	
     	// Set up the Select2 control
-	 $('#post').select2({
+	 /*$('#post').select2({
             tags: true,
             ajax: {
                 headers: {
@@ -80,8 +80,8 @@ $(document).ready(function() {
                     };
                 }
             }
-        });
-	   /*$("#post").select2({
+        });*/
+	   $("#post").select2({
 		placeholder: "Search for a repository",
 		minimumInputLength: 3,
 		ajax: {
@@ -101,9 +101,7 @@ $(document).ready(function() {
 			return { results: data.items, more: more };
 		    }
 		},
-		formatResult: repoFormatResult, // omitted for brevity, see the source of this page
-		formatSelection: repoFormatSelection, // omitted for brevity, see the source of this page
 		dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
 		escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
-	    });*/
+	    });
 });
