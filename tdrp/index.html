@@ -15,9 +15,11 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../design/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <!-- LOADING JS FILES -->
     <script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
     <script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
 </head>
 <body>
@@ -25,6 +27,7 @@
         <div class="row align-items-center pan">
             <div class="col-md-6 offset-md-3">
                 <form>
+                    <select name="post[]" id="post" class="select2" multiple></select>
                     <input type="text" placeholder="Your Title" id="title" />
                     <textarea col="50" class="post" row="4" id="mtext"></textarea>
                     <select id="author"></select>
