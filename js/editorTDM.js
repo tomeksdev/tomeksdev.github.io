@@ -77,12 +77,14 @@ $(document).ready(function() {
                 	var myResults = [];
 			$.each(data.posts, function (index, item) {
 			    myResults.push({
-				'id': item.id,
 				'title': item.title
 			    });
+			    console.log(item.title);
 			});
+			console.log(data.posts.title);
+			console.log(myResults);
 			return {
-			    results: data.posts.title
+			    results: myResults
 			};
 		}
 	    }
