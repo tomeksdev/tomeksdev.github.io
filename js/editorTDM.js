@@ -101,7 +101,6 @@ $(document).ready(function() {
 			return { results: data.items, more: more };
 		    }
 		},
-		dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
 		escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
 	    });
 });
