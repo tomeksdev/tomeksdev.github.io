@@ -1,5 +1,5 @@
-var editor = new Editor();
-editor.render();
+//var editor = new Editor();
+//editor.render();
 
 //Save posts to post.json file
 function savePost(id, title, text, author) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        url: "http://tomeksdev.com/post/post.json",
+        url: "file:///C:/Users/tomek/Documents/GitHub/tomeksdev.github.io/post/post.json",
         type: "get",
         dataType: 'json',
         success: function(data) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
             id = parseInt(data.posts[j].id) + 1;
             for (var i = 0; i < data.author.length; i++) {
-                $("#author").html('<option value="' + data.author[i].name + '">' + data.author[i].name + '</option>');
+                $("#author").html(data.author[i].name);
             }
 
         },
@@ -53,14 +53,14 @@ $(document).ready(function() {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        url: "http://tomeksdev.com/post/post.json",
+        url: "file:///C:/Users/tomek/Documents/GitHub/tomeksdev.github.io/post/post.json",
         type: "get",
         dataType: 'json',
         success: function(data) {
             for (var i = 0; i < data.posts.length; i++)
                 var j = i;
 
-            id = parseInt(data.posts[j].id) + 1;
+            id = parseInt(data.posts[j].id);
             for (var i = 0; i < data.posts.length; i++) {
                 $("#post").html('<option value="' + data.posts[i].id + '">' + data.posts[i].title + '</option>');
             }
