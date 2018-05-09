@@ -30,7 +30,7 @@ $(document).ready(function() {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        url: "file:///C:/Users/tomek/Documents/GitHub/tomeksdev.github.io/post/post.json",
+        url: "http://tomeksdev.com/post/post.json",
         type: "get",
         dataType: 'json',
         success: function(data) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        url: "file:///C:/Users/tomek/Documents/GitHub/tomeksdev.github.io/post/post.json",
+        url: "http://tomeksdev.com/post/post.json",
         type: "get",
         dataType: 'json',
         success: function(data) {
@@ -62,7 +62,7 @@ $(document).ready(function() {
 
             id = parseInt(data.posts[j].id);
             for (var i = 0; i < data.posts.length; i++) {
-                $("#post").html('<option value="' + data.posts[i].id + '">' + data.posts[i].title + '</option>');
+                $("#postNumber").html(i);
             }
 
         },

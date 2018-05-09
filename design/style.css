@@ -140,17 +140,20 @@ nav .active {
 
 .new {
     background-color: #009933;
-    padding: 80px;
+    padding: 30px;
     width: 100%;
 }
 
 .edit {
     background-color: #d80000;
-    padding: 80px;
+    padding: 30px;
     width: 100%;
 }
 
 .box-title{
     text-transform: uppercase;
     font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
 }
