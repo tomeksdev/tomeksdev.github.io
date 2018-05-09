@@ -41,7 +41,6 @@ $(document).ready(function() {
             for (var i = 0; i < data.author.length; i++) {
                 $("#author").html(data.author[i].name);
             }
-
         },
         error: function() {
             console.log("err");
@@ -60,11 +59,7 @@ $(document).ready(function() {
             for (var i = 0; i < data.posts.length; i++)
                 var j = i;
 
-            id = parseInt(data.posts[j].id);
-            for (var i = 0; i < data.posts.length; i++) {
-                $("#postNumber").html(i);
-            }
-
+            $("#postNumber").html(j);
         },
         error: function() {
             console.log("err");
