@@ -9,7 +9,7 @@ function savePost(id, title, text, author) {
         },
         type: "POST",
         //the url where you want to sent the userName and password to
-        url: 'http://tomeksdev.com/post/post.json',
+        url: 'http://localhost/tomeksdev/post/post.json',
         contentType: 'application/json',
         dataType: 'json',
         async: false,
@@ -30,40 +30,33 @@ $(document).ready(function() {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        url: "http://tomeksdev.com/post/post.json",
+        url: "http://localhost/tomeksdev/post/post.json",
         type: "get",
         dataType: 'json',
         success: function(data) {
-            for (var i = 0; i < data.posts.length; i++)
-                var j = i;
-
-            id = parseInt(data.posts[j].id) + 1;
-            for (var i = 0; i < data.author.length; i++) {
-                $("#author").html(data.author[i].name);
+            var post = "";
+            for (var i = 0; i < data.posts.length; i++) {
+                text = data.posts[i].text
+                text = text.substring(0, 50);
+                last = text.lastIndexOf(" ");
+                text = text.substring(0, last);
+                post += '<div class="col-md-12 row post-print"><div class="col-md-3"><div class="post-title">' + data.posts[i].title + '</div></div><div class="col-md-3"><div class="post-title">' 
+                        + data.posts[i].author + '</div></div><div class="col-md-3"><div class="post-title">' + text + '</div></div>'
+                        + '<div class="col-md-1"><div class="post-title"><a href="#edit" data-id="' + data.posts[i].id + '"><i class="fas fa-edit"></i></a></div></div></div>';
             }
+
+            $("#postNumber").html(data.posts.length);
+            $("#allPost .row").html(post);
         },
         error: function() {
             console.log("err");
         }
     });
 
+    $("#textarea").markdown({autofocus:false,savable:false});
 
-    $.ajax({
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
-        url: "http://tomeksdev.com/post/post.json",
-        type: "get",
-        dataType: 'json',
-        success: function(data) {
-            for (var i = 0; i < data.posts.length; i++)
-                var j = i;
-
-            $("#postNumber").html(j);
-        },
-        error: function() {
-            console.log("err");
-        }
+    $("#newPost").click(function() {
+        $("#modalNew").modal();
     });
 
     $("#submit").click(function() {

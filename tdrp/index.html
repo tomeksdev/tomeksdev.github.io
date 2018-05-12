@@ -11,7 +11,7 @@
     <link rel="stylesheet " href="http://cdn.jsdelivr.net/editor/0.1.0/editor.css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet " href="../design/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css " rel="stylesheet " />
     <!-- LOADING JS FILES -->
     <script src="http://cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
@@ -19,16 +19,16 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js "></script> -->
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row pan">
+    <div class="container-fluid pan">
+        <div class="row">
             <div class="col-md-2">
-                <a href="#newPost"><div class="new">
+                <a href="#newPost" id="newPost"><div class="new">
                     <div class="box-title">New Post</div>
                 </div><a>
             </div>
             <div class="col-md-2">
-                <a href="#editPost"><div class="edit">
-                    <div class="box-title">Edit Post</div>
+                <a href="#editPost" id="editPost"><div class="edit">
+                    
                 </div></a>
             </div>
             <div class="col-md-2">
@@ -38,12 +38,60 @@
                 </div>
             </div>
         </div>
-        <div class="row pan">
+        <div class="row">
             <div class="col-md-12">
                 <div class="box-title">All posts</div>
             </div>
-            <div class="col-md-6">
-                <div class="allPost"></div>
+            <div class="col-md-12">
+                <div id="allPost">
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal new post -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="modalNew" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">New Post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <input name="postTitle" type="text" placeholder="New post title" />
+                            <textarea name="postText" data-provide="markdown" rows="10" id="textarea"></textarea>
+                        </form> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal edit post -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="modalEdit" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <input type="text" name="postTitle" placeholder="New post title" />
+                            <textarea class="markdown" name="postText">
+    
+                            </textarea>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

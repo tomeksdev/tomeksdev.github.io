@@ -24,7 +24,6 @@ a:hover {
 
 html,
 body {
-    height: 100%;
     background-color: #0d0d0d;
     font-family: 'Roboto', sans-serif;
 }
@@ -145,7 +144,6 @@ nav .active {
 }
 
 .edit {
-    background-color: #d80000;
     padding: 30px;
     width: 100%;
 }
@@ -156,4 +154,18 @@ nav .active {
     font-family: 'Raleway', sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
+}
+
+.post-print {
+    padding: 5px;
+    border-bottom: 1px solid #333;
+}
+
+.post-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-title{
+    color: #000 !important;
 }
