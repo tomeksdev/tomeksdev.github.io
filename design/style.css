@@ -1,9 +1,9 @@
 /*
 Theme Name: TomeksDEV
-Theme URI: http://tomeksdev.github.io
-Author URI: http://tomeksdev.github.io
+Theme URI: https://tomeksdev.com
+Author URI: https://tomeksdev.com
 Description: This template is for TomeksDEV created by Tomo Novak.
-Version: 1.1.4
+Version: 2.0.1
 */
 
 @font-face {
@@ -112,6 +112,10 @@ nav .active {
     padding: 0 5px;
 }
 
+.description {
+    font-size: 20px;
+    font-weight: 300;
+}
 
 /* BLOG PAGE */
 
