@@ -6,6 +6,12 @@ Description: This template is for TomeksDEV created by Tomo Novak.
 Version: 1.1.4
 */
 
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('dist/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
 a,
 a:focus,
 a:hover {
@@ -26,6 +32,19 @@ html,
 body {
     background-color: #0d0d0d;
     font-family: 'Roboto', sans-serif;
+    background-image: url(images/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    color: #222;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    z-index: -2;
 }
 
 body {
@@ -44,6 +63,13 @@ body {
     border-top: 4px solid #d30000;
 }
 
+#canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 
 /* NAVIGATION MENU */
 
@@ -62,9 +88,8 @@ nav a:hover {
 }
 
 nav .active {
-    bottom-border: 1px solid #d80000;
+    border-bottom: 1px solid #d80000;
 }
-
 
 /* LOGO TEXT - front_page */
 
@@ -100,7 +125,26 @@ nav .active {
     font-size: 42px;
 }
 
-.lead {}
+.lead {
+    text-align: left !important;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: Courier, 'New Courier', monospace;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #262626;
+    color: #28a745;
+}
+
+img {
+    width: 100% !important;
+    height: auto;
+}
 
 
 /* CONTACT PAGE */
@@ -117,55 +161,4 @@ nav .active {
     .logo-text {
         font-size: 60px !important;
     }
-}
-
-
-/* Panel Editor */
-
-.CodeMirror {
-    background: #fff;
-    color: #000;
-    text-shadow: initial;
-    text-align: left;
-}
-
-.editor-toolbar {
-    background: #e1e1e1;
-}
-
-.pan {
-    margin-top: 50px;
-}
-
-.new {
-    background-color: #009933;
-    padding: 30px;
-    width: 100%;
-}
-
-.edit {
-    padding: 30px;
-    width: 100%;
-}
-
-.box-title{
-    text-transform: uppercase;
-    font-size: 3em;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-
-.post-print {
-    padding: 5px;
-    border-bottom: 1px solid #333;
-}
-
-.post-title{
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.modal-title{
-    color: #000 !important;
 }
