@@ -34,9 +34,8 @@ plugins:
 ---
 title: Jekyll Redirect 301
 redirect_from:
-    - /some/404/url/
-    - /another/404/url/
-permalink: /jekyll-redirect/
+    - https://tomeksdev.com
+permalink: https://tomeksdev.com/blog
 ---
 
 # Exclude from processing.
