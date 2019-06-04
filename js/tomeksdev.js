@@ -31,7 +31,7 @@ function getText(myUrl){
 $(document).ready(function() {
 	var fileNames = new Array();
     $.ajax({
-		  url: 'http://localhost/tomeksdev/post/',
+		  url: 'https://tomeksdev.com/post/',
 		  type: 'GET',
 		  contentType: 'text/markdown',
 		  dataType: 'html',
@@ -43,10 +43,11 @@ $(document).ready(function() {
 			});
 			var lastPost = fileNames.pop();
 
-			var text = markdown.toHTML(getText('http://localhost/tomeksdev/post/' + lastPost));
+			var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + lastPost));
 			var post = lastPost.split('_');
-			var postTitle = post[2].substr(0, post[2].lastIndexOf('.'));
+			var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
 			var title = postTitle.split('-');
+			console.log(title);
 			$('.blog .cover-heading').html(title.join(' '));
 			$('.blog .lead').html(text);
       	}
