@@ -1,16 +1,3 @@
-//Files
-function openFile(file) {
-	var extension = file.substr((file.lastIndexOf('.') + 1));
-	switch(extension) {
-		case 'md': {
-			return true;
-			break;
-		}
-		default:
-			return false;
-	}
-}
-
 //Markdown read
 function getText(myUrl){
 	var result = null;
@@ -29,24 +16,22 @@ function getText(myUrl){
 
 //jQuery function
 $(document).ready(function() {
-	var fileNames = new Array();
     $.ajax({
-		  url: 'https://raw.githubusercontent.com/tomeksdev/tomeksdev.github.io/master/post/',
+		  url: 'https://api.github.com/repos/tomeksdev/tomeksdev.github.io/git/trees/2f6d23565209e527786f4aa2d2691175cda96b45',
 		  type: 'GET',
 		  contentType: 'text/markdown',
-		  dataType: 'html',
+		  dataType: 'json',
       	success: function(data){
-			$(data).find('td > a').each(function(){
-				if(openFile($(this).attr('href'))){
-					fileNames.push($(this).attr('href'));
-				}           
-			});
-			var lastPost = fileNames.pop();
+			//Set post name in variable
+			var lastPost = data['tree'][0]['path'];
 
-			var text = markdown.toHTML(getText('https://raw.githubusercontent.com/tomeksdev/tomeksdev.github.io/master/post/' + lastPost));
+			//Get post text from file
+			var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + data['tree'][0]['path']));
+			//Split post file name for title and date
 			var post = lastPost.split('_');
 			var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
 			var title = postTitle.split('-');
+			//Show post on blog page
 			$('.blog .cover-heading').html(title.join(' '));
 			$('.blog .lead').html(text);
       	}
