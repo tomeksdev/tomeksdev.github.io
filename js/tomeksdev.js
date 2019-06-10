@@ -14,26 +14,99 @@ function getText(myUrl){
 	return result;
 }
 
+//Get month name
+function getMonthName(month){
+	if(month == "01") return "January";
+	if(month == "02") return "February";
+	if(month == "03") return "March";
+	if(month == "04") return "April";
+	if(month == "05") return "May";
+	if(month == "06") return "June";
+	if(month == "07") return "July";
+	if(month == "08") return "August";
+	if(month == "09") return "September";
+	if(month == "10") return "October";
+	if(month == "11") return "November";
+	if(month == "12") return "December";
+}
+
 //jQuery function
 $(document).ready(function() {
+
+	$.urlParam = function (name) {
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+						  .exec(window.location.search);
+	
+		return (results !== null) ? results[1] || 0 : false;
+	}
+
     $.ajax({
-		  url: 'https://api.github.com/repos/tomeksdev/tomeksdev.github.io/git/trees/2f6d23565209e527786f4aa2d2691175cda96b45',
+		  url: 'https://api.github.com/repos/tomeksdev/tomeksdev.github.io/contents/post',
 		  type: 'GET',
 		  contentType: 'text/markdown',
 		  dataType: 'json',
       	success: function(data){
 			//Set post name in variable
-			var lastPost = data['tree'][0]['path'];
+			var lastKey = Object.keys(data).sort().reverse()[0];
+			var lastPost = data[lastKey]['path'];
 
-			//Get post text from file
-			var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + data['tree'][0]['path']));
-			//Split post file name for title and date
-			var post = lastPost.split('_');
-			var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
-			var title = postTitle.split('-');
-			//Show post on blog page
-			$('.blog .cover-heading').html(title.join(' '));
-			$('.blog .lead').html(text);
+			if($.urlParam('post') != false) {
+				//Get post text from file
+				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('post')));
+
+				//Split post file name for title and date
+				var post = $.urlParam('post').split('_');
+				var dateSplit = post[0].split('-');
+				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
+				var title = postTitle.split('-');
+				var year = dateSplit[0];
+				var day = dateSplit[2];
+				var month = getMonthName(dateSplit[1]);
+
+				var date = "By Vujca " + day + " " + month + " " + year;
+
+				//Show post on blog page
+				$('.blog .cover-heading').html(title.join(' '));
+				$('.blog .lead').html(text);
+
+				//Show date
+				$('.blog .date').html(date);
+			}
+			else {
+				//Get post text from file
+				var text = markdown.toHTML(getText('https://tomeksdev.com/' + lastPost));
+
+				//Split post file name for title and date
+				var post = lastPost.split('_');
+				var dateSplit = post[0].split('-');
+				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
+				var title = postTitle.split('-');
+				var year = dateSplit[0].split('/');
+				var day = dateSplit[2];
+				var month = getMonthName(dateSplit[1]);
+
+				var date = "By Vujca " + day + " " + month + " " + year[1];
+
+				//Show post on blog page
+				$('.blog .cover-heading').html(title.join(' '));
+				$('.blog .lead').html(text);
+
+				//Show date
+				$('.blog .date').html(date);
+			}
+
+			//Archive links
+			var br = 5;
+			var i = 0;
+			if(lastKey < 5) br = 1 + parseInt(lastKey, 10);
+
+			while (i < br) {
+				var post = data[i]['name'].split('_');
+				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
+				var title = postTitle.split('-');
+				$('.blog-archive ul').append("<li><a href='https://tomeksdev.com/blog?post=" + data[i]['name'] + "'>" + title.join(' ') + "</a></li>");
+				i++;
+			}
       	}
     });
 });

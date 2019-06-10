@@ -31,7 +31,9 @@
         <div class="row align-items-center">
             <div class="col-md-6 offset-md-3">
                 <div class="contact">
-                    <div class="about"></div>
+                    <div class="about">
+                            <div class="fb-messengermessageus" messenger_app_id="442717329846759" page_id="609536219062933" color="blue" size="xlarge"></div>
+                    </div>
                     <div class="gmaps">
                         <iframe width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJj0o58jdLb0cRMJDt6s3thTI&key=AIzaSyAd4w712Yk27vhYr24IkVxfCliMRKl_sJM" allowfullscreen></iframe> 
                     </div>
@@ -55,5 +57,17 @@
     <script src="https://tomeksdev.com/design/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://tomeksdev.com/js/ie10-viewport-bug-workaround.js"></script>
+    <!--Facebook plugin-->
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        appId            : '442717329846759',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v3.3'
+        });
+    };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   </body>
 </html>

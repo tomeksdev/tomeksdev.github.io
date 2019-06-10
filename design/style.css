@@ -62,6 +62,7 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
+    width: 100% !important;
 }
 
 .ubuntu{
@@ -129,7 +130,16 @@ nav .active {
 }
 
 .lead {
+    font-family: 'Lato', sans-serif;
     text-align: left !important;
+    font-weight: 300;
+}
+
+.lead a,
+.lead a:focus,
+.lead a:hover {
+    color: #fd7e14 !important;
+    text-decoration: none;
 }
 
 pre {
@@ -144,11 +154,33 @@ pre {
     color: #28a745;
 }
 
+.blog ul li code{
+    font-size: 15px !important;
+}
+
 img {
     width: 100% !important;
     height: auto;
 }
 
+.date {
+    font-family: 'Lato', sans-serif;
+    text-align: left !important;
+    font-weight: 300;
+    font-size: 12px !important;
+    font-style: italic;
+}
+
+.blog-archive{
+    margin-top: 80px !important;
+    font-family: 'Lato', sans-serif;
+    text-align: left !important;
+    font-size: 15px;
+}
+
+.blog-archive ul li{
+    text-decoration: none;
+}
 
 /* CONTACT PAGE */
 
