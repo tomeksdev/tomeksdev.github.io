@@ -34,10 +34,9 @@ function getMonthName(month){
 $(document).ready(function() {
 
 	$.urlParam = function (name) {
-		var results = new RegExp('[\?&]' + name + '=([^&#]*)')
-						  .exec(window.location.search);
-	
-		return (results !== null) ? results[1] || 0 : false;
+		var results = window.location.search.split(name);
+						  	
+		return (results !== 0) ? results[1] || 0 : false;
 	}
 
     $.ajax({
@@ -50,15 +49,14 @@ $(document).ready(function() {
 			var lastKey = Object.keys(data).sort().reverse()[0];
 			var lastPost = data[lastKey]['path'];
 
-			if($.urlParam('post') != false) {
+			if($.urlParam('?') != 0) {
 				//Get post text from file
-				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('post')));
+				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('?') + ".md"));
 
 				//Split post file name for title and date
-				var post = $.urlParam('post').split('_');
+				var post = $.urlParam('?').split('_');
 				var dateSplit = post[0].split('-');
-				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
-				var title = postTitle.split('-');
+				var title = post[1].split('-');
 				var year = dateSplit[0];
 				var day = dateSplit[2];
 				var month = getMonthName(dateSplit[1]);
@@ -97,15 +95,16 @@ $(document).ready(function() {
 
 			//Archive links
 			var br = 5;
-			var i = 0;
-			if(lastKey < 5) br = 1 + parseInt(lastKey, 10);
+			var i = parseInt(lastKey, 10) + 1;
+			if(br > lastKey) br = 1 + parseInt(lastKey, 10);
 
-			while (i < br) {
-				var post = data[i]['name'].split('_');
+			while (br >= i && i != 0) {
+				var post = data[i - 1]['name'].split('_');
 				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
 				var title = postTitle.split('-');
-				$('.blog-archive ul').append("<li><a href='https://tomeksdev.com/blog?post=" + data[i]['name'] + "'>" + title.join(' ') + "</a></li>");
-				i++;
+				var url = data[i - 1]['name'].split('.');
+				$('.blog-archive ul').append("<li><a href='https://tomeksdev.com/blog/?" + url[0] + "'>" + title.join(' ') + "</a></li>");
+				i--;
 			}
       	}
     });
