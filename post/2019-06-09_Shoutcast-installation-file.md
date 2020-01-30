@@ -20,13 +20,15 @@ Test:
 
 - `Ubuntu 18.04 Desktop - WORKING`
 
-- `Ubuntu 16.04 LTS - NOT TESTED`
+- `Ubuntu 16.04 LTS - WORKING`
 
-- `Ubuntu 16.04 Desktop - NOT TESTED`
+- `Ubuntu 16.04 Desktop - WORKING`
 
-- `Debian 8 Jessie - NOT TESTED`
+- `Debian 8 Jessie - WORKING`
 
 - `Debian 9 Stretch - WORKING`
+
+- `Debian 10 Buster - WORKING`
 
 
 
