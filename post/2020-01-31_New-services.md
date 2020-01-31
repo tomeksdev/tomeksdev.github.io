@@ -5,6 +5,7 @@ Our servers are co-located at **_Contabo's_** best-in-class datacenter, ensuring
 ![Alt](https://tomeksdev.com/design/images/plesk_logo_4c_primary_positive_cmyk.jpg "Plesk")
 
 Our servers are based on linux OS ([Ubuntu](https://ubuntu.com/)) with the latest plesk panel ([Obsidian](https://www.plesk.com/)), with mandatory constant updating and maintenance of the service available to you for 0-24 hours.
+
 - The backup is started every day and is saved if there is a need for a restore 
 - Each user receives login information for a plesk panel from which they can manage their web site, mail
 
