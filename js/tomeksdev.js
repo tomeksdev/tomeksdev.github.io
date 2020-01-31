@@ -33,6 +33,12 @@ function getMonthName(month){
 //jQuery function
 $(document).ready(function() {
 
+	var constantsURL = 'https://tomeksdev.com/';
+	$('.nav-masthead a').each(function() {
+		var originalAction = $(this).attr('href');
+		$(this).attr('href', originalAction.replace('{{url}}', constantsURL));
+	});
+
 	$.urlParam = function (name) {
 		var results = window.location.search.split(name);
 						  	
