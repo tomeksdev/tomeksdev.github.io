@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TomeksDEV - Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="https://tomeksdev.com/design/images/favicon-32x32.png" sizes="32x32" />
+    <meta name="description" content="Develop web, mobile applications with html, css, javascript, nodejs, raspberry...">
+    <meta name="keywords" content="nodejs, javascript, jquery, html, css, tomeksdev, developer, development, developing, raspberry, pi">
+    <meta name="author" content="Tomo Novak">
+    <!-- Facebook Meta -->
+    <meta property="og:url" content="{{postURL}}">
+    <meta property="og:title" content="{{postTitle}}">
+    <meta property="og:description" content="{{postDesc}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{postImg}}">
+    <meta property="og:image:secure_url" content="{{postImg}}">
+    <meta property="og:image:type" content="image/png">
+    <!-- LOADING CSS FILES -->
+    <link rel="stylesheet" href="https://tomeksdev.com/design/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://tomeksdev.com/design/style.css">
+    <link rel="stylesheet" type="text/css" href="css/live.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="https://tomeksdev.com/design/font-awesome/css/font-awesome.min.css">
+    <!-- LOADING JS FILES -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149612850-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149612850-1');
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <canvas id="canvas"></canvas>
+        <div class="row align-items-start">
+            <div class="col-md-6 offset-md-3 logo-margin">
+                <div class="logo-live">
+                        <span class="logo-normaltext">Tomeks</span>
+                        <span class="logo-smalltext">DEV</span>
+                        <span class="logo-livetext">LiveStream</span>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6 offset-md-3" id="live">
+                <div class="ready-player-1 player">
+                    <audio crossorigin data-name="Radio 105">
+                        <source src="http://194.56.74.7:8050/;" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-2 player">
+                    <audio crossorigin data-name="Radio Kaj">
+                        <!--<source src="http://144.76.172.23:7051/;" type="audio/mpeg">-->
+                        <source src="http://144.76.172.23:7051/;" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-3 player">
+                    <audio crossorigin data-name="SjeverniFM">
+                        <source src="http://centova-cloud01.novi-net.net:8000/stream" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-4 player">
+                    <audio crossorigin data-name="Narodni Radio">
+                        <source src="http://live.narodni.hr:8059/;" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-5 player">
+                    <audio crossorigin data-name="Antena Zagreb">
+                        <source src="http://live.antenazagreb.hr:8000/;" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-6 player">
+                    <audio crossorigin data-name="Radio Megaton">
+                        <source src="http://centova-cloud01.novi-net.net:8006/stream" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="ready-player-7 player">
+                    <audio data-name="Radio Čakovec(HRČAK)">
+                        <source src="http://144.76.39.214:7000/;" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom">
+            <div class="col-md-6 offset-md-3 footer">
+                <p>2020 &copy; <a href="{{url}}">TomeksDEV</a>, by <a href="https://www.facebook.com/vujca">@Vujca</a>.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://tomeksdev.com/js/markdown.js"></script>
+    <script src="../js/tomeksdev.js"></script>
+    <script>window.jQuery || document.write('<script src="https://tomeksdev.com/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://tomeksdev.com/js/vendor/popper.min.js"></script>
+    <script src="https://tomeksdev.com/design/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://tomeksdev.com/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- AUDIO JavaScript load -->
+    <script type="text/javascript" src="js/audio.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            GreenAudioPlayer.init({
+                selector: '.player',
+                stopOthersOnPlay: true
+            });
+
+            GreenAudioPlayer.init({
+                selector: '.player-with-download',
+                stopOthersOnPlay: true,
+                showDownloadButton: true,
+                enableKeystrokes: true
+            });
+
+            GreenAudioPlayer.init({
+                selector: '.player-with-accessibility',
+                stopOthersOnPlay: true,
+                enableKeystrokes: true
+            });
+        });
+    </script>
+  </body>
+</html>

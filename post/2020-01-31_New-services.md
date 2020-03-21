@@ -2,7 +2,7 @@ We are monitoring the development of web hosting and Internet services, so we de
 We uncompromisingly choose the best for our partners.
 Our servers are co-located at **_Contabo's_** best-in-class datacenter, ensuring premium bandwidth and fastest access (lowest ping! higgest performance!).
 
-![Alt](https://tomeksdev.com/design/images/plesk_logo_4c_primary_positive_cmyk.jpg "Plesk")
+![Alt](https://tomeksdev.com/postImages/plesk.jpg "Plesk")
 
 Our servers are based on linux OS ([Ubuntu](https://ubuntu.com/)) with the latest plesk panel ([Obsidian](https://www.plesk.com/)), with mandatory constant updating and maintenance of the service available to you for 0-24 hours.
 

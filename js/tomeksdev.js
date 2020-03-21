@@ -113,7 +113,7 @@ $(document).ready(function() {
 				i--;
 			}
       	}
-    });
+	});
 });
 
 //CANVAS

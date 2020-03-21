@@ -2,11 +2,20 @@
 TomeksDEV Github Page! https://tomeksdev.com
 
 Website is created with Bootstrap library, jQuery, json, markdown.
-Version: v2.1.0
+Version: ![Version Info](https://tomeksdev.com/postImages/svg/version.svg)
 
 # NEWS
 
-##### version <span style="color: #31B404">2.1.0</span> stable
+#### New version ![Version Info](https://tomeksdev.com/postImages/svg/version.svg)
+- added new images and link on the Home page
+- added new images and link on the underconstucrion page
+- added new Web Hosting packages
+- Edited and added new text on Home page
+- added link's on contact page
+
+----------------------------------------------
+
+#### Old version ![Version Info](https://tomeksdev.com/postImages/svg/version_2.1.0.svg)
 - added js constantsURL for links
 - added new page: hosting (Under Construction)
 - new post: New services!
@@ -17,16 +26,7 @@ Version: v2.1.0
 
 ----------------------------------------------
 
-##### version <span style="color: #B4045F">2.1.1</span> planning
-- create hosting page full
-- create order page with entering information about customers
-- add new images of hosting plans
-- write all information about web hosting services
-- add cookie information on website
-
-------------------------------------------
-
-##### version <span style="color: #d30000">2.0.5</span> old
+#### Old Version ![Version Info](https://tomeksdev.com/postImages/svg/version_2.0.5.svg)
 - created basic web site template
 - added images for Ubuntu and TomeksDEV
 - added SEO tags for facebook, twitter
