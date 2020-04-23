@@ -1,0 +1,6 @@
+- Plesk panel
+- 10 GB Storage
+- 100 Mailbox (1GB per mailbox)
+- Unlimited bandwidth
+- Wordpress, Joomla applications
+- 99% server uptime
