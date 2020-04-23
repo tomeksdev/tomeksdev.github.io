@@ -1,4 +1,4 @@
- |
+Test |
 ------------ |
 Plesk panel |
 1 GB Storage |
