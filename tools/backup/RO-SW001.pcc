@@ -1,0 +1,39 @@
+; JL357A Configuration Editor; Created on release #YC.16.10.0002
+; Ver #14:27.44.38.04.99.03.b3.b8.ef.74.61.fc.68.f3.8c.fc.e3.ff.37.2f:33
+
+hostname "RO-SW001"
+module 1 type jl357a
+interface 49
+   name " UP-Link Sophos"
+   exit
+interface 50
+   name " UP-Link RO-SW002"
+   exit
+interface 51
+   disable
+   exit
+interface 52
+   disable
+   exit
+snmp-server community "rosenheim" unrestricted
+snmp-server contact "support@sonextis.de" location "Rosenheim"
+vlan 1
+   name "Internal Network"
+   no untagged 36,43,48
+   untagged 1-35,37-42,44-47,49-52
+   ip address 192.168.3.252 255.255.255.0
+   exit
+vlan 53
+   name "PACS Network"
+   untagged 36,43,48
+   tagged 49-50
+   ip address 192.168.53.252 255.255.255.0
+   exit
+management-vlan 1
+no tftp server
+no autorun
+no dhcp config-file-update
+no dhcp image-file-update
+no dhcp tr69-acs-url
+password manager
+
