@@ -1,0 +1,497 @@
+/*
+Theme Name: TomeksDEV
+Theme URI: https://tomeksdev.com
+Author URI: https://tomeksdev.com
+Description: This template is for TomeksDEV created by Tomo Novak.
+Version: 3.0.0
+*/
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('dist/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+a,
+a:focus,
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: #fff;
+    border: .05rem solid #fff;
+}
+
+html,
+body {
+    /*background-color: #0d0d0d;*/
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    z-index: -2;
+}
+
+/* HEADER */
+
+.navi {
+    background-color: #333;
+    height: 40px;
+}
+
+.logo {
+    width: 100%;
+    padding: 0px 5px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+.first {
+    font-size: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+
+.second {
+    font-size: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    background: #d80000;
+    padding: 5px 5px;
+}
+
+/* NAVIGATION MENU */
+
+nav {
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+    line-height: 40px;
+}
+
+.navlink {
+    /*padding: 5px;*/
+    padding: 10px 10px;
+}
+
+nav a:hover {
+    background-color: #d80000;
+}
+
+nav .active {
+    background-color: #d80000;
+}
+
+/* IMAGE ROTATE */
+.img-content{
+    padding: 0px;
+}
+
+.img-rotate{
+    background: red;
+    width: 100%;
+}
+
+.dark{
+    /*height: 400px;*/
+    background-color: #262626;
+}
+
+.light{
+    height: 400px;
+    background-color: #333;
+}
+
+/* FOOTER */
+.footer{
+    height: 200px !important;
+}
+
+/* SLIDER */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+img {
+  max-width: 100%;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 8rem;
+  z-index: 9;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 500ms ease opacity, 500ms ease transform;
+  transform: translateY(60px);
+}
+.caption.current-caption {
+  transition-delay: 1000ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+.caption.previous-caption {
+  transform: translateY(-60px);
+}
+.caption .caption-heading {
+  transition: 500ms ease-in all;
+}
+.caption .caption-heading h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-indent: -0.2rem;
+  letter-spacing: .2rem;
+  font-weight: 300;
+}
+.caption .caption-subhead {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
+  word-spacing: .1rem;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+.caption a.btn {
+  color: #333;
+  font-size: 0.8rem;
+  text-decoration: none;
+  background-color: white;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  position: relative;
+  z-index: 9;
+  transition: 250ms ease-in background-color, 500ms ease-in color;
+}
+.caption a.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  background-color: #2C302E;
+  display: flex;
+  position: relative;
+  max-width: none !important;
+  padding: 0;
+}
+
+.left-col, .right-col {
+  width: 100%;
+  box-sizing: border-box;
+  height: calc(100% - 0rem);
+  overflow: hidden;
+}
+
+.left-col {
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+.left-col .slide {
+  filter: grayscale(100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: left top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 1000ms cubic-bezier(1, 0.04, 0.355, 1) transform, 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) clip-path;
+  transform: translateY(-100%);
+  scale: 1;
+  z-index: -1;
+}
+.left-col .slide.previous {
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0);
+  animation-delay: 1s;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: 3s ease transform;
+  will-change: transform;
+}
+.left-col .slide.previous.change {
+  transform: translateY(50%);
+}
+.left-col .slide.next {
+  transform: translateY(-100%);
+  z-index: 3;
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+.left-col .slide.current {
+  opacity: 1;
+  transform: translateY(0) scale(1.25);
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.right-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-col .preview {
+  max-width: 400px;
+}
+
+.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  overflow: hidden;
+}
+.nav a {
+  color: #fafafa;
+  font-size: 3rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.nav:hover .slide-up, .nav:hover .slide-down {
+  opacity: .5;
+  transform: translateX(0);
+}
+.nav .slide-up, .nav .slide-down {
+  display: block;
+  position: absolute;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: .25s ease opacity,.25s ease transform;
+  z-index: 99;
+}
+.nav .slide-up:hover, .nav .slide-down:hover {
+  opacity: 1;
+}
+.nav .slide-up a, .nav .slide-down a {
+  text-decoration: none;
+  font-weight: 300 !important;
+}
+.nav .slide-up {
+  top: 35%;
+  left: 0;
+  transform: translateX(-100%);
+}
+.nav .slide-down {
+  top: 35%;
+  right: 0;
+  transform: translateX(100%);
+}
+
+/***********************
+ *	Variables
+ **********************/
+/***********************
+ *	Project Main Styles
+ **********************/
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ body {
+   font-family: "Open Sans", sans-serif;
+   background-color: #282828;
+ }
+
+ .container-fluid{
+     padding: 0 !important;
+ }
+ 
+.col-sm-6{
+    position: absolute !important;
+}
+
+ .slider-pages {
+   overflow: hidden;
+   position: relative;
+   height: 100vh;
+ }
+ 
+ .slider-page {
+   position: absolute;
+   top: 0;
+   width: 50%;
+   height: 100vh;
+   -webkit-transition: -webkit-transform 1350ms;
+   transition: -webkit-transform 1350ms;
+   transition: transform 1350ms;
+   transition: transform 1350ms, -webkit-transform 1350ms;
+ }
+ 
+ .slider-page--skew {
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   width: 140%;
+   height: 100%;
+   background: #202020;
+   -webkit-transform: skewX(-18deg);
+           transform: skewX(-18deg);
+ }
+ 
+ .slider-page--left {
+   left: 0;
+   -webkit-transform: translateX(-32.5vh) translateY(100%) translateZ(0);
+           transform: translateX(-32.5vh) translateY(100%) translateZ(0);
+ }
+ .slider-page--left .slider-page--skew {
+   left: -40%;
+ }
+ .slider-page--left .slider-page__content {
+   padding: auto 30% auto 30%;
+   -webkit-transform-origin: 100% 0;
+           transform-origin: 100% 0;
+ }
+ 
+ .slider-page--right {
+   left: 50%;
+   -webkit-transform: translateX(32.5vh) translateY(-100%) translateZ(0);
+           transform: translateX(32.5vh) translateY(-100%) translateZ(0);
+ }
+ .slider-page--right .slider-page--skew {
+   right: -40%;
+ }
+ .slider-page--right .slider-page__content {
+   padding: auto 30% auto 30%;
+   -webkit-transform-origin: 0 100%;
+           transform-origin: 0 100%;
+ }
+ 
+ .slider-page__content {
+   position: absolute;
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+           align-items: center;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+           flex-flow: column wrap;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 0 30% 0 30%;
+   color: #e2e2e2;
+   background-size: cover;
+   -webkit-transform: skewX(18deg);
+           transform: skewX(18deg);
+   -webkit-transition: -webkit-transform 1350ms;
+   transition: -webkit-transform 1350ms;
+   transition: transform 1350ms;
+   transition: transform 1350ms, -webkit-transform 1350ms;
+ }
+ 
+ .slider-page__title {
+   margin-bottom: 1em;
+   font-size: 1em;
+   text-align: center;
+ }
+ 
+ .slider-page__title--big {
+   font-size: 1.2em;
+ }
+ 
+ .slider-page__description {
+   font-size: 1em;
+   text-align: center;
+   z-index: -1;
+ }
+ 
+ .slider-page__link {
+   color: #80a1c1;
+ }
+ .slider-page__link:hover, .slider-page__link:focus {
+   color: #6386a9;
+   text-decoration: none;
+ }
+ 
+ /***********************
+  *	Project JS Styles
+  **********************/
+ .js-scrolling__page {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+ }
+ 
+ .js-scrolling--active .slider-page {
+   -webkit-transform: translateX(0) translateY(0) translateZ(0);
+           transform: translateX(0) translateY(0) translateZ(0);
+ }
+ 
+ .js-scrolling--inactive .slider-page__content {
+   -webkit-transform: skewX(18deg) scale(0.9);
+           transform: skewX(18deg) scale(0.9);
+ }
+ 
+ .js-scrolling__page-1 .slider-page--left .slider-page__content {
+   background-image: url("images/back.png");
+ }
+ .js-scrolling__page-1 .slider-page--right .slider-page__content {
+   /*background-color: #282828;*/
+ }
+ 
+ .js-scrolling__page-2 .slider-page--left .slider-page__content {
+   /*background-color: #282828;*/
+ }
+ .js-scrolling__page-2 .slider-page--left .slider-page__title,
+ .js-scrolling__page-2 .slider-page--left .slider-page__description {
+   color: #e2e2e2;
+ }
+ .js-scrolling__page-2 .slider-page--right .slider-page__content {
+   background-image: url("images/back.png");
+ }
+ 
+ .js-scrolling__page-3 .slider-page--left .slider-page__content {
+   background-image: url("images/back.png");
+ }
+ .js-scrolling__page-3 .slider-page--right .slider-page__content {
+  /* background-color: #282828;*/
+ }
+ 
+ .ubuntu{
+    max-width:20% !important;
+    height:auto;
+    margin-right: 20px;
+}
+
+/* Background Video */
+
+.video-container {
+  position: absolute;
+  z-index: -2;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
