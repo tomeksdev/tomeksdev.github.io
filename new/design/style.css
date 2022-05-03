@@ -14,6 +14,7 @@ body{
   overflow: none;
   background-color: #0d0d0d;
   color: #fff;
+  z-index: -1;
 }
 
 /* LOGO TEXT - front_page */
@@ -26,6 +27,8 @@ body{
     font-weight: 300;
     color: #fff;
     text-align: center;
+    z-index: 0;
+    position: relative;
 }
 
 .logo-normaltext {
@@ -56,8 +59,9 @@ body{
     display: block;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 3;
     width: 100% !important;
+    height: 100%;
 }
 
 .ubuntu{
