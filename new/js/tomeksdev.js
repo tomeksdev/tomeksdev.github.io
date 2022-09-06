@@ -67,14 +67,14 @@ $(document).ready(function() {
 				var day = dateSplit[2];
 				var month = getMonthName(dateSplit[1]);
 
-				var date = "By Vujca " + day + " " + month + " " + year;
+				var date = day + " " + month + " " + year;
 
 				//Show post on blog page
-				$('.blog .cover-heading').html(title.join(' '));
-				$('.blog .lead').html(text);
+				$('.postHome .postTitleHomeBig').html(title.join(' '));
+				//$('.blog .lead').html(text);
 
 				//Show date
-				$('.blog .date').html(date);
+				$('.postHome .postDateHomeBig').html(date);
 			}
 			else {
 				//Get post text from file
