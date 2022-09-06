@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 	$.urlParam = function (name) {
 		var results = window.location.search.split(name);
-						  	
+		console.log("New start! URL Param");
 		return (results !== 0) ? results[1] || 0 : false;
 	}
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
 			else {
 				//Get post text from file
 				var text = markdown.toHTML(getText('https://tomeksdev.com/' + lastPost));
-
+				console.log("New start! Post write wrong");
 				//Split post file name for title and date
 				var post = lastPost.split('_');
 				var dateSplit = post[0].split('-');
