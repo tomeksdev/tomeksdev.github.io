@@ -41,22 +41,22 @@ $(document).ready(function() {
 
 	$.urlParam = function (name) {
 		var results = window.location.search.split(name);
-		console.log("New start! URL Param");
 		return (results !== 0) ? results[1] || 0 : false;
 	}
 
     $.ajax({
-		  url: 'https://api.github.com/repos/tomeksdev/tomeksdev.github.io/contents/post',
 		  type: 'GET',
-		  contentType: 'text/markdown',
+		  contentType: 'json',
 		  dataType: 'json',
+		  async: false,
+		  url: 'https://tomeksdev.com/new/post/post.json',
       	success: function(data){
-			console.log("New start! Read");
+			console.log(data);
 			//Set post name in variable
 			var lastKey = Object.keys(data).sort().reverse()[0];
 			var lastPost = data[lastKey]['path'];
-
-			if($.urlParam('?') != 0) {
+			console.log(lastPost);
+			/*if($.urlParam('?') != 0) {
 				//Get post text from file
 				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('?') + ".md"));
 				console.log("New start! Post write");
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 				//Show post on blog page
 				$('.postHome .postTitleHomeBig').html(title.join(' '));
-				//$('.blog .lead').html(text);
+				$('.blog .lead').html(text);
 
 				//Show date
 				$('.postHome .postDateHomeBig').html(date);
@@ -98,21 +98,7 @@ $(document).ready(function() {
 
 				//Show date
 				$('.postHome .postDateHomeBig').html(date);
-			}
-
-			//Archive links
-			var br = 5;
-			var i = parseInt(lastKey, 10) + 1;
-			if(br > lastKey) br = 1 + parseInt(lastKey, 10);
-
-			while (br >= i && i != 0) {
-				var post = data[i - 1]['name'].split('_');
-				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
-				var title = postTitle.split('-');
-				var url = data[i - 1]['name'].split('.');
-				$('.blog-archive ul').append("<li><a href='https://tomeksdev.com/blog/?" + url[0] + "'>" + title.join(' ') + "</a></li>");
-				i--;
-			}
+			}*/
       	}
 	});
 });
