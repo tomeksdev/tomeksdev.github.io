@@ -94,7 +94,8 @@ $(document).ready(function() {
 						var year = dateSplit[0];
 						var day = dateSplit[2];
 						var month = getMonthName(dateSplit[1]);
-						var image = data[i].image;
+						var imageBig = data[i].imageBig;
+						var imageSmall = data[i].imageSmall;
 				
 						var date = day + " " + month + " " + year;
 
@@ -107,7 +108,7 @@ $(document).ready(function() {
 							$('.postHomeBig .postDateHomeBig').html(date);
 
 							//Show image
-							$("img .bigHome").attr('src','https://tomeksdev.com/new/postImages/' + image);
+							$(".bigHome").attr('src','postImages/' + imageBig);
 						}
 						else if(i == (lastKey - 1)){
 							//Show post on home page
@@ -118,7 +119,7 @@ $(document).ready(function() {
 							$('.postHomeSmall-1 .postDateHomeBig').html(date);
 
 							//Show image
-							$("img .smallHome-1").attr('src','https://tomeksdev.com/new/postImages/' + image);
+							$(".smallHome-1").attr('src','postImages/' + imageSmall);
 						}
 						else if (i == (lastKey - 2)) {
 							//Show post on home page
@@ -129,7 +130,7 @@ $(document).ready(function() {
 							$('.postHomeSmall-2 .postDateHomeBig').html(date);
 
 							//Show image
-							$("img .smallHome-2").attr('src','https://tomeksdev.com/new/postImages/' + image);
+							$(".smallHome-2").attr('src','postImages/' + imageSmall);
 						}
 						else{
 							console.log("Append all other posts!");
