@@ -32,7 +32,7 @@ function getMonthName(month){
 
 //jQuery function
 $(document).ready(function() {
-
+	console.log("New start!");
 	var constantsURL = 'https://tomeksdev.com/';
 	$('.nav-masthead a').each(function() {
 		var originalAction = $(this).attr('href');
@@ -51,6 +51,7 @@ $(document).ready(function() {
 		  contentType: 'text/markdown',
 		  dataType: 'json',
       	success: function(data){
+			console.log("New start! Read");
 			//Set post name in variable
 			var lastKey = Object.keys(data).sort().reverse()[0];
 			var lastPost = data[lastKey]['path'];
@@ -58,7 +59,7 @@ $(document).ready(function() {
 			if($.urlParam('?') != 0) {
 				//Get post text from file
 				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('?') + ".md"));
-
+				console.log("New start! Post write");
 				//Split post file name for title and date
 				var post = $.urlParam('?').split('_');
 				var dateSplit = post[0].split('-');
