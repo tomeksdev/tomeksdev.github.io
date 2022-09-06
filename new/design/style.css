@@ -1,0 +1,256 @@
+/*
+Theme Name: TomeksDEV
+Theme URI: https://tomeksdev.com
+Author URI: https://tomeksdev.com
+Description: This template is for TomeksDEV created by Tomo Novak.
+Version: 2.1.1
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('dist/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+img {
+  overflow:hidden;
+}
+
+html,
+body{
+  margin: 0px;
+  overflow: none;
+  background-color: #0d0d0d;
+  color: #fff;
+  z-index: -1;
+}
+
+.padding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.margin {
+  margin: 0 !important;
+}
+
+/* LOGO TEXT - front_page */
+.logo-text {
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+
+.logo-normaltext {
+  padding: 0;
+}
+
+.logo-smalltext {
+  color: #fff;
+  background: #d80000;
+  padding: 0 5px;
+}
+
+/* MENU - Links */
+nav {
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+.navlink {
+    padding: 20px;
+    margin-left: -3px;
+}
+
+nav a:hover {
+    background-color: #d80000;
+    border-bottom: 1px solid #d80000;
+}
+
+nav .active {
+    background-color: #d80000;
+    border-bottom: 1px solid #d80000;
+}
+
+/* HOME - Main page*/
+.home .col-sm-6 {
+  padding-left: 0px !important;
+}
+
+.home-small-img {
+  height: 100% !important; 
+  width: 100% !important;
+}
+
+.home-small-img img {
+  height: 100% !important;
+  background-size:cover;
+  background-position:50% 50%;
+}
+
+.mask-overlay {
+  position: relative;
+  display: block;
+  overflow:hidden;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.mask-overlay img {
+  width: 100%;
+  transition: transform 1s ease-in-out;
+  transform-origin: 50% 50%
+}
+
+.mask-overlay:hover img {
+  transform: scale(1.2);
+  width: 100%;
+}
+
+.mask-overlay:hover {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  opacity:0.7;
+}
+
+.mask-overlay:focus {
+  animation-play-state: paused;
+  opacity: 0.7;
+}
+
+.mask-overlay:after{
+  content: "";
+  background: -webkit-linear-gradient(130deg, rgba(67,9,242,0.35) 0%, rgba(242,0,238,0.44) 90%);
+  background: linear-gradient(130deg, rgba(67,9,242,0.35) 0%, rgba(242,0,238,0.44) 90%);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.postHome {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+
+.postDateHomeBig {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.postTitleHomeBig {
+  position: absolute;
+  left: 10px;
+  top: 75%;
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.postDescHomeBig {
+  position: absolute;
+  left: 30px;
+  top: 90%;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.postTitleHomeSmall {
+  position: absolute;
+  left: 10px;
+  top: 60%;
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.postDescHomeSmall {
+  position: absolute;
+  left: 30px;
+  top: 85%;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.text-bg-secondary {
+  background-color: #5E2750 !important;
+}
+
+.card-body {
+  background-color: #772953 !important;
+}
+
+.card-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.card-date {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.card-text {
+  color: #AEA79F !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+/* FOOTER */
+.footer{
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.footer a{
+  color: #d30000;
+}
+
+/* ANIMATIONS */
