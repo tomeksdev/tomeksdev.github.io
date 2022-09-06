@@ -90,14 +90,14 @@ $(document).ready(function() {
 				var day = dateSplit[2];
 				var month = getMonthName(dateSplit[1]);
 
-				var date = "By Vujca " + day + " " + month + " " + year[1];
+				var date = day + " " + month + " " + year[1];
 
 				//Show post on blog page
-				$('.blog .cover-heading').html(title.join(' '));
+				$('.postHome .postTitleHomeBig').html(title.join(' '));
 				$('.blog .lead').html(text);
 
 				//Show date
-				$('.blog .date').html(date);
+				$('.postHome .postDateHomeBig').html(date);
 			}
 
 			//Archive links
