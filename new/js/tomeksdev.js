@@ -32,7 +32,6 @@ function getMonthName(month){
 
 //jQuery function
 $(document).ready(function() {
-	console.log("New start!");
 	var constantsURL = 'https://tomeksdev.com/';
 	$('.nav-masthead a').each(function() {
 		var originalAction = $(this).attr('href');
@@ -46,17 +45,19 @@ $(document).ready(function() {
 
     $.ajax({
 		  type: 'GET',
-		  contentType: 'json',
+		  contentType: 'text/markdown',
 		  dataType: 'json',
-		  async: false,
+		  headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		  },
 		  url: 'https://tomeksdev.com/new/post/post.json',
       	success: function(data){
-			console.log(data);
+			//console.log(data);
 			//Set post name in variable
 			var lastKey = Object.keys(data).sort().reverse()[0];
 			var lastPost = data[lastKey]['path'];
-			console.log(lastPost);
-			/*if($.urlParam('?') != 0) {
+			//console.log(data[lastKey].title);
+			if($.urlParam('?') != 0) {
 				//Get post text from file
 				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('?') + ".md"));
 				console.log("New start! Post write");
@@ -78,27 +79,65 @@ $(document).ready(function() {
 				$('.postHome .postDateHomeBig').html(date);
 			}
 			else {
-				//Get post text from file
-				var text = markdown.toHTML(getText('https://tomeksdev.com/' + lastPost));
-				console.log("New start! Post write wrong");
-				//Split post file name for title and date
-				var post = lastPost.split('_');
-				var dateSplit = post[0].split('-');
-				var postTitle = post[1].substr(0, post[1].lastIndexOf('.'));
-				var title = postTitle.split('-');
-				var year = dateSplit[0].split('/');
-				var day = dateSplit[2];
-				var month = getMonthName(dateSplit[1]);
+				$(function () {
+					var i = lastKey;
+					console.log("Start v: " + i);
+					while (i >= 0 ) {
+						console.log("New v: " + i);
+						//Get post text from file
+						var text = markdown.toHTML(getText('https://tomeksdev.com/new/' + data[i].location));
 
-				var date = day + " " + month + " " + year[1];
+						//Split post file name for title and date
+						var dateSplit = data[i].date.split('-');
+						var title = data[i].title;
+						var desc = data[i].description;
+						var year = dateSplit[0];
+						var day = dateSplit[2];
+						var month = getMonthName(dateSplit[1]);
+						var image = data[i].image;
+				
+						var date = day + " " + month + " " + year;
 
-				//Show post on blog page
-				$('.postHome .postTitleHomeBig').html(title.join(' '));
-				$('.blog .lead').html(text);
+						if(i == lastKey){
+							//Show post on home page
+							$('.postHomeBig .postTitleHomeBig').html(title);
+							$('.postHomeBig .postDescHomeBig').html(desc);
 
-				//Show date
-				$('.postHome .postDateHomeBig').html(date);
-			}*/
+							//Show date
+							$('.postHomeBig .postDateHomeBig').html(date);
+
+							//Show image
+							$("img .bigHome").attr('src','https://tomeksdev.com/new/postImages/' + image);
+						}
+						else if(i == (lastKey - 1)){
+							//Show post on home page
+							$('.postHomeSmall-1 .postTitleHomeSmall').html(title);
+							$('.postHomeSmall-1 .postDescHomeSmall').html(desc);
+
+							//Show date
+							$('.postHomeSmall-1 .postDateHomeBig').html(date);
+
+							//Show image
+							$("img .smallHome-1").attr('src','https://tomeksdev.com/new/postImages/' + image);
+						}
+						else if (i == (lastKey - 2)) {
+							//Show post on home page
+							$('.postHomeSmall-2 .postTitleHomeSmall').html(title);
+							$('.postHomeSmall-2 .postDescHomeSmall').html(desc);
+
+							//Show date
+							$('.postHomeSmall-2 .postDateHomeBig').html(date);
+
+							//Show image
+							$("img .smallHome-2").attr('src','https://tomeksdev.com/new/postImages/' + image);
+						}
+						else{
+							console.log("Append all other posts!");
+						}
+						i--;
+					}
+				});
+			}
       	}
 	});
 });
