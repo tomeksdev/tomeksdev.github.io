@@ -52,40 +52,39 @@ $(document).ready(function() {
 		  },
 		  url: 'https://tomeksdev.com/new/post/post.json',
       	success: function(data){
-			//console.log(data);
+
 			//Set post name in variable
 			var lastKey = Object.keys(data).sort().reverse()[0];
-			var lastPost = data[lastKey]['path'];
-			//console.log(data[lastKey].title);
+
 			if($.urlParam('?') != 0) {
+
 				//Get post text from file
-				var text = markdown.toHTML(getText('https://tomeksdev.com/post/' + $.urlParam('?') + ".md"));
-				console.log("New start! Post write");
+				var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/2022-09-06_Script-for-insert-multiple-ssh-keys-on-multiple-servers.md'));
+
 				//Split post file name for title and date
-				var post = $.urlParam('?').split('_');
-				var dateSplit = post[0].split('-');
-				var title = post[1].split('-');
+				var dateSplit = data[lastKey].date.split('-');
+				var title = data[lastKey].title;
 				var year = dateSplit[0];
 				var day = dateSplit[2];
 				var month = getMonthName(dateSplit[1]);
-
+				
 				var date = day + " " + month + " " + year;
 
 				//Show post on blog page
-				$('.postHome .postTitleHomeBig').html(title.join(' '));
-				$('.blog .lead').html(text);
+				$('.homeFullPost .homeFullPostTitle').html(title);
+				$('.homeFullPost .homeFullPostText').html(text);
 
 				//Show date
-				$('.postHome .postDateHomeBig').html(date);
+				$('.homeFullPost .homeFullPostDate').html("By Vujca" + date);
 			}
 			else {
 				$(function () {
 					var i = lastKey;
-					console.log("Start v: " + i);
+	
 					while (i >= 0 ) {
-						console.log("New v: " + i);
+	
 						//Get post text from file
-						var text = markdown.toHTML(getText('https://tomeksdev.com/new/' + data[i].location));
+						//var text = markdown.toHTML(getText('https://tomeksdev.com/new/' + data[i].location));
 
 						//Split post file name for title and date
 						var dateSplit = data[i].date.split('-');
@@ -98,7 +97,8 @@ $(document).ready(function() {
 						var imageSmall = data[i].imageSmall;
 				
 						var date = day + " " + month + " " + year;
-
+						var oldPost= '<div class="col"><div class="card text-bg-secondary"><img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="postImages/' + imageSmall + '" /><div class="card-body"><h5 class="card-title"><a href="#">' +  title + '</a><p class="card-date">' + date + '</p></h5><p class="card-text">' + desc + '</p></div></div></div>';
+						
 						if(i == lastKey){
 							//Show post on home page
 							$('.postHomeBig .postTitleHomeBig').html(title);
@@ -133,7 +133,8 @@ $(document).ready(function() {
 							$(".smallHome-2").attr('src','postImages/' + imageSmall);
 						}
 						else{
-							console.log("Append all other posts!");
+							//Show older posts in cards
+							$('.oldPosts').append(oldPost);
 						}
 						i--;
 					}

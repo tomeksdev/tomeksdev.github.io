@@ -9,26 +9,19 @@ To download this script, click [THIS LINK](https://github.com/tomeksdev/ssh-key-
 
 To download it from the server, if you did not download it from the browser, you must enter the following command.
 
-``` 
-wget https://github.com/tomeksdev/ssh-key-server-add/releases/download/v1.0.0/import-ssh-keys.tar.gz
-```
+    wget https://github.com/tomeksdev/ssh-key-server-add/releases/download/v1.0.0/import-ssh-keys.tar.gz
+
 OR
 
-```
-git clone https://github.com/tomeksdev/ssh-key-server-add.git
-```
+    git clone https://github.com/tomeksdev/ssh-key-server-add.git
 
 If you downloaded from a browser or with the ``wget`` command, you need to unpack the downloaded file with the following command. If you are working with git, you can skip this step.
 
-```
-tar -xvf archive.tar.gz
-```
+    tar -xvf archive.tar.gz
 
 Once the file is unzipped or cloned with Git, we only need to do two things to make the script work. First, we need to add an executable right to the ``import_ssh.sh`` file, which we can then run.
 
-```
-chmod +x import_ssh.sh
-```
+    chmod +x import_ssh.sh
 
 Secondly, we need to fill or modify the ``Server.txt`` and ``Keys.txt`` configuration files:
 
@@ -40,13 +33,11 @@ Secondly, we need to fill or modify the ``Server.txt`` and ``Keys.txt`` configur
 
 And last but not least run the script:
 
-```
-sh import_ssh.sh
-```
+    sh import_ssh.sh
+
 OR
-```
-./import_ssh.sh
-```
+
+    ./import_ssh.sh
 
 ## Vesrions
 

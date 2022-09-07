@@ -242,6 +242,53 @@ nav .active {
   font-weight: 400;
 }
 
+.homeFullPost {
+  background-color: #772953 !important;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.homeFullPost img {
+  width: 100% !important;
+  height: auto;
+}
+
+.homeFullPost ul li code{
+  font-size: 15px !important;
+}
+
+.homeFullPost code {
+  display: block;
+  word-wrap: break-word;
+  font-family: Courier, 'New Courier', monospace;
+  font-size: 12px;
+  padding: 10px;
+  background-color: #262626;
+  color: #28a745;
+}
+
+.homeFullPostTitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.homeFullPostDate {
+  font-family: 'Lato', sans-serif;
+  text-align: left !important;
+  font-weight: 300;
+  font-size: 12px !important;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.homeFullPostText {
+  font-family: 'Lato', sans-serif;
+  text-align: left !important;
+  font-weight: 300;
+}
+
 /* FOOTER */
 .footer{
   font-family: 'Lato', sans-serif;
