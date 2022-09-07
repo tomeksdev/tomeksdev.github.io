@@ -54,7 +54,7 @@ body{
 
 /* LOGO TEXT - front_page */
 .logo-text {
-  font-size: 30px;
+  font-size: 2vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #fff;
@@ -111,7 +111,7 @@ nav .active {
 
 .mask-overlay {
   position: relative;
-  display: block;
+  display: inline-block;
   overflow:hidden;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
@@ -178,14 +178,14 @@ nav .active {
   left: 10px;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 .postTitleHomeBig {
   position: absolute;
   left: 10px;
   top: 75%;
-  font-size: 40px;
+  font-size: 2vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
 }
@@ -194,7 +194,7 @@ nav .active {
   position: absolute;
   left: 30px;
   top: 90%;
-  font-size: 20px;
+  font-size: 1.3vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
@@ -203,7 +203,7 @@ nav .active {
   position: absolute;
   left: 10px;
   top: 60%;
-  font-size: 40px;
+  font-size: 2vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
 }
@@ -212,7 +212,7 @@ nav .active {
   position: absolute;
   left: 30px;
   top: 85%;
-  font-size: 20px;
+  font-size: 1.3vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
@@ -233,7 +233,7 @@ nav .active {
 .card-date {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 0.8vw;
 }
 
 .card-text {

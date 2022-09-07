@@ -16,6 +16,14 @@
         "imageSmall":"plesk_small.svg"
     },
     {
+        "title": "Prepare proxmox for SAS storage",
+        "date": "2022-07-25",
+        "description": "We investigate and prepare proxmox with SAS storage and multipath",
+        "location": "post/2022-07-25_Prepare-proxmox-for-SAS-storage.md",
+        "imageBig":"proxmox_sas.svg",
+        "imageSmall":"proxmox_sas_small.svg"
+    },
+    {
         "title": "Linux script for inserting SSH keys",
         "date": "2022-09-06",
         "description": "Small linux script for inserting multipe ssh keys to multiple servers",
