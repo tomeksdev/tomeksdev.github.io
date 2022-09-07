@@ -257,7 +257,7 @@ nav .active {
   font-size: 15px !important;
 }
 
-.homeFullPost code {
+.homeFullPost pre {
   display: block;
   word-wrap: break-word;
   font-family: Courier, 'New Courier', monospace;
@@ -265,6 +265,13 @@ nav .active {
   padding: 10px;
   background-color: #262626;
   color: #28a745;
+}
+
+.homeFullPost p code {
+  word-wrap: break-word;
+  font-family: Courier, 'New Courier', monospace;
+  padding: 10px;
+  color: #fff;
 }
 
 .homeFullPostTitle {

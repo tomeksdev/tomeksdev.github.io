@@ -26,10 +26,10 @@ Once the file is unzipped or cloned with Git, we only need to do two things to m
 Secondly, we need to fill or modify the ``Server.txt`` and ``Keys.txt`` configuration files:
 
 - server.txt
-> Add multiple servers with root@ip_address. Each server in a new line.
+    > Add multiple servers with root@ip_address. Each server in a new line.
 
 - keys.txt
-> Add or change keys if necessary. Also each ssh key in a new line.
+    > Add or change keys if necessary. Also each ssh key in a new line.
 
 And last but not least run the script:
 
