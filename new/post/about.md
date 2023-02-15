@@ -1,7 +1,5 @@
 Hey, it's Tomo (aka Vujca)!
 
-![Alt](../design/images/vujca.JPG "Ubuntu")
-
 ## Short...
 I hail from Croatia and I'm a Network and System Administrator with over a decade of experience working across various countries, including Austria and Germany. Over the years, I've tackled numerous challenges related to virtualization, networking, firewalls, and a ton of other cool tech stuff that comes with the territory.
 

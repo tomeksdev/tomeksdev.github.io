@@ -337,6 +337,16 @@ nav .active {
   margin-right: 50px;
 }
 
+/* ABOUT */
+.aboutPage img{
+  width: 100% !important;
+  height: auto !important;
+}
+
+.aboutPage .aboutPicMe{
+  border-radius: 50%;
+}
+
 /* FOOTER */
 .footer{
   font-family: 'Lato', sans-serif;
