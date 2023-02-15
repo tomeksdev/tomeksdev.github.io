@@ -22,6 +22,6 @@ So, if you need any help with your IT needs, just give me a holler!
 [![Alt](https://tomeksdev.com/design/images/proxmox-logo.png "Proxmox")]('https://proxmox.com')
 [![Alt](https://tomeksdev.com/design/images/truenas-logo.svg "TrueNAS")]('https://truenas.com')
 [![Alt](https://tomeksdev.com/design/images/kubernetes-logo.svg "Kubernetes")]("https://kubernetes.io")
-[![Alt](https://tomeksdev.com/design/images/vmware-logo.svg "TrueNAS")]('https://vmware.com')
+[[![Alt](https://tomeksdev.com/design/images/vmware-logo.svg "vmware")]('https://vmware.com')
 [![Alt](https://tomeksdev.com/design/images/debian-logo.svg "Debian")]('https://debian.org')
 [![Alt](https://tomeksdev.com/design/images/dell-logo.svg "Dell")]('https://dell.com')
