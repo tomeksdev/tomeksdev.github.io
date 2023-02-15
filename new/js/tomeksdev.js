@@ -169,6 +169,10 @@ $(document).ready(function() {
 	var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/about.md'));
 	$('.aboutPage .aboutText').html(text);
 
+	var calc = new Date().getFullYear();
+	var years = calc - 1992 + ' years old';
+	$('.aboutPage .aboutYears').html(years);
+
 	$.ajax({
 		type: 'GET',
 		contentType: 'text/markdown',
@@ -180,7 +184,7 @@ $(document).ready(function() {
 		success: function(data){
 		  var tableOutput = '';
 		  $.each(data, function(i, item) {
-			tableOutput += '<tr class="table-dark"><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.version + '</td><td><a href="' + item.location + '"><i class="bi bi-box-arrow-down fa-2x"></i></a></td></tr>';
+			tableOutput += '<tr class="table-dark"><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.version + '</td><td><a href="' + item.location + '"><i class="bi bi-box-arrow-down fa-2x"></i></a><a href="' + item.infoURL + '"><i class="bi bi-info-square fa-2x"></i></a></td></tr>';
 		  });
 		  $('.table .tableShow').append(tableOutput);
 		}

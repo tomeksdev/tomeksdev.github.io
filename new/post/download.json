@@ -3,12 +3,14 @@
         "name": "Import SSH Keys",
         "description": "Script that adds multiple SSH keys to multiple servers.",
         "location": "https://github.com/tomeksdev/ssh-key-server-add/releases/download/v1.1.0/Import_SSH_Keys.tar.gz",
-        "version":"v1.1.0"
+        "version":"v1.1.0",
+        "infoURL":"https://tomeksdev.com/?2022-09-06_Script-for-insert-multiple-ssh-keys-on-multiple-servers"
     },
     {
         "name": "Shoutcast install",
         "description": "Shoutcast server install script(linux)",
         "location": "https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz",
-        "version":"v1.1.1"
+        "version":"v1.1.1",
+        "infoURL":"https://tomeksdev.com/?2019-06-09_Shoutcast-installation-file"
     }
 ]

@@ -12,8 +12,13 @@ Some of the technologies that I'm a total pro at include Proxmox, VmWare, Hyper-
 So, if you need any help with your IT needs, just give me a holler!
 
 ![Alt](https://tomeksdev.com/design/images/canonical-friends_orange_hex.png "Ubuntu")
-![Alt](https://tomeksdev.com/design/images/plesk-logo.png "Plesk")
+![Alt](https://tomeksdev.com/design/images/plesk-logo.svg "Plesk")
 ![Alt](https://tomeksdev.com/design/images/sophos-logo.svg "Sophos")
 ![Alt](https://tomeksdev.com/design/images/cisco-logo.svg "Cisco")
 ![Alt](https://tomeksdev.com/design/images/windows-logo.svg "Microsoft")
 ![Alt](https://tomeksdev.com/design/images/maas_orange_hex.png "Ubuntu MAAS")
+![Alt](https://tomeksdev.com/design/images/openstack-logo.svg "OpenStack")
+![Alt](https://tomeksdev.com/design/images/debian-logo.svg "Debian")
+![Alt](https://tomeksdev.com/design/images/dell-logo.svg "Dell")
+![Alt](https://tomeksdev.com/design/images/hpe-logo.svg "HPE")
+![Alt](https://tomeksdev.com/design/images/proxmox-logo.png "Proxmox")
