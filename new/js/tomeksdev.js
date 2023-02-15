@@ -62,7 +62,7 @@ $(document).ready(function() {
 				$(".fullPost").removeClass("hidden");
 
 				//Get post text from file
-				var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/' + $.urlParam('?') + ".md"));
+				var text = getText('https://tomeksdev.com/new/post/' + $.urlParam('?') + '.md');
 
 				//Split post file name for title and date
 				var post = $.urlParam('?').split('_');
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 				//Show post on blog page
 				$('.homeFullPost .homeFullPostTitle').html(title.join(' '));
-				$('.homeFullPost .homeFullPostText').html(text);
+				$('.homeFullPost .homeFullPostText').html(marked.parse(text));
 
 				//Show date
 				$('.homeFullPost .homeFullPostDate').html("By Vujca" + date);
@@ -166,8 +166,8 @@ $(document).ready(function() {
 
 
 	//About Section
-	var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/about.md'));
-	$('.aboutPage .aboutText').html(text);
+	var text = getText('https://tomeksdev.com/new/post/about.md');
+	$('.aboutPage .aboutText').html(marked.parse(text));
 
 	var calc = new Date().getFullYear();
 	var years = calc - 1992 + ' years old';
