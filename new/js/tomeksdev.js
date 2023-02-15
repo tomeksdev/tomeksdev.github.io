@@ -105,7 +105,7 @@ $(document).ready(function() {
 						var link = linkSplit1[0];
 
 						//Prepare cards for older posts
-						var oldPost= '<div class="col"><div class="card text-bg-secondary"><img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="postImages/' + imageSmall + '" /><div class="card-body"><h5 class="card-title"><a href="?' + link + '">' +  title + '</a><p class="card-date">' + date + '</p></h5><p class="card-text">' + desc + '</p></div></div></div>';
+						var oldPost= '<div class="col"><div class="card text-bg-secondary"><a href="?' + link + '"><img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="postImages/' + imageSmall + '" /><div class="card-body"><h5 class="card-title">' +  title + '</a><p class="card-date">' + date + '</p></h5><p class="card-text">' + desc + '</p></div></div></div>';
 						
 						if(i == lastKey){
 							
