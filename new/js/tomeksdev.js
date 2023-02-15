@@ -163,4 +163,11 @@ $(document).ready(function() {
 			}
       	}
 	});
+
+
+	//Get post text from file
+	var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/about.md'));
+
+	//Show post on blog page
+	$('.aboutPage .aboutText').html(text);
 });
