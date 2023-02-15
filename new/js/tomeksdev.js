@@ -79,7 +79,7 @@ $(document).ready(function() {
 				$('.homeFullPost .homeFullPostText').html(marked.parse(text));
 
 				//Show date
-				$('.homeFullPost .homeFullPostDate').html("By Vujca" + date);
+				$('.homeFullPost .homeFullPostDate').html("By Vujca " + date);
 			}
 			else {
 				$(function () {
