@@ -1,26 +1,14 @@
 [
     {
-        "name": "Test",
-        "description": "Small script to install shoutcast server with all commands in few lines",
-        "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"v1.0.0"
+        "name": "Import SSH Keys",
+        "description": "Script that adds multiple SSH keys to multiple servers.",
+        "location": "https://github.com/tomeksdev/ssh-key-server-add/releases/download/v1.1.0/Import_SSH_Keys.tar.gz",
+        "version":"v1.1.0"
     },
     {
-        "name": "Test 1",
-        "description": "Small script to install shoutcast server with all commands in few lines",
-        "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"v1.0.0"
-    },
-    {
-        "name": "Test 2",
-        "description": "Small script to install shoutcast server with all commands in few lines",
-        "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"v1.0.0"
-    },
-    {
-        "name": "Test 3",
-        "description": "Small script to install shoutcast server with all commands in few lines",
-        "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"v1.0.0"
+        "name": "Shoutcast install",
+        "description": "Shoutcast server install script(linux)",
+        "location": "https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz",
+        "version":"v1.1.1"
     }
 ]

@@ -178,25 +178,11 @@ $(document).ready(function() {
 		},
 		url: 'https://tomeksdev.com/new/post/download.json',
 		success: function(data){
-		  console.log("Start");
-		  //Set post name in variable
-		  var lastKey = Object.keys(data).sort().reverse()[0];
-
-		  var i = lastKey;
-  
-		  while (i >= 0 ) {
-
-			  //Split post file name for title and date
-			  var name = data[i].name;
-			  var desc = data[i].description;
-			  var url = data[i].location;
-			  var version = data[i].version;
-
-			  var table = '<tr class="table-dark"><td>' + name + '</td><td>' + desc + '</td><td>' + version + '</td><td><a href="' + url + '"><i class="bi bi-box-arrow-down fa-2x"></i></a></td></tr>';
-			  //Show in table
-			  $('.table .tableShow').html(table);
-			  i--;
-		  }
+		  var tableOutput = '';
+		  $.each(data, function(i, item) {
+			tableOutput += '<tr class="table-dark"><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.version + '</td><td><a href="' + item.location + '"><i class="bi bi-box-arrow-down fa-2x"></i></a></td></tr>';
+		  });
+		  $('.table .tableShow').append(tableOutput);
 		}
   	});
 });
