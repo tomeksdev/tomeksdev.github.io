@@ -170,7 +170,15 @@ $(document).ready(function() {
 	$('.aboutPage .aboutText').html(marked.parse(text));
 
 	var calc = new Date().getFullYear();
-	var years = calc - 1992 + ' years old';
+	var month = new Date().getMonth();
+	console.log(month);
+	if(month > 04){
+		var years = calc - 1991 + ' years old';
+	}
+	else {
+		var years = calc - 1992 + ' years old';
+	}
+	
 	$('.aboutPage .aboutYears').html(years);
 
 	$.ajax({

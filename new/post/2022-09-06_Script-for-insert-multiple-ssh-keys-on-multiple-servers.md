@@ -42,6 +42,7 @@ OR
 ## Vesrions
 
 #### version v1.1.0
+! {.release}
 [![GitHub release](https://img.shields.io/badge/release-v1.1.0-informational)](https://github.com/tomeksdev/ssh-key-server-add/releases/tag/v1.1.0)
 - The script now checks on each server whether the file authorized_keys exists
 - It now checks if the key from the keys.txt file exists in the authorized_keys file, and skips it in this case
@@ -50,6 +51,7 @@ OR
 - Create nicer echo on the console
 
 #### Version v1.0.0
+!{.release}
 [![GitHub release](https://img.shields.io/badge/release-v1.0.0-informational)](https://github.com/tomeksdev/ssh-key-server-add/releases/tag/v1.0.0)
 - Add all keys from keys.txt file to all servers reading server.txt files
 - Old ssh keys must be deleted on each server to run the script again
