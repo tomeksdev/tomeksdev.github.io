@@ -306,6 +306,11 @@ nav .active {
   font-weight: 300;
 }
 
+.release {
+  height: auto !important;
+  width: auto !important;
+}
+
 /* CONTACT PAGE */
 .contact a:hover{
   text-decoration: underline;
@@ -384,6 +389,7 @@ nav .active {
   text-decoration: underline;
   color: #772953 !important;
 }
+
 /* DOWNLOADS */
 .downloads {
   padding-top: 20px !important;
