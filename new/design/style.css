@@ -400,6 +400,10 @@ nav .active {
   font-weight: 300 !important;
 }
 
+.downloads td a:hover{
+  color: #772953 !important;
+}
+
 /* FOOTER */
 .footer{
   font-family: 'Lato', sans-serif;

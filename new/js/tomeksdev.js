@@ -192,7 +192,7 @@ $(document).ready(function() {
 		success: function(data){
 		  var tableOutput = '';
 		  $.each(data, function(i, item) {
-			tableOutput += '<tr class="table-dark"><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.version + '</td><td><a href="' + item.location + '"><i class="bi bi-box-arrow-down fa-2x"></i></a><a href="' + item.infoURL + '"><i class="bi bi-info-square fa-2x"></i></a></td></tr>';
+			tableOutput += '<tr class="table-dark"><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.version + '</td><td><a href="' + item.location + '"><i class="bi bi-box-arrow-down fa-2x"></i></a><a href="#"><i class="bi bi-info-square fa-2x"></i></a></td></tr>';
 		  });
 		  $('.table .tableShow').append(tableOutput);
 		}
