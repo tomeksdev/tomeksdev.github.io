@@ -49,70 +49,24 @@
                 <div class="col-md-4 offset-md-6 padding">
                     <nav class="nav-masthead navbar-right">
                         <a class="navlink active" data-rel="home" href="{{url}}">Home</a>
-                        <a class="navlink" data-rel="wiki" href="{{url}}wiki">WiKi</a>
+                        <a class="navlink" data-rel="wiki" href="{{url}}wiki">Downloads</a>
                         <a class="navlink" data-rel="about" href="{{url}}about">About Me</a>
                         <a class="navlink" data-rel="contact" href="{{url}}contact">Contact</a>
                     </nav>
                 </div>   
             </div>
-            <!--Content-->
-            <div class="row home padding" style="display: none;">
-                <div class="col-lg padding">
-                    <div class="row home-row padding">
-                        <div class="col-sm-6 padding">
-                            <a class="mask-overlay" href="#">
-                                <img class="home-big-image bigHome" style="width: 100% !important;" src="postImages/plesk.svg"/>
-                                <div class="postHome postHomeBig">
-                                    <div class="postDateHomeBig"></div>
-                                    <div class="postTitleHomeBig"></div>
-                                    <div class="postDescHomeBig"></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-6 padding">
-                            <div class="row home-row padding">
-                                <div class=".col-6 .col-sm-6 home-small-img padding">
-                                    <a class="mask-overlay" href="#">
-                                        <img class="home-small-image smallHome-1" style="width: 100% !important;" src="postImages/shoutcast.svg"/>
-                                        <div class="postHome postHomeSmall-1">
-                                            <div class="postDateHomeBig"></div>
-                                            <div class="postTitleHomeSmall"></div>
-                                            <div class="postDescHomeSmall"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class=".col-6 .col-sm-6 home-small-img padding">
-                                    <a class="mask-overlay" href="#">
-                                        <img class="home-small-image smallHome-2" style="width: 100% !important;" src="postImages/shoutcast.svg"/>
-                                        <div class="postHome postHomeSmall-2">
-                                            <div class="postDateHomeBig"></div>
-                                            <div class="postTitleHomeSmall"></div>
-                                            <div class="postDescHomeSmall"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row padding" style="display: none;">
-                <div class="col-lg padding">
-                    <div class="row padding">
-                        <div class="row row-cols-1 row-cols-md-3 g-4 oldPosts"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Full Post Here -->
-            <div class="row padding">
+            <!--About-->
+            <div class="row padding about">
                 <div class="col-lg padding">
                     <div class="col-lg padding">
-                        <div class="row justify-content-md-center">
-                            <div class="col col-lg-8 homeFullPost">
-                                <div class="homeFullPostTitle"></div>
-                                <div class="homeFullPostDate"></div>
-                                <div class="homeFullPostText"></div>
+                        <div class="row padding">
+                            <div class="col col-lg-2"></div>
+                            <div class="col col-lg-8 aboutPage">
+                                <div class="aboutImage"></div>
+                                <div class="aboutTitle"></div>
+                                <div class="aboutText"></div>
                             </div>
+                            <div class="col col-lg-2 gradientRight"></div>
                         </div>
                     </div>
                 </div>
@@ -120,9 +74,13 @@
             <!--Footer-->
             <div class="row padding">
                 <div class="col-lg footer padding">
-                    <!--<div class="col-md-6 offset-md-3 footer">-->
-                        <p>2020 - 2022 &copy; <a href="{{url}}">TomeksDEV</a>, by <a href="https://www.facebook.com/vujca">@Vujca</a>.</p>
-                    <!--</div>-->
+                    <div class="row padding center justify-content-md-center">
+                        <div class="col col-lg-2 gradientLeft fullPost hidden"></div>
+                        <div class="col col-lg-8 footer">
+                            <p>2020 - 2022 &copy; <a href="{{url}}">TomeksDEV</a>, by <a href="https://www.facebook.com/vujca">@Vujca</a>.</p>
+                        </div>
+                        <div class="col col-lg-2 gradientRight fullPost hidden"></div>
+                    </div>
                 </div>
             </div>
         </div>

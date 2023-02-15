@@ -52,18 +52,22 @@ $(document).ready(function() {
 		  },
 		  url: 'https://tomeksdev.com/new/post/post.json',
       	success: function(data){
-
+			console.log("Start");
 			//Set post name in variable
 			var lastKey = Object.keys(data).sort().reverse()[0];
 
 			if($.urlParam('?') != 0) {
+				//Change atribute
+				$(".default").addClass("hidden");
+				$(".fullPost").removeClass("hidden");
 
 				//Get post text from file
-				var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/2022-09-06_Script-for-insert-multiple-ssh-keys-on-multiple-servers.md'));
+				var text = markdown.toHTML(getText('https://tomeksdev.com/new/post/' + $.urlParam('?') + ".md"));
 
 				//Split post file name for title and date
-				var dateSplit = data[lastKey].date.split('-');
-				var title = data[lastKey].title;
+				var post = $.urlParam('?').split('_');
+				var dateSplit = post[0].split('-');
+				var title = post[1].split('-');
 				var year = dateSplit[0];
 				var day = dateSplit[2];
 				var month = getMonthName(dateSplit[1]);
@@ -71,7 +75,7 @@ $(document).ready(function() {
 				var date = day + " " + month + " " + year;
 
 				//Show post on blog page
-				$('.homeFullPost .homeFullPostTitle').html(title);
+				$('.homeFullPost .homeFullPostTitle').html(title.join(' '));
 				$('.homeFullPost .homeFullPostText').html(text);
 
 				//Show date
@@ -82,9 +86,6 @@ $(document).ready(function() {
 					var i = lastKey;
 	
 					while (i >= 0 ) {
-	
-						//Get post text from file
-						//var text = markdown.toHTML(getText('https://tomeksdev.com/new/' + data[i].location));
 
 						//Split post file name for title and date
 						var dateSplit = data[i].date.split('-');
@@ -97,9 +98,17 @@ $(document).ready(function() {
 						var imageSmall = data[i].imageSmall;
 				
 						var date = day + " " + month + " " + year;
-						var oldPost= '<div class="col"><div class="card text-bg-secondary"><img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="postImages/' + imageSmall + '" /><div class="card-body"><h5 class="card-title"><a href="#">' +  title + '</a><p class="card-date">' + date + '</p></h5><p class="card-text">' + desc + '</p></div></div></div>';
+
+						//Link to Full post
+						var linkSplit = data[i].location.split('/');
+						var linkSplit1 = linkSplit[1].split('.');
+						var link = linkSplit1[0];
+
+						//Prepare cards for older posts
+						var oldPost= '<div class="col"><div class="card text-bg-secondary"><img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="postImages/' + imageSmall + '" /><div class="card-body"><h5 class="card-title"><a href="?' + link + '">' +  title + '</a><p class="card-date">' + date + '</p></h5><p class="card-text">' + desc + '</p></div></div></div>';
 						
 						if(i == lastKey){
+							
 							//Show post on home page
 							$('.postHomeBig .postTitleHomeBig').html(title);
 							$('.postHomeBig .postDescHomeBig').html(desc);
@@ -109,8 +118,12 @@ $(document).ready(function() {
 
 							//Show image
 							$(".bigHome").attr('src','postImages/' + imageBig);
+
+							//Add link to Full post
+							$(".linkBigHome").attr('href','?' + link);
 						}
 						else if(i == (lastKey - 1)){
+
 							//Show post on home page
 							$('.postHomeSmall-1 .postTitleHomeSmall').html(title);
 							$('.postHomeSmall-1 .postDescHomeSmall').html(desc);
@@ -120,8 +133,12 @@ $(document).ready(function() {
 
 							//Show image
 							$(".smallHome-1").attr('src','postImages/' + imageSmall);
+
+							//Add link to Full post
+							$(".linkSmallHome-1").attr('href','?' + link);
 						}
 						else if (i == (lastKey - 2)) {
+
 							//Show post on home page
 							$('.postHomeSmall-2 .postTitleHomeSmall').html(title);
 							$('.postHomeSmall-2 .postDescHomeSmall').html(desc);
@@ -131,8 +148,12 @@ $(document).ready(function() {
 
 							//Show image
 							$(".smallHome-2").attr('src','postImages/' + imageSmall);
+
+							//Add link to Full post
+							$(".linkSmallHome-2").attr('href','?' + link);
 						}
 						else{
+
 							//Show older posts in cards
 							$('.oldPosts').append(oldPost);
 						}

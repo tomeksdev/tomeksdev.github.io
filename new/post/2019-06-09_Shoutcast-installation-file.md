@@ -16,19 +16,19 @@ NOTE: The **_adminpassword_** and **_password_** can not be the same, and it's b
 
 Test:
 
-- `Ubuntu 18.04 LTS - WORKING`
+- Ubuntu 18.04 LTS - `WORKING`
 
-- `Ubuntu 18.04 Desktop - WORKING`
+- Ubuntu 18.04 Desktop - `WORKING`
 
-- `Ubuntu 16.04 LTS - WORKING`
+- Ubuntu 16.04 LTS - `WORKING`
 
-- `Ubuntu 16.04 Desktop - WORKING`
+- Ubuntu 16.04 Desktop - `WORKING`
 
-- `Debian 8 Jessie - WORKING`
+- Debian 8 Jessie - `WORKING`
 
-- `Debian 9 Stretch - WORKING`
+- Debian 9 Stretch - `WORKING`
 
-- `Debian 10 Buster - WORKING`
+- Debian 10 Buster - `WORKING`
 
 
 

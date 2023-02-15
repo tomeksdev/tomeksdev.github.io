@@ -52,6 +52,10 @@ body{
   margin: 0 !important;
 }
 
+.hidden {
+  display: none;
+}
+
 /* LOGO TEXT - front_page */
 .logo-text {
   font-size: 2vw;
@@ -243,9 +247,14 @@ nav .active {
 }
 
 .homeFullPost {
-  background-color: #772953 !important;
+  /*background-color: #772953 !important;*/
   margin-top: 40px;
   margin-bottom: 20px;
+  
+}
+
+.homeFullPost a {
+  color: #772953 !important;
 }
 
 .homeFullPost img {
@@ -255,6 +264,7 @@ nav .active {
 
 .homeFullPost ul li code{
   font-size: 15px !important;
+  color: #772953 !important;
 }
 
 .homeFullPost pre {
@@ -294,6 +304,37 @@ nav .active {
   font-family: 'Lato', sans-serif;
   text-align: left !important;
   font-weight: 300;
+}
+
+/* CONTACT PAGE */
+.contact a:hover{
+  text-decoration: underline;
+  color: #772953 !important;
+}
+
+.contactTitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+}
+.contactBussines{
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding: 20px;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.social-icons{
+  margin-top: 20px;
+}
+
+.social-icons a{
+  margin-right: 50px;
 }
 
 /* FOOTER */
