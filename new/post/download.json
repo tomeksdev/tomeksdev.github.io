@@ -3,24 +3,24 @@
         "name": "Test",
         "description": "Small script to install shoutcast server with all commands in few lines",
         "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"shoutcast.svg"
+        "version":"v1.0.0"
     },
     {
         "name": "Test 1",
         "description": "Small script to install shoutcast server with all commands in few lines",
         "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"shoutcast.svg"
+        "version":"v1.0.0"
     },
     {
         "name": "Test 2",
         "description": "Small script to install shoutcast server with all commands in few lines",
         "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"shoutcast.svg"
+        "version":"v1.0.0"
     },
     {
         "name": "Test 3",
         "description": "Small script to install shoutcast server with all commands in few lines",
         "location": "post/2019-06-09_Shoutcast-installation-file.md",
-        "version":"shoutcast.svg"
+        "version":"v1.0.0"
     }
 ]
