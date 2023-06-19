@@ -1,3 +1,29 @@
+window.addEventListener('DOMContentLoaded', event => {
+
+    // Activate Bootstrap scrollspy on the main nav element
+    const mainNav = document.body.querySelector('#mainNav');
+    if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#mainNav',
+            offset: 74,
+        });
+    };
+
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .navlink')
+    );
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
+});
+
 //Markdown read
 function getText(myUrl){
 	var result = null;
@@ -33,7 +59,7 @@ function getMonthName(month){
 //jQuery function
 $(document).ready(function() {
 	var constantsURL = 'https://tomeksdev.com/';
-	$('.nav-masthead a').each(function() {
+	$('.navbar-nav a').each(function() {
 		var originalAction = $(this).attr('href');
 		$(this).attr('href', originalAction.replace('{{url}}', constantsURL));
 	});

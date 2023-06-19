@@ -42,20 +42,29 @@
         <div class="container-fluid padding">
             <!--Header-->
             <div class="row padding header">
-                <div class="col">
-                    <div class="logo-text">
-                        <span class="logo-normaltext">Tomeks</span>
-                        <span class="logo-smalltext">DEV</span>
+                <!-- Navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+                    <div class="container px-5">
+                        <div class="navbar-brand fw-bold">
+                            <div class="logo-text">
+                                <span class="logo-normaltext">Tomeks</span>
+                                <span class="logo-smalltext">DEV</span>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            Menu
+                            <i class="bi-list"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                                <li class="nav-item" style="padding: 0 !important;"><a class="navlink active" href="{{url}}">Home</a></li>
+                                <li class="nav-item"><a class="navlink" href="{{url}}downloads">Downloads</a></li>
+                                <li class="nav-item"><a class="navlink" href="{{url}}about">About Me</a></li>
+                                <li class="nav-item"><a class="navlink" href="{{url}}contact">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 offset-md-6 padding">
-                    <nav class="nav-masthead navbar-right">
-                        <a class="navlink" data-rel="home" href="{{url}}">Home</a>
-                        <a class="navlink" data-rel="downloads" href="{{url}}downloads">Downloads</a>
-                        <a class="navlink" data-rel="about" href="{{url}}about">About Me</a>
-                        <a class="navlink active" data-rel="contact" href="{{url}}contact">Contact</a>
-                    </nav>
-                </div>   
+                </nav>
             </div>
             <!--Contact-->
             <div class="row padding contact">
