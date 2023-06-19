@@ -497,4 +497,12 @@ nav .active {
   .footer {
     padding-bottom: 20px !important;
   }
+
+  .gradientLeft {
+    display: none !important;
+  }
+
+  .gradientRight {
+    display: none !important;
+  }
 }
