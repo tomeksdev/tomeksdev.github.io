@@ -505,4 +505,20 @@ nav .active {
   .gradientRight {
     display: none !important;
   }
+
+  .col {
+    flex: none !important;
+  }
+
+  .social-icons {
+    text-align: center !important;
+  }
+
+  .social-icons a {
+    margin-right: 10px !important;
+  }
+
+  .right {
+    text-align: left !important;
+  }
 }
