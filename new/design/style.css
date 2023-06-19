@@ -488,4 +488,9 @@ nav .active {
   .card-date {
     font-size: 1.8vw;
   }
+
+  .g-3 {
+    -bs-gutter-x: .0 rem;
+    padding: 10px;
+  }
 }
