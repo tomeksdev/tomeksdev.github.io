@@ -56,10 +56,6 @@ body{
   display: none;
 }
 
-.bg-dark {
-  
-}
-
 /* LOGO TEXT - front_page */
 .logo-text {
   font-size: 2vw;
@@ -91,12 +87,17 @@ nav {
   padding-bottom: 0;
 }
 
-.navlink {
+nav li {
     padding: 20px;
     margin-left: -3px;
 }
 
-nav a:hover {
+/*.navlink {
+    padding: 20px;
+    margin-left: -3px;
+}*/
+
+nav li:hover {
     background-color: #d80000;
     border-bottom: 1px solid #d80000;
 }
@@ -113,6 +114,24 @@ nav .active {
 .navbar-toggler {
   color: #ffffff !important;
 }
+
+.show .nav-item {
+  text-align: center !important;
+}
+
+.show .navlink {
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+
+.show .me-4 {
+    margin-right: 0 !important;
+}
+
+.bi .bi-list {
+    color: #ffffff;
+}
+
 
 /* HOME - Main page*/
 .home .col-sm-6 {
@@ -432,4 +451,9 @@ nav .active {
   color: #d30000;
 }
 
-/* ANIMATIONS */
+/* MOBILE */
+@media only screen and (max-device-width: 799px) {
+  .logo-text {
+    font-size: 5vw;
+  }
+}
