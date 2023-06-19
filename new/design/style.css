@@ -490,7 +490,7 @@ nav .active {
   }
 
   .g-3 {
-    -bs-gutter-x: .0 rem;
-    padding: 10px;
+    -bs-gutter-x: .0 rem !important;
+    padding: 10px !important;
   }
 }
