@@ -460,4 +460,16 @@ nav .active {
   .home-small-img {
     height: auto !important; 
   }
+
+  .postDateHomeBig {
+    font-size: 2vw;
+  }
+
+  .postTitleHomeBig {
+    font-size: 3vw;
+  }
+
+  .postDescHomeBig {
+    font-size: 2.3vw;
+  }
 }
