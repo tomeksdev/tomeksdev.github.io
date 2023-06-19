@@ -521,4 +521,8 @@ nav .active {
   .right {
     text-align: left !important;
   }
+
+  .aboutIcons a {
+    padding: 10px !important;
+  }
 }
