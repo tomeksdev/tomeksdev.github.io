@@ -456,4 +456,9 @@ nav .active {
   .logo-text {
     font-size: 10vw;
   }
+
+  .home-small-img {
+    height: auto !important; 
+    width: 100% !important;
+  }
 }
