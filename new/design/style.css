@@ -454,7 +454,7 @@ nav .active {
 /* MOBILE */
 @media only screen and (max-device-width: 799px) {
   .logo-text {
-    font-size: 10vw;
+    font-size: 6vw;
   }
 
   .home-small-img {
