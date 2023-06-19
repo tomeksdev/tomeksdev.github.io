@@ -486,11 +486,11 @@ nav .active {
   }
   
   .card-date {
-    font-size: 1.8vw;
+    font-size: 2.8vw;
   }
 
   .g-3 {
-    -bs-gutter-x: .0 rem !important;
+    --bs-gutter-x: .0 rem !important;
     padding: 10px !important;
   }
 }
