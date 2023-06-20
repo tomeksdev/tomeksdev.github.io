@@ -452,7 +452,7 @@ nav .active {
 }
 
 /* MOBILE */
-@media only screen and (max-device-width: 799px) {
+@media only screen and (max-device-width: 1000px) {
   .logo-text {
     font-size: 6vw;
   }
