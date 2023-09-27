@@ -1,0 +1,58 @@
+---
+layout: page
+---
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <a class="navlink" href="{{ baseurl }}/"><li class="nav-item">Home</li></a>
+        <a class="navlink" href="{{ baseurl }}/downloads"><li class="nav-item">Downloads</li></a>
+        <a class="navlink" href="{{ baseurl }}/about"><li class="nav-item">About Me</li></a>
+        <a class="navlink" href="{{ baseurl }}/contact"><li class="nav-item">Contact</li></a>
+    </ul>
+</div>
+</div>
+</nav>
+</div>
+<!-- Full Post Here -->
+<div class="row padding fullPost">
+    <div class="col-lg padding">
+        <div class="col-lg padding">
+            <div class="row padding">
+                <div class="col col-lg-2 gradientLeft"></div>
+                <div class="col col-lg-8 homeFullPost">
+                    <h1 class="homeFullPostTitle">{{ page.title }}</h1>
+                    <h5 class="homeFullPostDate">
+                        {{ page.date | date: "%B %e, %Y" }} by Vujca
+                        {% if page.url %}
+                        <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count"></div>
+                        {% endif %}
+                    </h5>
+                    <div class="homeFullPostText">
+                        {{ content }}
+
+                        {% if page.content contains "code" %}
+                        <script>
+                            // get all <code> elements
+                            var allCodeBlocksElements = $( "pre code" );
+
+                            allCodeBlocksElements.each(function(i) {
+                                // add different id for each code block
+
+                                // target	
+                            var currentId = "codeblock" + (i + 1);
+                            $(this).attr('id', currentId);
+                                
+                            //trigger
+                            var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
+                                $(this).after(clipButton);
+                            });
+                            
+                            new Clipboard('.copy-text');
+                        </script>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col col-lg-2 gradientRight"></div>
+            </div>
+        </div>
+    </div>
+</div>

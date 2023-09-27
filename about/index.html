@@ -1,0 +1,55 @@
+---
+title: About Me
+layout: page
+---
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <a class="navlink" href="{{ baseurl }}/"><li class="nav-item">Home</li></a>
+        <a class="navlink" href="{{ baseurl }}/downloads"><li class="nav-item">Downloads</li></a>
+        <a class="navlink" href="{{ baseurl }}/about"><li class="nav-item active">About Me</li></a>
+        <a class="navlink" href="{{ baseurl }}/contact"><li class="nav-item">Contact</li></a>
+    </ul>
+</div>
+</div>
+</nav>
+</div>
+<!--About-->
+<div class="row padding about">
+    <div class="col-lg padding">
+        <div class="col-lg padding">
+            <div class="row padding aboutPage">
+                <div class="col col-lg-2"></div>
+                <div class="col col-lg-8">
+                    <div class="row">
+                    <div class="col-sm-3 aboutLeft">
+                        <div class="aboutImage"><img class="aboutPicMe" src="https://tomeksdev.com/new/design/images/vujca.JPG" /></div>
+                        <br />
+                        {% assign year = site.time | date:'%Y' %}
+                        <div class="aboutName">Tomo Novak (aka Vujca)</div>
+                        <div class="aboutYears">
+                            {% assign year = site.time | date:'%Y' %}
+                            {% assign old = year | minus: 1992 %}
+                            {{ old }} years old
+                        </div>
+                        <div class="aboutSite"><a href="https://tomeksdev.com">https://tomeksdev.com</a></div>
+                        <br />
+                        <div class="aboutIcons">
+                            <a href="{{ site.social-network-links.facebook }}"><i class="fa-brands fa-facebook fa-2x" style="color: #4267B2;"></i></a>
+                            <a href="{{ site.social-network-links.whatsapp }}"><i class="fa-brands fa-whatsapp fa-2x" style="color: #25D366;"></i></a>
+                            <a href="{{ site.social-network-links.messenger }}"><i class="fa-brands fa-facebook-messenger fa-2x" style="color: #006AFF;"></i></a>
+                            <a href="mailto:{{ site.social-network-links.email }}"><i class="fa-solid fa-envelope fa-2x" style="color: #ffffff;"></i></a>
+                            <a href="{{ site.social-network-links.linkedin }}"><i class="fa-brands fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+                            <a href="{{ site.social-network-links.github }}"><i class="fa-brands fa-github fa-2x" style="color: #967bb6;"></i></a>
+                            <a href="{{ site.social-network-links.instagram }}"><i class="fa-brands fa-instagram fa-2x" id="insta" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="aboutText">{% capture my_include %}{% include about.md %}{% endcapture %}{{ my_include | markdownify }}</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col col-lg-2 gradientRight"></div>
+            </div>
+        </div>
+    </div>
+</div>

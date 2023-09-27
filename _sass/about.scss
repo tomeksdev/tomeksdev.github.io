@@ -1,0 +1,55 @@
+.about {
+    padding-top: 20px !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+  
+  .aboutPage .aboutLeft{
+    text-align: center;
+  }
+  
+  .aboutLeft .aboutName {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+  }
+  
+  .aboutLeft .aboutYears {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+  }
+    
+  
+  .aboutPage img{
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .aboutPage .aboutPicMe{
+    border-radius: 50%;
+  }
+  
+  .aboutPage .aboutText img {
+    max-width: 20% !important;
+    height: auto;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  
+  .aboutPage .aboutText p:last-of-type {
+    text-align: center !important;
+  }  
+  
+  .aboutPage .aboutSite a:hover{
+    text-decoration: underline;
+    color: #772953 !important;
+  }
+
+  #insta {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip: text;
+              /* Also define standard property for compatibility */
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }

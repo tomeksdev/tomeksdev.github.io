@@ -1,105 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TomeksDEV - Contact</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Develop web, mobile applications with html, css, javascript, nodejs, raspberry...">
-  <meta name="keywords" content="nodejs, javascript, jquery, html, css, tomeksdev, developer, development, developing, raspberry, pi">
-    <meta name="author" content="Tomo Novak">
-    <!-- LOADING CSS FILES -->
-    <link rel="stylesheet" href="https://tomeksdev.com/design/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://tomeksdev.com/design/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://tomeksdev.com/design/font-awesome/css/font-awesome.min.css">
-    <!-- LOADING JS FILES -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149612850-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-149612850-1');
-    </script>
-</head>
-<body>
-    <div class="container-fluid">
-        <canvas id="canvas"></canvas>
-        <div class="row align-items-start">
-            <div class="col-md-4 offset-md-6">
-                <nav class="nav-masthead">
-                    <a class="navlink" data-rel="home" href="{{url}}">Home</a>
-                    <a class="navlink" data-rel="hosting" href="{{url}}hosting">Hosting</a>
-                    <a class="navlink" data-rel="blog" href="{{url}}blog">Blog</a>
-                    <a class="navlink active" data-rel="contact" href="{{url}}contact">Contact</a>
-                </nav>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-8 offset-md-2">
-                <div class="contact">
-                    <div class="contact-content">
-                            <div class="side">
-                                <div class="side-title">Company Info</div>
-                                <div class="side-content">
-                                    <p>TomeksDEV j.d.o.o.</p>
-                                    <p>Martinska 26, M. Središće 40315</p>
-                                    <p>OIB: 78665168146</p>
-                                    <p>MB: 070171456</p>
-                                    <p>Registered with the Commercial Court in Varaždin under MBS number 070171456 and a share capital of 10KN paid in full.</p>
-                                </div>
-                            </div>
-                            <div class="side">
-                                <div class="side-title">Contact Info</div>
-                                <div class="side-content">
-                                    <p>Phone: <a href="tel: +385996893981">+385996893981</a></p>
-                                    <p>E-mail: <a href="mailto: info&commat;tomeksdev&period;com">info&commat;tomeksdev&period;com</a></p>
-                                    <div class="fb-messengermessageus" messenger_app_id="442717329846759" page_id="609536219062933" color="blue" size="xlarge"></div>
-                                    <p class="social-icons">
-                                        <a href="https://www.facebook.com/tomeksdev"><i class="fa fa-facebook fa-2x"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
-                                        <a href="https://github.com/tomeksdev"><i class="fa fa-github fa-2x"></i></a>
-                                    </p>
-                                </div>
-                            </div>
+---
+title: Contact
+layout: page
+---
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <a class="navlink" href="{{ baseurl }}/"><li class="nav-item">Home</li></a>
+        <a class="navlink" href="{{ baseurl }}/downloads"><li class="nav-item">Downloads</li></a>
+        <a class="navlink" href="{{ baseurl }}/about"><li class="nav-item">About Me</li></a>
+        <a class="navlink" href="{{ baseurl }}/contact"><li class="nav-item active">Contact</li></a>
+    </ul>
+</div>
+</div>
+</nav>
+</div>
+<!--Contact-->
+<div class="row padding contact">
+    <div class="col-lg padding">
+        <div class="col-lg padding">
+            <div class="row padding">
+                <div class="col col-lg-2"></div>
+                <div class="col col-lg-4 contact">
+                    <div class="contactTitle">Company Info</div>
+                    <div class="contactBussines">
+                        <p>TomeksDEV j.d.o.o.</p>
+                        <p>Martinska 26, M. Središće 40315</p>
+                        <p>OIB: 78665168146</p>
+                        <p>MB: 070171456</p>
+                        <p>Registered with the Commercial Court in Varaždin under MBS number 070171456 and a share capital of 10KN paid in full.</p>
                     </div>
+                </div>
+                <div class="col col-lg-4 contact">
+                    <div class="contactTitle right">Contact Info</div>
+                    <div class="contactBussines right">
+                        <p>Phone: <a href="tel: +385996893981">+385996893981</a></p>
+                        <p>E-mail: <a href="mailto: info&commat;tomeksdev&period;com">info&commat;tomeksdev&period;com</a></p>
+                        <div class="fb-messengermessageus" messenger_app_id="442717329846759" page_id="609536219062933" color="blue" size="xlarge"></div>
+                        <p class="social-icons">
+                            <a href="{{ site.author.facebook }}"><i class="fa-brands fa-facebook fa-2x" style="color: #4267B2;"></i></a>
+                            <a href="{{ site.social-network-links.whatsapp }}"><i class="fa-brands fa-whatsapp fa-2x" style="color: #25D366;"></i></a>
+                            <a href="{{ site.author.messenger }}"><i class="fa-brands fa-facebook-messenger fa-2x" style="color: #006AFF;"></i></a>
+                            <a href="mailto: {{ site.author.email }}"><i class="fa-solid fa-envelope fa-2x" style="color: #ffffff;"></i></a>
+                            <a href="{{ site.social-network-links.linkedin }}"><i class="fa-brands fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+                            <a href="{{ site.social-network-links.github }}"><i class="fa-brands fa-github fa-2x" style="color: #967bb6;"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col col-lg-2"></div>
+                <div class="col col-lg-2"></div>
+                <div class="col col-lg-8 contact">
                     <div class="gmaps">
                         <iframe width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJj0o58jdLb0cRMJDt6s3thTI&key=AIzaSyAd4w712Yk27vhYr24IkVxfCliMRKl_sJM" allowfullscreen></iframe> 
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row bottom">
-            <div class="col-md-6 offset-md-3 footer">
-                <p>2020 &copy; <a href="{{url}}">TomeksDEV</a>, by <a href="https://www.facebook.com/vujca">@Vujca</a>.</p>
+                <div class="col col-lg-2 gradientRight"></div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://tomeksdev.com/js/markdown.js"></script>
-    <script src="https://tomeksdev.com/js/tomeksdev.js"></script>
-    <script>window.jQuery || document.write('<script src="https://tomeksdev.com/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://tomeksdev.com/js/vendor/popper.min.js"></script>
-    <script src="https://tomeksdev.com/design/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://tomeksdev.com/js/ie10-viewport-bug-workaround.js"></script>
-    <!--Facebook plugin-->
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-        appId            : '442717329846759',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v3.3'
-        });
-    };
-    </script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
-  </body>
-</html>
+</div>

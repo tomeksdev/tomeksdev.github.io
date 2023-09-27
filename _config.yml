@@ -1,0 +1,38 @@
+title: TomeksDEV
+url: https://tomeksdev.com
+description: 'Meet Tomo (aka Vujca), your tech-savvy problem-solving sidekick from Croatia. Master of networks, defender of firewalls, and lover of all things Linux!'
+keywords:
+ - Network Administrator
+ - System Administrator
+ - Virtualization
+ - Firewalls
+ - Datacenter
+ - Linux
+ - Windows
+ - Servers
+ - Storage
+
+author:
+    name: Tomo Novak (aka Vujca)
+    email: info@tomeksdev.com
+    facebook: https://facebook.com/vujca
+    messenger: https://m.me/tomeksdev
+
+social-network-links:
+  email: "tomeknomek@gmail.com"
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  facebook: https://facebook.com/tomeksdev
+  github: https://github.com/tomeksdev
+  youtube: https://www.youtube.com/@Tomek4341
+  linkedin: https://ie.linkedin.com/in/tomo-novak-39777ba1
+  instagram: https://instagram.com/vujca
+  telephone: +385996893981
+  whatsapp: https://wa.me/996893981
+  messenger: https://m.me/vujca
+
+pygments: true
+permalink: :year/:month/:day/:title
+exclude:
+ - README.md
+ - .git
+ - LICENSE

@@ -1,0 +1,55 @@
+<div class="row home padding default">
+    <div class="col-lg padding">
+        <div class="row home-row padding">
+            <div class="col-sm-6 padding">
+                {% for post in site.posts limit:1 %}
+                <a class="mask-overlay linkBigHome" href="{{ site.baseurl }}{{ post.url }}">
+                    <img class="home-big-image bigHome" style="width: 100% !important;" src="/postImages/{{ post.imageBig }}" alt="{{ post.imageAlt }}" />
+                    <div class="postHome postHomeBig">
+                        <div class="postDateHomeBig">{{ post.date | date: "%-d %B %Y" }}</div>
+                        <div class="postTitleHomeBig">{{ post.title }}</div>
+                        <div class="postDescHomeBig">{{ post.description }}</div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="col-sm-6 padding">
+                <div class="row home-row padding">
+                    {% for post in site.posts offset:1 limit:2 %}
+                    <div class=".col-6 .col-sm-6 home-small-img padding">
+                        <a class="mask-overlay linkSmallHome-1" href="{{ site.baseurl }}{{ post.url }}">
+                            <img class="home-small-image smallHome-1" style="width: 100% !important;" src="/postImages/{{ post.imageSmall }}" alt="{{ post.imageAlt }}" />
+                            <div class="postHome postHomeSmall-1">
+                                <div class="postDateHomeBig">{{ post.date | date: "%-d %B %Y" }}</div>
+                                <div class="postTitleHomeSmall">{{ post.title }}</div>
+                                <div class="postDescHomeSmall">{{ post.description }}</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row padding default">
+    <div class="col-lg padding">
+        <div class="row padding">
+            <div class="row row-cols-1 row-cols-md-3 g-3 oldPosts">
+                {% for post in site.posts offset:3 %}
+			    <div class="col">
+                    <div class="card text-bg-secondary">
+                        <a href="{{ site.baseurl }}{{ post.url }}">
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="/postImages/{{ post.imageSmall }}" alt="{{ post.imageAlt }}" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</a><p class="card-date">{{ post.date | date: "%-d %B %Y" }}</p></h5>
+                            <p class="card-text">{{ post.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

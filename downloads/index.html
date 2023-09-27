@@ -1,0 +1,51 @@
+---
+title: Downloads
+layout: page
+---
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <a class="navlink" href="{{ baseurl }}/"><li class="nav-item">Home</li></a>
+        <a class="navlink" href="{{ baseurl }}/downloads"><li class="nav-item active">Downloads</li></a>
+        <a class="navlink" href="{{ baseurl }}/about"><li class="nav-item">About Me</li></a>
+        <a class="navlink" href="{{ baseurl }}/contact"><li class="nav-item">Contact</li></a>
+    </ul>
+</div>
+</div>
+</nav>
+</div>
+<!--Downloads-->
+<div class="row padding downloads">
+    <div class="col-lg padding">
+        <div class="col-lg padding">
+            <div class="row padding">
+                <div class="col col-lg-2"></div>
+                <div class="col col-lg-8">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr class="table-dark">
+                                <td scope="col">Name</td>
+                                <td scope="col">Description</td>
+                                <td scope="col" style="text-align: center;">Version</td>
+                                <td scope="col" style="text-align: center;">Download</td>
+                            </tr>
+                        </thead>
+                        <tbody class="tableShow">
+                            {% for item in site.data.downloads %}
+                            <tr class="table-dark">
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.description }}</td>
+                                <td style="text-align: center;">{{ item.version }}</td>
+                                <td style="text-align: center;">
+                                    <a href="{{ item.linkDownload }}"><i class="fa-solid fa-file-arrow-down fa-2x"></i></a>
+                                    <a href="{{ item.linkInfo }}"><i class="fa-solid fa-circle-info fa-2x"></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col col-lg-2 gradientRight"></div>
+            </div>
+        </div>
+    </div>
+</div>

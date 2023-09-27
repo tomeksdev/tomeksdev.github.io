@@ -1,0 +1,86 @@
+@media only screen and (max-device-width: 799px) {
+    .logo-text {
+      font-size: 6vw;
+    }
+  
+    .home-small-img {
+      height: 122px !important; 
+    }
+  
+    nav {
+      text-align: center;
+    }
+  
+    nav li {
+      margin-left: 0 !important;
+    }
+  
+    .me-4 {
+      margin-right: 0 !important;
+    }
+  
+    .postDateHomeBig {
+      font-size: 3vw;
+    }
+  
+    .postTitleHomeBig {
+      font-size: 4vw;
+    }
+  
+    .postDescHomeBig {
+      font-size: 2.3vw;
+    }
+  
+    .postDateHomeSmall {
+      font-size: 3vw;
+    }
+  
+    .postTitleHomeSmall {
+      font-size: 4vw;
+    }
+  
+    .postDescHomeSmall {
+      font-size: 2.3vw;
+    }
+    
+    .card-date {
+      font-size: 2.8vw;
+    }
+  
+    .g-3 {
+      --bs-gutter-x: .0 rem !important;
+      padding: 10px !important;
+    }
+  
+    .footer {
+      padding-bottom: 20px !important;
+    }
+  
+    .gradientLeft {
+      display: none !important;
+    }
+  
+    .gradientRight {
+      display: none !important;
+    }
+  
+    .col {
+      flex: none !important;
+    }
+  
+    .social-icons {
+      text-align: center !important;
+    }
+  
+    .social-icons a {
+      margin-right: 10px !important;
+    }
+  
+    .right {
+      text-align: left !important;
+    }
+  
+    .aboutIcons a {
+      padding: 10px !important;
+    }
+  }
