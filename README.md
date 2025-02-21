@@ -2,11 +2,18 @@
 TomeksDEV Github Page! https://tomeksdev.com
 
 Website is created with Bootstrap library, jQuery, yaml, markdown and Jeklly.
-Version: ![GitHub release](https://img.shields.io/badge/release-v3.0.0-darkgreen)
+Version: ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkgreen)
+[![OSSAR](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/ossar-analysis.yml/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/ossar-analysis.yml)
+[![CodeQL](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/codeql-analysis.yml)
+[![pages-build-deployment](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/pages/pages-build-deployment)
 
 # NEWS
 
-### New version ![GitHub release](https://img.shields.io/badge/release-v3.0.0-darkgreen)
+### New version ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkgreen)
+- added new button for About page
+- added new page CV
+
+### Old version ![GitHub release](https://img.shields.io/badge/release-v3.0.0-darkred)
 - redesign whole website
 - new backend with Jeklly
 - new files structure
@@ -15,6 +22,8 @@ Version: ![GitHub release](https://img.shields.io/badge/release-v3.0.0-darkgreen
 - download all my released project and many more comming
 - URL masking
 - SEO of website
+
+----------------------------------------------
 
 #### Old version ![GitHub release](https://img.shields.io/badge/release-v2.1.1-darkred)
 - added new images and link on the Home page
