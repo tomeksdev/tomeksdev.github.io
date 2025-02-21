@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Proxmox Data Center Manager
-description: Proxmox Data Center Manager is an open-source virtualization platform that efficiently manages VMs, containers, and storage with high availability and backup solutions. It’s a cost-effective alternative to VMware, ideal for Linux-savvy IT administrators.
+description: Proxmox Data Center Manager is an open-source virtualization platform
 imgAlt: Proxmox Datacenter
 imageBig: proxmox_datacenter.png
 imageSmall: proxmox_datacenter.png
