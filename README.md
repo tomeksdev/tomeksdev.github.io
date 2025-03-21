@@ -4,7 +4,7 @@ TomeksDEV Github Page! https://tomeksdev.com
 Website is created with Bootstrap library, jQuery, yaml, markdown and Jeklly.
 Version: ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkgreen)
 [![OSSAR](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/ossar-analysis.yml/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/ossar-analysis.yml)
-[![CodeQL](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/github-code-scanning/codeql)
 [![pages-build-deployment](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/tomeksdev/tomeksdev.github.io/actions/workflows/pages/pages-build-deployment)
 
 # NEWS
