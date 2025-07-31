@@ -5,7 +5,7 @@
 **Address**: Martinska 26, 40315 Mursko Središće
 **Home Phone**: +38540 544 169
 **Mobile Phone**: +38599 689 3981
-**E-mail**: tomeknomek@gmail.com
+**E-mail**: info@tomeksdev.com
 **Date of birth**: 06 April 1992
 
 ## Working Experience
