@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="project-detail content-breadcrumb">
+  {% include breadcrumb.html %}
+</section>
+<section class="content-layout project-layout">
+  <div>
+    <article class="project-shell">
+      <div class="title"><h1>{{ page.title }}</h1></div>
+      <div class="meta">
+        Delivered {{ page.date | date: "%B %Y" }}
+        {%- if page.tags %} · {{ page.tags | join: ', ' }}{% endif %}
+      </div>
+      <div class="project-content article-body">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+  {% include rightbar.html context="page" %}
+</section>

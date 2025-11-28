@@ -1,15 +1,16 @@
 ---
-layout: post
 title: Proxmox Data Center Manager
 description: Proxmox Data Center Manager is an open-source virtualization platform
-imgAlt: Proxmox Datacenter
-imageBig: proxmox_datacenter.png
-imageSmall: proxmox_datacenter.png
-keywords: Proxmox Data Center Manager, Proxmox Virtual Environment (VE), Virtualization and container management, KVM virtual machines, LXC containers, Open-source virtualization, Data center management, High availability (HA) clustering, Backup and disaster recovery, Storage options (NFS, iSCSI, Ceph, ZFS), VMware alternative, Hyper-V vs Proxmox, Linux-based virtualization, Web-based management interface
+author: vujca
+date: 2025-02-21 11:33:00 +0100
+categories: [Blogging]
+tags: [proxmox, linux, servers, tomeks, vujca, blog, post, technology, learning, virtualization]
+image:
+  path: /assets/img/post/proxmox_datacenter.png
+  alt: Proxmox
 ---
-Managing a data center efficiently requires powerful, reliable, and scalable tools. **Proxmox Data Center Manager (PDCM)** is one such solution that has been gaining traction among IT administrators for its robust virtualization and container management capabilities. In this review, we take an in-depth look at Proxmox Data Center Manager, exploring its features, performance, usability, and how it stacks up against competitors.
 
-*![Alt]({{ baseurl }}/postImages/PDCM/proxmox_datacenter.png "TomeksDEV")*
+Managing a data center efficiently requires powerful, reliable, and scalable tools. **Proxmox Data Center Manager (PDCM)** is one such solution that has been gaining traction among IT administrators for its robust virtualization and container management capabilities. In this review, we take an in-depth look at Proxmox Data Center Manager, exploring its features, performance, usability, and how it stacks up against competitors.
 
 ## What is Proxmox Data Center Manager?
 **Proxmox Data Center Manager** is an open-source platform designed to help IT professionals manage virtual machines (VMs), containers, and storage systems from a single interface. Built on the foundation of **Proxmox Virtual Environment (VE)**, it offers a web-based UI for seamless infrastructure management.

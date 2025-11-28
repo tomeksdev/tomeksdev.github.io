@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        {% include head.html %}
-    </head>
-    <body>
-        <div class="container-fluid padding">
-            <!--Header-->
-            {% include header.html %}
-
-            <!-- Content -->
-            {{ content }}
-
-            <!--Footer-->
-            {% include footer.html %}
-
-            <!-- Scripts -->
-            {% include scripts.html %}
-    </body>
+<html lang="{{ page.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="layout-{{ page.layout | default: 'default' }}">
+    {% include sidebar.html %}
+    <main class="main-content" id="main-content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
 </html>

@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 60'>
+  <defs>
+    <linearGradient id='plesk-gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#00A3E0'/>
+      <stop offset='100%' stop-color='#006186'/>
+    </linearGradient>
+  </defs>
+  <rect width='160' height='60' rx='14' fill='url(#plesk-gradient)'/>
+  <text x='50%' y='50%' font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size='22' font-weight='600' fill='#ffffff' text-anchor='middle' dominant-baseline='middle'>Plesk</text>
+</svg>

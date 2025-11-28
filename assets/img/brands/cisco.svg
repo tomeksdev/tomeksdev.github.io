@@ -1,0 +1,10 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 60'>
+  <defs>
+    <linearGradient id='cisco-gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#1BA0D7'/>
+      <stop offset='100%' stop-color='#106081'/>
+    </linearGradient>
+  </defs>
+  <rect width='160' height='60' rx='14' fill='url(#cisco-gradient)'/>
+  <text x='50%' y='50%' font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size='22' font-weight='600' fill='#ffffff' text-anchor='middle' dominant-baseline='middle'>Cisco</text>
+</svg>

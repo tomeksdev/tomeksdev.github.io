@@ -1,0 +1,50 @@
+{%- assign context = include.context | default: 'home' -%}
+<aside class="right-sidebar">
+  <div class="card-sidebar">
+    <h5>Recent Posts</h5>
+    <ul class="recent-posts">
+      {%- for post in site.posts limit: 5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <span>{{ post.title }}</span>
+            <small>{{ post.date | date: '%b %Y' }}</small>
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- if context == 'post' %}
+    <div class="card-sidebar toc-card" data-toc-source=".article-body">
+      <h5>Contents</h5>
+      <ul class="toc-list" aria-label="Table of contents"></ul>
+    </div>
+    {%- if page.tags %}
+      <div class="card-sidebar">
+        <h5>Tags</h5>
+        <ul class="tag-list">
+          {%- for tag in page.tags %}
+            <li><a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    {%- endif %}
+  {%- endif %}
+  <div class="card-sidebar">
+    <h5>Stay in touch</h5>
+    <ul class="contact-list">
+      {%- assign social = site['social-network-links'] -%}
+      {%- if social.email %}
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:{{ social.email }}">{{ social.email }}</a></li>
+      {%- endif %}
+      {%- if social.linkedin %}
+        <li><i class="fab fa-linkedin"></i><a href="{{ social.linkedin }}" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+      {%- endif %}
+      {%- if social.github %}
+        <li><i class="fab fa-github"></i><a href="{{ social.github }}" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+      {%- endif %}
+      {%- if social.messenger %}
+        <li><i class="fa-brands fa-facebook-messenger"></i><a href="{{ social.messenger }}" target="_blank" rel="noreferrer noopener">Messenger</a></li>
+      {%- endif %}
+    </ul>
+  </div>
+</aside>

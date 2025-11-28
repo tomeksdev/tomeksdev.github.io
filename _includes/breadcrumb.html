@@ -1,0 +1,25 @@
+{%- assign trail = include.trail -%}
+{%- assign show_current = include.show_current -%}
+{%- if show_current == nil %}
+  {%- assign show_current = true -%}
+{%- endif %}
+<nav id="breadcrumb" aria-label="Breadcrumb">
+  <span><a href="{{ '/' | relative_url }}">Home</a></span>
+  {%- if trail and trail != empty %}
+    {%- for crumb in trail %}
+      <span>
+        {%- if crumb.url %}
+          <a href="{{ crumb.url | relative_url }}">{{ crumb.label }}</a>
+        {%- else %}
+          {{ crumb.label }}
+        {%- endif %}
+      </span>
+    {%- endfor %}
+  {%- endif %}
+  {%- if show_current %}
+    {%- assign current_label = include.current_label | default: page.title -%}
+    {%- if current_label %}
+      <span>{{ current_label }}</span>
+    {%- endif %}
+  {%- endif %}
+</nav>

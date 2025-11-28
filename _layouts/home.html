@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="content-breadcrumb">
+{% include breadcrumb.html show_current=false %}
+</div>
+<section class="content-layout">
+  <div class="blog-feed">
+    {%- assign paginated_posts = paginator.posts | default: site.posts -%}
+    {%- if paginated_posts and paginated_posts.size > 0 %}
+      {%- assign cat_colors = site.category_colors | default: empty -%}
+      {%- for post in paginated_posts %}
+        {%- assign words = post.content | strip_html | split: ' ' | size -%}
+        {%- assign reading_time = words | plus: 199 | divided_by: 200 -%}
+        {%- if reading_time < 1 %}
+          {%- assign reading_time = 1 -%}
+        {%- endif %}
+        {%- assign primary_category = post.categories | first | default: 'Default' -%}
+        {%- assign border_color = cat_colors[primary_category] | default: cat_colors['Default'] | default: '#ff4c4c' -%}
+        <a class="blog-post-link" href="{{ post.url | relative_url }}">
+          <article class="blog-post" style="border-left-color: {{ border_color }}">
+            <div class="post-content">
+              <h3>{{ post.title }}</h3>
+              <div class="meta meta-inline">
+                <span class="meta-item"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="meta-item"><i class="fa-solid fa-user" aria-hidden="true"></i>{{ post.author | default: site.author.name }}</span>
+                <span class="meta-item"><i class="fa-regular fa-clock" aria-hidden="true"></i>{{ reading_time }} min read</span>
+                {%- if post.categories and post.categories.size > 0 %}
+                  <span class="meta-item"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>{{ post.categories | join: ', ' }}</span>
+                {%- endif %}
+              </div>
+              <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+            </div>
+            <div class="post-image">
+              {%- assign image_path = post.image.path | default: '/assets/img/post/TomeksDEV-blog.png' -%}
+              {%- assign image_alt = post.image.alt | default: post.title -%}
+              <img src="{{ image_path | relative_url }}" alt="{{ image_alt }}" loading="lazy">
+            </div>
+          </article>
+        </a>
+      {%- endfor %}
+    {%- else %}
+      <p>No posts published yet. Check back soon.</p>
+    {%- endif %}
+    {%- if paginator and paginator.total_pages > 1 %}
+      <nav class="pagination-nav" aria-label="Pagination">
+        {%- if paginator.previous_page %}
+          <a class="btn-custom" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer posts</a>
+        {%- else %}
+          <span class="btn-custom disabled">Start of archive</span>
+        {%- endif %}
+        <span class="page-count">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {%- if paginator.next_page %}
+          <a class="btn-custom" href="{{ paginator.next_page_path | relative_url }}">Older posts &rarr;</a>
+        {%- else %}
+          <span class="btn-custom disabled">End of archive</span>
+        {%- endif %}
+      </nav>
+    {%- endif %}
+  </div>
+  {% include rightbar.html context="home" %}
+</section>

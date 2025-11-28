@@ -1,0 +1,61 @@
+<aside class="sidebar">
+  <div class="logo-section">
+    <h2>Tomeks<span>DEV</span></h2>
+    <p class="subtitle">{{ site.tagline | default: "Building uptime & stories" }}</p>
+    <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menu</span>
+    </button>
+  </div>
+  <nav id="primary-nav" class="nav-menu" aria-label="Primary">
+    {%- assign nav_items = site.navigation | default: site.pages -%}
+    {%- for item in nav_items %}
+      {%- assign href = item.url -%}
+      {%- assign is_external = item.external | default: false -%}
+      {%- if is_external == false %}
+        {%- assign href = href | relative_url -%}
+      {%- endif %}
+      {%- assign active = false -%}
+      {%- if page.url == item.url %}
+        {%- assign active = true -%}
+      {%- elsif item.url == '/' and page.url == nil %}
+        {%- assign active = true -%}
+      {%- elsif item.match and page.url contains item.match %}
+        {%- assign active = true -%}
+      {%- endif %}
+      <a class="nav-item{% if active %} active{% endif %}{% if item.disabled %} disabled{% endif %}"
+         href="{{ href }}"
+         {%- if item.disabled %} tabindex="-1"{% endif -%}
+         {%- if is_external %} target="_blank" rel="noreferrer noopener"{% endif -%}
+         {%- if active %} aria-current="page"{% endif -%}>
+        {%- assign icon_style = item.icon_style | default: 'fa-solid' -%}
+        <i class="{{ icon_style }} {{ item.icon | default: 'fa-circle-dot' }}"></i>
+        <span>{{ item.label | default: item.title | default: 'Page' }}</span>
+      </a>
+    {%- endfor %}
+  </nav>
+  <div class="footer-sidebar">
+    <div class="social-links">
+      {%- assign social = site['social-network-links'] -%}
+      {%- if social.github %}
+        <a href="{{ social.github }}" aria-label="GitHub" target="_blank" rel="noreferrer noopener"><i class="fab fa-github"></i></a>
+      {%- endif %}
+      {%- if social.facebook %}
+        <a href="{{ social.facebook }}" aria-label="Facebook" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i></a>
+      {%- endif %}
+      {%- if social.linkedin %}
+        <a href="{{ social.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin"></i></a>
+      {%- endif %}
+      {%- if social.email %}
+        <a href="mailto:{{ social.email }}" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      {%- endif %}
+    </div>
+    <div class="sidebar-footnote">
+      <p>© {{ 'now' | date: '%Y' }} {{ site.title }} · Crafted with Jekyll and a lot of coffee.</p>
+      <p class="small">
+        <a href="{{ site.github_username | prepend: 'https://github.com/' }}" target="_blank" rel="noreferrer noopener">GitHub</a>
+        · <a href="mailto:{{ site.email }}">Contact</a>
+      </p>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,70 @@
+-
+  name: Ubuntu
+  slug: canonical-friends
+  url: https://ubuntu.com
+  color: "#E95420"
+-
+  name: Plesk
+  slug: plesk
+  url: https://plesk.com
+  color: "#00A3E0"
+-
+  name: Sophos
+  slug: sophos
+  url: https://sophos.com
+  color: "#0053A6"
+-
+  name: Cisco
+  slug: cisco
+  url: https://cisco.com
+  color: "#1BA0D7"
+-
+  name: Microsoft
+  slug: windows
+  url: https://microsoft.com
+  color: "#0078D7"
+-
+  name: Ubuntu MAAS
+  slug: maas
+  url: https://maas.io
+  color: "#FF6A00"
+-
+  name: OpenStack
+  slug: openstack
+  url: https://openstack.org
+  color: "#D92B2B"
+-
+  name: HPE
+  slug: hpe
+  url: https://hpe.com
+  color: "#00B388"
+-
+  name: Proxmox
+  slug: proxmox
+  url: https://proxmox.com
+  color: "#F15A24"
+-
+  name: TrueNAS
+  slug: truenas
+  url: https://truenas.com
+  color: "#0095D5"
+-
+  name: Kubernetes
+  slug: kubernetes
+  url: https://kubernetes.io
+  color: "#326CE5"
+-
+  name: VMware
+  slug: vmware
+  url: https://vmware.com
+  color: "#6DB33F"
+-
+  name: Debian
+  slug: debian
+  url: https://debian.org
+  color: "#C7007F"
+-
+  name: Dell
+  slug: dell
+  url: https://dell.com
+  color: "#0085C3"

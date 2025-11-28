@@ -1,81 +1,44 @@
-<!-- Information about web site -->
-{% if page.title %}
-<title>{{ page.title }} &mdash; {{ site.title }}</title>
-{% else %}
-<title>{{ site.title }}</title>
-{% endif %}
-{% assign description = site.description %}
-{% if page.description %}
-    {% assign description = page.description %}
-{% endif %}
-<meta name="description" content="{{ description }}" />
-{% assign keywords = site.keywords %}
-{% if page.keywords %}
-    {% assign keywords = page.keywords %}
-{% endif %}
-<meta name="keywords" content="{{ keywords | join: "," }}" />
-<meta name="author" content="{{ site.author.name }}" />
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description -%}
+{%- assign page_image = page.image.path | default: site.default_image -%}
+{%- assign canonical_url = page.url | absolute_url -%}
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/tomeksdev_favicon.png" sizes="64x64" />
-
-<!-- Facebook -->
-{% if page.url %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-{% endif %}
-{% if page.title %}
-<meta property="og:title" content="{{ page.title }} &mdash; {{ site.title }}">
-{% else %}
-<meta property="og:title" content="{{ site.title }}">
-{% endif %}
-<meta property="og:description" content="{{ description }}">
-<meta property="og:type" content="website">
-{% if page.imageBig %}
-<meta property="og:image" content="{{ site.baseurl }}/postImages/{{ page.imageBig }}">
-{% else %}
-<meta property="og:image" content="{{ site.baseurl }}/assets/images/tomeksdev.png">
-{% endif %}
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="900">
-<div id="fb-root"></div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- LOADING CSS FILES -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/brands.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/solid.min.css">
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149612850-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149612850-1');
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title | escape }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+{%- if site.keywords %}
+<meta name="keywords" content="{{ site.keywords | join: ', ' | escape }}">
+{%- endif %}
+<meta name="theme-color" content="#1a1a1a">
+<link rel="canonical" href="{{ canonical_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:image" content="{{ page_image | relative_url | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ page_description | escape }}">
+<meta name="twitter:image" content="{{ page_image | relative_url | absolute_url }}">
+{%- if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif %}
+<link rel="stylesheet" href="{{ '/assets/css/main.bundle.css' | relative_url }}">
+{%- assign organization = site.company -%}
+{%- if organization %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ organization.name | escape }}",
+  "legalName": "{{ organization.legal_name | escape }}",
+  "url": "{{ organization.url | default: site.url }}",
+  "logo": "{{ organization.logo | relative_url | absolute_url }}",
+  "foundingDate": "{{ organization.founding_date }}",
+  "sameAs": [{% for profile in organization.same_as %}"{{ profile }}"{% if forloop.last == false %}, {% endif %}{% endfor %}]
+}
 </script>
-
-<!-- Microsoft tracking -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "j1pgtflfvi");
-</script>
+{%- endif %}

@@ -1,0 +1,141 @@
+.right-sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 320px;
+  width: 100%;
+}
+
+.card-sidebar {
+  background: #2a2a2a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-sidebar h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.recent-posts {
+  list-style: none;
+  padding-left: 0;
+}
+
+.recent-posts li {
+  margin-bottom: 1rem;
+}
+
+.recent-posts a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.recent-posts a:hover {
+  color: #ff4c4c;
+}
+
+.recent-posts small {
+  color: #a0a0a0;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.tag-list,
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-list li a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 76, 76, 0.15);
+  color: #ffb4b4;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.contact-list {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.contact-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: #ff4c4c;
+}
+
+.toc-card .toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc-item {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.toc-item.active a {
+  color: #ff4c4c;
+  font-weight: 600;
+}
+
+.toc-item.level-3 {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.toc-item.level-4 {
+  padding-left: 1.75rem;
+  font-size: 0.85rem;
+}
+
+.toc-item a {
+  color: #d0d0d0;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.toc-item a:hover {
+  color: #ff4c4c;
+}
+
+.toc-item.active a {
+  color: #ff4c4c;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .right-sidebar {
+    position: static;
+  }
+}

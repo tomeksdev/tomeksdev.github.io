@@ -1,14 +1,17 @@
 ---
-layout: post
 title: Wireguard VPN - Installation and configuration
 description: Installation of wireguard VPN server and adding clients.
-imageBig: wireguard.png
-imageSmall: wireguard-small.png
-keywords: linux, ubuntu, debian, wireguard, vpn, connection, security, protocol, server
+author: vujca
+date: 2023-01-05 11:33:00 +0100
+categories: [Server]
+tags: [linux, ubuntu, debian, wireguard, vpn, connection, security, protocol, server]
+image:
+  path: /assets/img/post/wireguard-small.png
+  alt: Wireguard
 ---
+
 For my purposes, I needed a VPN connection to connect all my sites and my notebook to access them all. I use WireGuard VPN for this solution because it is secure and uses modern cryptography for the connections. I have connected my location in Croatia (Home Lab), where I have several servers, network devices, and virtualization for my testing purposes and for backups of all cell phones and PCs at home. Also, my location in Germany, where I live and work, and my servers, which are located in Germany in one of the data centers of the provider Contabo.
 
-*![Alt]({{ baseurl }}/postImages/wireguard.png "Wireguard")*
 
 ### Why I use wireguard?
 ----------------------------------------------
@@ -44,25 +47,25 @@ chmod +x wireguard-server-inst.sh
 
 Here, my script asks if you want to continue with the installation. If you want to cancel the installation, simply type "no/NO."
 
-**![Alt]({{ baseurl }}/postImages/wireguard/continue.png "Wireguard")**
+**![Alt]({{ '/assets/img/post/wireguard/continue.png' | relative_url }} "Wireguard")**
 
 #### Step 4:
 
 In this step, you have the choice to activate either IPv4 or IPv6 for your WireGuard VPN setup. You can select and activate only one of them, depending on your network configuration and requirements.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/IPv4-IPv6.png "IPv4 IPv6")**
+**![Alt]({{ '/assets/img/post/wireguard/IPv4-IPv6.png' | relative_url }} "IPv4 IPv6")**
 
 #### Step 5:
 
 The last thing we need is a port for accessing the WebGUI of WireGuard. The default is 5000, but you can choose any port you prefer.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/default-port.png "Web port")**
+**![Alt]({{ '/assets/img/post/wireguard/default-port.png' | relative_url }} "Web port")**
 
 #### Setp 6:
 
 Finally, we have finished the installation, and now you can access your Web GUI from WireGuard. Below are instructions on how to configure WireGuard via the WebGUI.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/finished.png "Installation finished")**
+**![Alt]({{ '/assets/img/post/wireguard/finished.png' | relative_url }} "Installation finished")**
 
 
 ### Configuration of WireGuard via WebGUI
@@ -70,13 +73,13 @@ Finally, we have finished the installation, and now you can access your Web GUI 
 
 You can access your WebGUI using this URL: http://IP_ADDRESS:PORT with the username **admin** and password **admin**.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/login-page.png "Login")**
+**![Alt]({{ '/assets/img/post/wireguard/login-page.png' | relative_url }} "Login")**
 
 #### Setp 1:
 
 In the first step on WebGUI, we need to configure the WireGuard server in Global Configuration. We need to put a public static IP with which we will connect to other devices and WireGuard client systems. Additionally, I always use the DNS server, which here is set to 8.8.8.8, the public Google DNS. Other settings can be left at their default values for now.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/global-settings.png "Settings")**
+**![Alt]({{ '/assets/img/post/wireguard/global-settings.png' | relative_url }} "Settings")**
 
 #### Setp 2:
 
@@ -98,13 +101,13 @@ In the "Post Down Script" field, you should input the following code:
 iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o ens192 -j MASQUERADE
 ```
 
-**![Alt]({{ baseurl }}/postImages/wireguard/server-settings.png "Server")**
+**![Alt]({{ '/assets/img/post/wireguard/server-settings.png' | relative_url }} "Server")**
 
 #### Setp 3:
 
 Now, you can add client devices/users to your WireGuard server and establish VPN connections by clicking on "Wireguard Clients."
 
-**![Alt]({{ baseurl }}/postImages/wireguard/client-add.png "Client Add")**
+**![Alt]({{ '/assets/img/post/wireguard/client-add.png' | relative_url }} "Client Add")**
 
 #### Setp 4:
 
@@ -114,13 +117,13 @@ When you click on "+ New Client," you can configure the client. Here, you can sp
 - "Allowed IPs" defines which host IPs and network range IPs will be included in the client's WireGuard configuration and to which all clients will have access. I typically avoid using the default IP 0.0.0.0/0 and instead specify the specific networks I need.
 - "Extra Allowed IPs" remains empty for most clients like notebooks, PCs, or mobile phones. If you connect a router like Mikrotik, OPNSense, or any router/firewall that supports WireGuard, and you need to allow access from other clients to networks behind these routers/firewalls, you should enter the network you need access to in this field.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/new-client.png "New Client")**
+**![Alt]({{ '/assets/img/post/wireguard/new-client.png' | relative_url }} "New Client")**
 
 #### Setp 5:
 
 Once you've configured the client, you can download the configuration by clicking on "Download" or scan the QR code by clicking on "QR code." When you apply this configuration to your devices and activate the tunnel, you'll have a VPN connection to the WireGuard server.
 
-**![Alt]({{ baseurl }}/postImages/wireguard/created-client.png "Settings")**
+**![Alt]({{ '/assets/img/post/wireguard/created-client.png' | relative_url }} "Settings")**
 
 ### Conclusion
 ----------------------------------------------

@@ -1,15 +1,16 @@
 ---
-layout: post
 title: Linux script for inserting SSH keys
 description: Small linux script for inserting multipe ssh keys to multiple servers
-imgAlt: Code SSH
-imageBig: ssh_script.png
-imageSmall: ssh_script_small.png
-keywords: SSH, bash, script, linux, server, desktop, ubuntu, debian, key
+author: vujca
+date: 2022-09-06 11:33:00 +0100
+categories: [Programming]
+tags: [SSH, bash, script, linux, server, desktop, ubuntu, debian, key]
+image:
+  path: /assets/img/post/ssh_script_small.png
+  alt: Code SSH
 ---
-For personal use, and all, I've created this script to make my job sometimes easy. I have multiple servers and i didnt want to write every time same command for every server, and because of that, i created this script. All my project's are on my GitHub account and here is link where you can look for this repository: [SSH-KEY-SERVER-ADD](https://github.com/tomeksdev/ssh-key-server-add).
 
-*![Alt]({{ baseurl }}/postImages/ssh_script.png "SSH Script")*
+For personal use, and all, I've created this script to make my job sometimes easy. I have multiple servers and i didnt want to write every time same command for every server, and because of that, i created this script. All my project's are on my GitHub account and here is link where you can look for this repository: [SSH-KEY-SERVER-ADD](https://github.com/tomeksdev/ssh-key-server-add).
 
 Script that adds multiple SSH keys to multiple servers.
 

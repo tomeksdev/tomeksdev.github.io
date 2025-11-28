@@ -1,4 +1,12 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="content-breadcrumb">
+  {% include breadcrumb.html %}
+</div>
+<section class="content-layout">
+  <div>
+    {% include content.html title=page.title content=content %}
+  </div>
+  {% include rightbar.html context="page" %}
+</section>

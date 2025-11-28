@@ -1,16 +1,16 @@
 ---
-layout: post
 title: Prepare proxmox for SAS storage
 description: We investigate and prepare proxmox with SAS storage and multipath
-imgAlt: Proxmox
-imageBig: proxmox_sas.png
-imageSmall: proxmox_sas_small.png
-keywords: proxmox, proxmox SAS, SAS, Prepare proxmox, SAS storage, storage, SAS storage TomeksDEV, Multipath, WWID, configure Multipath, configure Mutipath, multipath wwid
+author: vujca
+date: 2022-07-25 11:33:00 +0100
+categories: [Server]
+tags: [proxmox, proxmox SAS, SAS, Prepare proxmox, SAS storage, storage, SAS storage TomeksDEV, Multipath, WWID]
+image:
+  path: /assets/img/post/proxmox_sas_small.png
+  alt: Proxmox
 ---
 
 We are looking and investigating the connection between proxmox and SAS storage. In our case we are using two HPE DL380 Gen10 servers and one MSA 2060 SAS LFF storage. During our investigation and research, we came across the Multipath configuration that needs to be configured on Linux machines in order for the SAS to work normally and without any issues. Therefore, we made an effort to configure Multipath and successfully make all luns visible and add them to our nodes. Below is an explanation of how we got this solution to work. 
-
-*![Alt]({{ baseurl }}/postImages/proxmox_sas_small.png "Proxmox")*
 
 If the node has a SAS controller that is external and connected to external storage (e.g. MSA 1060 SAS), we first need to change some lines in the iscsid.conf file.
 
@@ -45,7 +45,7 @@ To see and know WWID from drive which must be in multipath, we use command bello
 /lib/udev/scsi_id -g -u -d /dev/sdX
 ```
 
-*![Alt]({{ baseurl }}/postImages/proxmox_wwid.png "Proxmox")*
+*![Alt]({{ '/assets/img/post/proxmox_wwid.png' | relative_url }} "Proxmox")*
 
 Copy this WWID to some text editor that you have always by yourselfs because we needed this id to configure multipath.conf file.
 
@@ -107,7 +107,7 @@ You can check all multipath devices with command bellow.
 multipath -ll
 ```
 
-*![Alt]({{ baseurl }}/postImages/proxmox_multipath.png "Proxmox")*
+*![Alt]({{ '/assets/img/post/proxmox_multipath.png' | relative_url }} "Proxmox")*
 
 After all configuration run command bellow in order.
 
