@@ -9,7 +9,12 @@ Version: ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkgreen
 
 # NEWS
 
-### New version ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkgreen)
+### New version ![GitHub release](https://img.shields.io/badge/release-v4.0.1-darkgreen)
+- new look
+- added project
+- writed new blog posts
+
+### Old version ![GitHub release](https://img.shields.io/badge/release-v3.0.1-darkred)
 - added new button for About page
 - added new page CV
 
