@@ -106,13 +106,15 @@ category_colors:
 
 giscus:
   repo: "tomeksdev/tomeksdev.github.io"
-  repo_id: "MDEwOlJlcG9zaXRvcnk3MzU1MTI5OQ"
+  repo_id: "MDEwOlJlcG9zaXRvcnk3MzU1MTI5OQ=="
   category: "Comments"
-  category_id: "DIC_kwDOBGJNw84CzPr"
+  category_id: "DIC_kwDOBGJNw84CzPr-"
   mapping: "og:title"
+  input_position: "bottom"
   reactions_enabled: "1"
   emit_metadata: "0"
-  theme: "transparent_dark"
+  strict: "0"
+  theme: "preferred_color_scheme"
   lang: "en"
 
 sass:
