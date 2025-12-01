@@ -106,10 +106,10 @@ category_colors:
 
 giscus:
   repo: "tomeksdev/tomeksdev.github.io"
-  repo_id: "73551299"
-  category: "General"
-  category_id: "REPLACE_WITH_CATEGORY_ID"
-  mapping: "pathname"
+  repo_id: "MDEwOlJlcG9zaXRvcnk3MzU1MTI5OQ"
+  category: "Comments"
+  category_id: "DIC_kwDOBGJNw84CzPr"
+  mapping: "og:title"
   reactions_enabled: "1"
   emit_metadata: "0"
   theme: "transparent_dark"
