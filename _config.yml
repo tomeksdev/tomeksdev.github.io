@@ -114,7 +114,7 @@ giscus:
   reactions_enabled: "1"
   emit_metadata: "0"
   strict: "0"
-  theme: "preferred_color_scheme"
+  theme: "dark_dimmed"
   lang: "en"
 
 sass:
