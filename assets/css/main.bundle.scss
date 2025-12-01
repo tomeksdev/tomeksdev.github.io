@@ -1,7 +1,5 @@
 ---
 # Only front matter so Jekyll processes this file.
 ---
-@use "sass:meta";
-
-@include meta.load-css("../bootstrap/css/bootstrap.min.css");
-@include meta.load-css("main");
+@import "../bootstrap/css/bootstrap.min.css";
+@import "main";

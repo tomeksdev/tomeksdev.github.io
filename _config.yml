@@ -85,7 +85,7 @@ social-network-links:
   whatsapp: https://wa.me/996893981
   messenger: https://m.me/vujca
 
-pygments: true
+highlighter: rouge
 permalink: :year/:month/:day/:title
 
 # Build settings
