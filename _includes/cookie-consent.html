@@ -1,0 +1,46 @@
+<div class="cookie-banner" data-cookie-banner role="dialog" aria-modal="false" aria-label="Cookie consent" hidden>
+  <div class="cookie-banner__content">
+    <div class="cookie-banner__header">
+      <p class="overline">Privacy first</p>
+      <h2>Cookie preferences</h2>
+      <p>
+        I use strictly necessary cookies to keep the site working. Functional cookies are optional and load the Giscus comment widget.
+        Analytics are disabled by default (none are loaded right now). See the <a href="{{ '/privacy/' | relative_url }}">Privacy & Cookie Policy</a> for details.
+      </p>
+    </div>
+    <div class="cookie-banner__choices">
+      <div class="cookie-toggle is-locked">
+        <div>
+          <p>Strictly necessary</p>
+          <small>Required for basic site functionality.</small>
+        </div>
+        <span class="pill">Always on</span>
+      </div>
+      <div class="cookie-toggle">
+        <div>
+          <p>Functional (comments)</p>
+          <small>Loads the GitHub-powered Giscus comments widget.</small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" data-consent-toggle="functional" aria-label="Enable functional cookies">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <div class="cookie-toggle">
+        <div>
+          <p>Analytics</p>
+          <small>Optional analytics when/if enabled in the future.</small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" data-consent-toggle="analytics" aria-label="Enable analytics cookies">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn-secondary" data-consent-action="reject">Reject non-essential</button>
+      <button type="button" class="btn-secondary" data-consent-action="save">Save choices</button>
+      <button type="button" class="btn-primary" data-consent-action="accept-all">Accept all</button>
+    </div>
+  </div>
+</div>

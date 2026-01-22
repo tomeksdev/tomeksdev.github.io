@@ -1,22 +1,31 @@
 {% assign giscus = site.giscus %}
 {% if giscus and giscus.repo and giscus.repo_id and giscus.category_id %}
 <section class="comments">
-  <script src="https://giscus.app/client.js"
-          data-repo="{{ giscus.repo }}"
-          data-repo-id="{{ giscus.repo_id }}"
-          data-category="{{ giscus.category }}"
-          data-category-id="{{ giscus.category_id }}"
-          data-mapping="{{ giscus.mapping | default: 'pathname' }}"
-          data-strict="{{ giscus.strict | default: '0' }}"
-          data-reactions-enabled="{{ giscus.reactions_enabled | default: '1' }}"
-          data-emit-metadata="{{ giscus.emit_metadata | default: '0' }}"
-          data-input-position="{{ giscus.input_position | default: 'bottom' }}"
-          data-theme="{{ giscus.theme | default: 'transparent_dark' }}"
-          data-lang="{{ giscus.lang | default: 'en' }}"
-          crossorigin="anonymous"
-          async>
-  </script>
-  <noscript>Please enable JavaScript to view the comments.</noscript>
+  <div class="consent-block"
+       data-consent-category="functional"
+       data-consent-type="giscus"
+       data-giscus-repo="{{ giscus.repo }}"
+       data-giscus-repo-id="{{ giscus.repo_id }}"
+       data-giscus-category="{{ giscus.category }}"
+       data-giscus-category-id="{{ giscus.category_id }}"
+       data-giscus-mapping="{{ giscus.mapping | default: 'pathname' }}"
+       data-giscus-strict="{{ giscus.strict | default: '0' }}"
+       data-giscus-reactions="{{ giscus.reactions_enabled | default: '1' }}"
+       data-giscus-emit-metadata="{{ giscus.emit_metadata | default: '0' }}"
+       data-giscus-input-position="{{ giscus.input_position | default: 'bottom' }}"
+       data-giscus-theme="{{ giscus.theme | default: 'noborder_gray' }}"
+       data-giscus-lang="{{ giscus.lang | default: 'en' }}">
+    <div class="consent-block__message" data-consent-placeholder>
+      <p>
+        Comments are provided through Giscus (GitHub Discussions). Loading it is optional and requires functional cookie consent.
+      </p>
+      <div class="consent-block__actions">
+        <button type="button" class="btn-custom" data-consent-action="accept-functional">Allow comments</button>
+        <button type="button" class="btn-secondary" data-open-consent>Manage preferences</button>
+      </div>
+    </div>
+    <div class="consent-block__slot" aria-live="polite"></div>
+  </div>
 </section>
 {% else %}
 <section class="comments comments--placeholder">

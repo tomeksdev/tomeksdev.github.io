@@ -144,4 +144,168 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     updateActiveHeading();
   });
+
+  const consentKey = 'td_cookie_consent_v1';
+  const consentDefaults = { necessary: true, functional: false, analytics: false };
+  const banner = document.querySelector('[data-cookie-banner]');
+  const preferenceTriggers = document.querySelectorAll('[data-open-consent]');
+  const consentToggles = document.querySelectorAll('[data-consent-toggle]');
+  let consentState = loadConsentState();
+
+  function loadConsentState() {
+    try {
+      const stored = localStorage.getItem(consentKey);
+      if (!stored) return null;
+      const parsed = JSON.parse(stored);
+      return {
+        ...consentDefaults,
+        functional: Boolean(parsed.functional),
+        analytics: Boolean(parsed.analytics),
+      };
+    } catch (error) {
+      console.warn('Unable to read consent state', error);
+      return null;
+    }
+  }
+
+  function persistConsentState(nextState, { silent } = {}) {
+    consentState = { ...consentDefaults, ...nextState };
+    try {
+      localStorage.setItem(
+        consentKey,
+        JSON.stringify({ ...consentState, updatedAt: new Date().toISOString() }),
+      );
+    } catch (error) {
+      console.warn('Unable to persist consent state', error);
+    }
+    updateToggleUI();
+    applyConsentToPage();
+    if (!silent) hideConsentBanner();
+  }
+
+  function updateToggleUI() {
+    consentToggles.forEach((toggle) => {
+      const key = toggle.dataset.consentToggle;
+      if (!key) return;
+      toggle.checked = Boolean(consentState?.[key]);
+    });
+  }
+
+  function showConsentBanner() {
+    if (!banner) return;
+    updateToggleUI();
+    banner.hidden = false;
+    banner.classList.add('is-visible');
+  }
+
+  function hideConsentBanner() {
+    if (!banner) return;
+    banner.classList.remove('is-visible');
+    banner.hidden = true;
+  }
+
+  function readToggleState() {
+    const next = { ...consentDefaults, ...(consentState || {}) };
+    consentToggles.forEach((toggle) => {
+      const key = toggle.dataset.consentToggle;
+      if (key) next[key] = Boolean(toggle.checked);
+    });
+    return next;
+  }
+
+  function loadGiscusWidget(container) {
+    if (!container || container.dataset.consentLoaded === 'true') return;
+    const slot = container.querySelector('.consent-block__slot');
+    if (!slot) return;
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    script.setAttribute('data-repo', container.dataset.giscusRepo || '');
+    script.setAttribute('data-repo-id', container.dataset.giscusRepoId || '');
+    script.setAttribute('data-category', container.dataset.giscusCategory || '');
+    script.setAttribute('data-category-id', container.dataset.giscusCategoryId || '');
+    script.setAttribute('data-mapping', container.dataset.giscusMapping || 'pathname');
+    script.setAttribute('data-strict', container.dataset.giscusStrict || '0');
+    script.setAttribute('data-reactions-enabled', container.dataset.giscusReactions || '1');
+    script.setAttribute('data-emit-metadata', container.dataset.giscusEmitMetadata || '0');
+    script.setAttribute('data-input-position', container.dataset.giscusInputPosition || 'bottom');
+    script.setAttribute('data-theme', container.dataset.giscusTheme || 'noborder_gray');
+    script.setAttribute('data-lang', container.dataset.giscusLang || 'en');
+    slot.innerHTML = '';
+    slot.appendChild(script);
+    const noscript = document.createElement('noscript');
+    noscript.textContent = 'Please enable JavaScript to view the comments.';
+    slot.appendChild(noscript);
+    container.dataset.consentLoaded = 'true';
+  }
+
+  function disableConsentElement(container) {
+    if (!container) return;
+    const slot = container.querySelector('.consent-block__slot');
+    if (slot) slot.innerHTML = '';
+    container.dataset.consentLoaded = 'false';
+    const placeholder = container.querySelector('[data-consent-placeholder]');
+    if (placeholder) placeholder.hidden = false;
+  }
+
+  function applyConsentToPage() {
+    document.querySelectorAll('[data-consent-category]').forEach((element) => {
+      const category = element.dataset.consentCategory;
+      if (!category) return;
+      const isAllowed = Boolean(consentState?.[category]);
+      const placeholder = element.querySelector('[data-consent-placeholder]');
+      if (placeholder) placeholder.hidden = isAllowed;
+
+      if (!isAllowed) {
+        disableConsentElement(element);
+        return;
+      }
+
+      if (element.dataset.consentType === 'giscus') {
+        loadGiscusWidget(element);
+      }
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    const action = event.target.closest('[data-consent-action]');
+    if (!action) return;
+    const actionType = action.dataset.consentAction;
+    if (actionType === 'accept-all') {
+      persistConsentState({ functional: true, analytics: true });
+    } else if (actionType === 'reject') {
+      persistConsentState({ functional: false, analytics: false });
+    } else if (actionType === 'save') {
+      persistConsentState(readToggleState());
+    } else if (actionType === 'accept-functional') {
+      persistConsentState({ ...(consentState || consentDefaults), functional: true }, { silent: true });
+    }
+  });
+
+  preferenceTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', showConsentBanner);
+  });
+
+  if (consentState) {
+    updateToggleUI();
+    applyConsentToPage();
+  } else {
+    consentState = { ...consentDefaults };
+    showConsentBanner();
+  }
+
+  const optimizeImages = () => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.getAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      if (!img.getAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  };
+
+  optimizeImages();
 });
