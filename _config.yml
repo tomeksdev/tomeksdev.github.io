@@ -99,6 +99,7 @@ pagination:
 category_colors:
   Blogging: "#ff4c4c"
   Server: "#2dd4bf"
+  Recovery: "#3b82f6"
   Programming: "#22c55e"
   Testing: "#a855f7"
   Security: "#475569"
