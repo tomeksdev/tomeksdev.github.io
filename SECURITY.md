@@ -7,10 +7,16 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 3.0.0   | :white_check_mark: |
+| 4.0.2   | :white_check_mark: |
+| 3.0.0   | :x: |
 | 2.1.1   | :x: |
 
 ## Reporting a Vulnerability
+
+#### Version 3.0.0
+
+To old website.
+Full website changed from re-design and all.
 
 #### Version 2.1.1
 
